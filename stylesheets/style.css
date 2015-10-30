@@ -1,4 +1,35 @@
+/*Using 100% for both html and body will allow the header */
 /* line 2, ../sass/style.scss */
-body h1 {
-  color: red;
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 7, ../sass/style.scss */
+.intro-header {
+  background: url("../img/landingpagebg.jpg") no-repeat center center scroll;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 15, ../sass/style.scss */
+.logo {
+  max-width: 50%;
+}
+
+/* line 19, ../sass/style.scss */
+.logo-section {
+  display: table;
+  height: 100%;
+  width: 50%;
+  border: 1px solid red;
+}
+
+/* line 26, ../sass/style.scss */
+.vertical-text {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  border: 1px solid green;
 }

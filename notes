@@ -1,0 +1,19 @@
+List of page to code
+
+landing page 
+dashboard - contains templates
+modal page - pop up modal
+top 4 button page - Similiar to download panel
+Presentation Header - Title in the middle and exit button on right
+dropdown with subdropdowns
+two column tab - Similiar to pricing page
+Forms - Checkbox, Radio, Textarea
+
+Use Bootstrap, SASS, CSS3
+Responsive,
+Cross-Browser Test (Chrome, Firefox, 1E9 & Above, Opera, Safari)
+
+Add own transition
+
+installed browser-refresh
+super shift r will save and refresh browser straight
