@@ -1,31 +1,236 @@
+@import "all";
+
 /*Using 100% for both html and body will allow the header */
 html, body {
-   width: 100%;
-   height: 100%;  
+	width: 100%;
+	height: 100%;
+}
+a:hover{
+	text-decoration: none;
+}
+/*Landing Page*/
+.landing-page {
+
+	.navbar-btn {
+		margin-right: 15px;
+	}
+
+	.intro-header {
+		background: url("../img/landingpagebg2.jpg") no-repeat center center scroll;
+		@include background-size (cover);
+		width: 100%;
+		height: 100%;
+		display: table;
+	}
+
+	.logo {
+		max-width: 50%;
+	}
+
+	.vertical-text {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		background-color: rgba(255,255,255,0.5);
+		background-color: rgba(0,0,0,0.7);
+		color: white;
+	}
 }
 
-.intro-header {
-   background: url("../img/landingpagebg.jpg") no-repeat center center scroll;
-   background-size: cover;
-   width: 100%;
-   height: 100%;
+/*Dashboard*/
+.dashboard-page {
+	.side-note {
+		position: fixed;
+		top:0%;
+		width:10%;
+		border: 1px solid red;
+		@include font-size(20px);
+	}
+  	/*HEADER*/
+	.top-header {
+		height: 50px;
+		display: table;
+		position: relative;
+		background-color: darkgray;
+		width: 100%;
 
+		span {
+			display: table-cell;
+			text-align: center;
+			vertical-align: middle;
+
+		img {
+			max-width: 10%;
+			}
+		}
+
+		.btn {
+			position: absolute;
+			right: 20px;
+		}
+	}
 }
 
-.logo {
-   max-width: 50%;
+/*Dashboard - DROPDOWN*/
+.dashboard-dropdown {
+	text-align: left;
+	height: 40px;
+	background-color: gray;
+	position: relative;
+	z-index: 9999;
+
+	.article-dropdown {
+		left: 16%;
+	}
+
+	.tutorial-dropdown {
+		left: 34%;
+	}
+
+	ul {
+		list-style: none;
+		padding: 0px;
+		position: relative;
+		display: inline-table;
+
+		&:after {
+			content:"";
+			clear: both;
+			display: block;
+		}
+
+		li {
+			background-color: gray;
+			border: 1px solid red;
+			color: white;
+			padding: 10px 20px;
+			float: left;
+			cursor: pointer;
+			&:hover {
+				background-color: red;
+			}
+			a {
+				color: white;
+			}
+		}
+	}
+
+	ul ul {
+		display: none;
+		position: absolute;
+		top: 100%;
+
+		li {
+			float: none;
+			position: relative;
+
+			&:hover {
+				background-color: red;
+			}
+		}
+	}
+	
+	ul ul ul {
+		left: 100%; 
+		top:0;
+	}
+
+	ul li:hover > ul {
+		display: block;
+	}
 }
 
-.logo-section {
-   display: table;
-   height: 100%;
-   width: 50%;
-   border: 1px solid red;
+/*Dashboard - Template Selector*/
+.template-preview-container {
+	padding: 100px 10px 20px;
+	background-color: green;
 }
 
-.vertical-text {
-   display: table-cell;
-   vertical-align: middle;
-   text-align: center;
-   border: 1px solid green;
-   }
+.template-select-container {
+	position: relative;
+	width: 90%;
+	margin: 0 auto;
+	padding: 40px 0px;
+}
+
+.pointer {
+	position: absolute;
+	top: 0%;
+	left: 140px;
+	width: 0; 
+	height: 0; 
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 20px solid green;
+}
+
+.template-set {
+	margin: 0 auto;
+	text-align: center;
+	padding: 0px;
+
+	.template-select-container & {
+		text-align: center;
+	}
+}
+
+.template {
+	display: inline-block;
+	position: relative;
+	margin-right: -4px; /*li gap fix*/
+	padding: 5px;
+
+	&:hover {
+		.template-option {
+			top: 5px;
+			height: 230px;
+			opacity: 1
+		}
+	}
+}
+
+.template-option {
+	// display: none;
+	position: absolute;
+	height: 230px;
+	background-color: rgba(0,0,0,0.7);
+	display: table;
+	width: 95%;
+	top: 55px;
+	opacity: 0;
+	@include transition (all 0.5s ease);
+
+	.btn-x {
+		position: absolute;
+		padding: 1px 6px;
+		right: 10px;
+		top: 10px;
+	}
+
+	.button-set {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		button {
+			display: block;
+			margin: 0 auto 5px;
+		}
+	}
+}
+
+.template-info {
+	background-color: gray;
+	position: relative;
+	bottom: 0px;
+	height: 50px;
+	width: 180px;
+	display: table;
+	p {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: left;
+		@include font-size (18px);
+		line-height: 13px;
+		padding: 5px;
+	}
+}

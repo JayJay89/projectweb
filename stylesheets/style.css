@@ -1,35 +1,261 @@
+/*background-size*/
+/*fonts*/
+/*Transition*/
+/*Break Point*/
 /*Using 100% for both html and body will allow the header */
-/* line 2, ../sass/style.scss */
+/* line 4, ../sass/style.scss */
 html, body {
   width: 100%;
   height: 100%;
 }
 
-/* line 7, ../sass/style.scss */
-.intro-header {
-  background: url("../img/landingpagebg.jpg") no-repeat center center scroll;
+/* line 8, ../sass/style.scss */
+a:hover {
+  text-decoration: none;
+}
+
+/*Landing Page*/
+/* line 14, ../sass/style.scss */
+.landing-page .navbar-btn {
+  margin-right: 15px;
+}
+/* line 18, ../sass/style.scss */
+.landing-page .intro-header {
+  background: url("../img/landingpagebg2.jpg") no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   width: 100%;
   height: 100%;
+  display: table;
 }
-
-/* line 15, ../sass/style.scss */
-.logo {
+/* line 26, ../sass/style.scss */
+.landing-page .logo {
   max-width: 50%;
 }
-
-/* line 19, ../sass/style.scss */
-.logo-section {
-  display: table;
-  height: 100%;
-  width: 50%;
-  border: 1px solid red;
-}
-
-/* line 26, ../sass/style.scss */
-.vertical-text {
+/* line 30, ../sass/style.scss */
+.landing-page .vertical-text {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
-  border: 1px solid green;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+
+/*Dashboard*/
+/* line 41, ../sass/style.scss */
+.dashboard-page {
+  /*HEADER*/
+}
+/* line 42, ../sass/style.scss */
+.dashboard-page .side-note {
+  position: fixed;
+  top: 0%;
+  width: 10%;
+  border: 1px solid red;
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+/* line 50, ../sass/style.scss */
+.dashboard-page .top-header {
+  height: 50px;
+  display: table;
+  position: relative;
+  background-color: darkgray;
+  width: 100%;
+}
+/* line 57, ../sass/style.scss */
+.dashboard-page .top-header span {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+/* line 62, ../sass/style.scss */
+.dashboard-page .top-header span img {
+  max-width: 10%;
+}
+/* line 67, ../sass/style.scss */
+.dashboard-page .top-header .btn {
+  position: absolute;
+  right: 20px;
+}
+
+/*Dashboard - DROPDOWN*/
+/* line 75, ../sass/style.scss */
+.dashboard-dropdown {
+  text-align: left;
+  height: 40px;
+  background-color: gray;
+  position: relative;
+  z-index: 9999;
+}
+/* line 82, ../sass/style.scss */
+.dashboard-dropdown .article-dropdown {
+  left: 16%;
+}
+/* line 86, ../sass/style.scss */
+.dashboard-dropdown .tutorial-dropdown {
+  left: 34%;
+}
+/* line 90, ../sass/style.scss */
+.dashboard-dropdown ul {
+  list-style: none;
+  padding: 0px;
+  position: relative;
+  display: inline-table;
+}
+/* line 96, ../sass/style.scss */
+.dashboard-dropdown ul:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+/* line 102, ../sass/style.scss */
+.dashboard-dropdown ul li {
+  background-color: gray;
+  border: 1px solid red;
+  color: white;
+  padding: 10px 20px;
+  float: left;
+  cursor: pointer;
+}
+/* line 109, ../sass/style.scss */
+.dashboard-dropdown ul li:hover {
+  background-color: red;
+}
+/* line 112, ../sass/style.scss */
+.dashboard-dropdown ul li a {
+  color: white;
+}
+/* line 118, ../sass/style.scss */
+.dashboard-dropdown ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+}
+/* line 123, ../sass/style.scss */
+.dashboard-dropdown ul ul li {
+  float: none;
+  position: relative;
+}
+/* line 127, ../sass/style.scss */
+.dashboard-dropdown ul ul li:hover {
+  background-color: red;
+}
+/* line 133, ../sass/style.scss */
+.dashboard-dropdown ul ul ul {
+  left: 100%;
+  top: 0;
+}
+/* line 138, ../sass/style.scss */
+.dashboard-dropdown ul li:hover > ul {
+  display: block;
+}
+
+/*Dashboard - Template Selector*/
+/* line 144, ../sass/style.scss */
+.template-preview-container {
+  padding: 100px 10px 20px;
+  background-color: green;
+}
+
+/* line 149, ../sass/style.scss */
+.template-select-container {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  padding: 40px 0px;
+}
+
+/* line 156, ../sass/style.scss */
+.pointer {
+  position: absolute;
+  top: 0%;
+  left: 140px;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid green;
+}
+
+/* line 167, ../sass/style.scss */
+.template-set {
+  margin: 0 auto;
+  text-align: center;
+  padding: 0px;
+}
+/* line 172, ../sass/style.scss */
+.template-select-container .template-set {
+  text-align: center;
+}
+
+/* line 177, ../sass/style.scss */
+.template {
+  display: inline-block;
+  position: relative;
+  margin-right: -4px;
+  /*li gap fix*/
+  padding: 5px;
+}
+/* line 184, ../sass/style.scss */
+.template:hover .template-option {
+  top: 5px;
+  height: 230px;
+  opacity: 1;
+}
+
+/* line 192, ../sass/style.scss */
+.template-option {
+  position: absolute;
+  height: 230px;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: table;
+  width: 95%;
+  top: 55px;
+  opacity: 0;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+/* line 203, ../sass/style.scss */
+.template-option .btn-x {
+  position: absolute;
+  padding: 1px 6px;
+  right: 10px;
+  top: 10px;
+}
+/* line 210, ../sass/style.scss */
+.template-option .button-set {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+/* line 214, ../sass/style.scss */
+.template-option .button-set button {
+  display: block;
+  margin: 0 auto 5px;
+}
+
+/* line 221, ../sass/style.scss */
+.template-info {
+  background-color: gray;
+  position: relative;
+  bottom: 0px;
+  height: 50px;
+  width: 180px;
+  display: table;
+}
+/* line 228, ../sass/style.scss */
+.template-info p {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: left;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 13px;
+  padding: 5px;
 }
