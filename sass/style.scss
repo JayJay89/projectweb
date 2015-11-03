@@ -8,7 +8,22 @@ html, body {
 a:hover{
 	text-decoration: none;
 }
-/*Landing Page*/
+
+section {
+	padding: 100px 0px;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+/*===========================================
+Landing Page
+===========================================*/
 .landing-page {
 
 	.navbar-btn {
@@ -36,8 +51,9 @@ a:hover{
 		color: white;
 	}
 }
-
-/*Dashboard*/
+/*===========================================
+Dashboard 
+===========================================*/
 .dashboard-page {
 	.side-note {
 		position: fixed;
@@ -70,8 +86,9 @@ a:hover{
 		}
 	}
 }
-
-/*Dashboard - DROPDOWN*/
+/*===========================================
+Dashboard - Dropdown
+===========================================*/
 .dashboard-dropdown {
 	text-align: left;
 	height: 40px;
@@ -139,8 +156,9 @@ a:hover{
 		display: block;
 	}
 }
-
-/*Dashboard - Template Selector*/
+/*===========================================
+Dashboard - Template Selector
+===========================================*/
 .template-preview-container {
 	padding: 100px 10px 20px;
 	background-color: green;
@@ -153,7 +171,7 @@ a:hover{
 	padding: 40px 0px;
 }
 
-.pointer {
+.template-pointer {
 	position: absolute;
 	top: 0%;
 	left: 140px;
@@ -232,5 +250,265 @@ a:hover{
 		@include font-size (18px);
 		line-height: 13px;
 		padding: 5px;
+	}
+}
+
+/*===========================================
+Dashboard - Modal
+===========================================*/
+.modal-section {
+	background-color: green;
+	height: 400px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/*
+	can't use display table-cell. This would stretch a across the screen and clicking on the section would call the modal
+	Flex is used instead. But note that it isn't supported in IE 8 and 9. It's partially supported in IE
+	*/
+	a {
+		color: white;
+		@include font-size (50px);
+	}
+}
+
+.modalDialog {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity: 0;
+    @include transition (opacity 0.2s ease-in);
+    /* 	Note that Pointer Events aren't supported in IE8, 9, 10 */
+    pointer-events: none;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.modalDialog:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modalDialog  {
+	& > div {
+		width: 400px;
+		position: relative;
+		padding: 5px 20px 13px 20px;
+		border-radius: 10px;
+		margin: 0px 20px;
+		background: #fff;
+
+		.close {
+			position: absolute;
+		    background: #606061;
+		    color: #FFFFFF;
+		    line-height: 24px;
+		    right: -12px;
+		    text-align: center;
+		    top: -10px;
+		    width: 24px;
+		    font-weight: normal;
+		    @include border-radius (12px);
+		    @include font-size (24px);
+		    opacity: 1.0;
+
+		    &:hover {
+		    	background: #00d9ff;
+		    }
+		}
+	}
+}
+
+.modal-button-set {
+	display: table;
+	margin: 10px 0px;
+	.btn {
+		display: table-cell;
+		border-radius: 0px;
+	}
+
+}
+.modal-right-side {
+	width: 224px;
+	margin-left: 75px;
+
+	p {
+		text-align: center;
+		margin-bottom: 0px;
+		background-color: green;
+		color: white;
+		border-radius: 6px;
+	}
+}
+.modal-line-pointer {
+	border-left: 2px solid gray;
+	border-right: 2px solid gray;
+	height: 10px;
+	position: relative;
+
+	.hr {
+		height: 1px;
+		width: 100%;
+		background-color: gray;
+		position: absolute;
+		top: 4px;
+	}
+}
+/*===========================================
+Dashboard - Tab
+===========================================*/
+.tabs-section  {
+	height: 600px;
+	width: 100%;
+	background-color: white;
+	display: table;
+}
+
+.tab-set {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+
+	.tab-header {
+		background-color: violet;
+	}
+
+	ul {
+		list-style: none;
+		display: inline-block;
+		padding: 0;
+		margin-right: 10px
+	}
+
+	li {
+		border-bottom: 1px solid gray;
+		width: 200px;
+		height: 60px;
+		padding: 0px 10px;
+		display: table;
+		@include font-size (20px);
+	}
+
+	span {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	.column1 {
+		text-align: right;
+
+		li {
+			border-bottom: 2px solid green;
+		}
+	}
+
+	.column2 {
+
+		li:not(.tab-header) {
+			background-color: yellow;
+			
+			&:nth-child(odd){
+				background-color: orange;
+			}
+		}
+	}
+
+	.column3 {
+
+		li:not(.tab-header) {
+			background-color: aquamarine;
+
+			&:nth-child(odd) {
+				background-color: lightblue;
+			}
+		}
+	}
+
+}
+/*===========================================
+Dashboard - Form
+===========================================*/
+.forms-section  {
+	height: auto;
+	width: 100%;
+	background-color: lightgreen;
+	display: table;
+
+	.section-container {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	.input-container {
+		> label {
+			text-align: right;
+			padding-right: 20px;
+		}
+	}
+}
+
+.forms-set {
+	width: 80%;
+	margin: 0 auto;
+	> div {
+		border-bottom: 1px solid red;
+		padding: 10px 0px;
+		&:first-child {
+			border-top: 1px solid red;
+		}
+	}
+	.input-container {
+		margin-bottom: 5px;
+	}
+
+	label {
+		width: 25%;
+		float: left;
+		@include font-size (30px);
+		/*This and label + div needs to have same height*/
+	}
+
+	label + div {
+		width: 75%;
+		float: right;
+		line-height: 25px;
+	}
+	
+}
+
+.input-text {
+	input {
+		width: 100%;
+	}
+	textarea {
+		width: 100%;
+		resize: none;
+	}
+}
+
+.input-radio {
+	.multi-choice {
+		text-align: center;
+		input {
+			margin-right: 10px;
+		}
+		label {
+			float: none;
+			margin-right: 5px;
+			width: auto;
+		}
+	}
+}
+
+.input-select {
+	label + div > select {
+		@include font-size(30px);
+		vertical-align: -2px;
 	}
 }

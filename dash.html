@@ -7,8 +7,10 @@
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <title>Enrico</title>
         <!-- Bootstrap -->
+        <link href="stylesheets/reset.css" rel="stylesheet">
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="stylesheets/style.css" rel="stylesheet">
+
         <style>
         </style>
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -62,7 +64,7 @@
         </nav>
 
         <!--Content-->
-        <div class="row">
+        <section class="template-section">
             <div class="template-container">
                 <div class="template-preview-container">
 
@@ -75,7 +77,7 @@
                 </div>
 
                 <div class="template-select-container">
-                    <div class="pointer"></div>
+                    <div class="template-pointer"></div>
                     <ul class="template-set">
                         <li class="template">
                             <img src="http://placehold.it/180x230" alt="">
@@ -192,7 +194,163 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <section class="modal-section">
+            <a href="#openModal">Open Modal</a>
+
+            <div id="openModal" class="modalDialog">
+                <div>
+                    <a href="#close" title="Close" class="close">x</a>
+                    <h2>Modal Box</h2>
+                    <div class="modal-button-set">
+                        <div class="modal-right-side">
+                            <p>Awesome buttons</p>
+                            <div class="modal-line-pointer">
+                                <div class="hr"></div>
+                            </div>
+                        </div>
+                        <button class="btn btn-default">button1</button>
+                        <button class="btn btn-default">button2</button>
+                        <button class="btn btn-default">button3</button>
+                        <button class="btn btn-default">button4</button>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam nisi explicabo quos, reprehenderit eveniet, magni iste laudantium, nemo rem veritatis aspernatur sit mollitia doloremque natus quas? Ea ipsa assumenda, fugit, excepturi tenetur molestias voluptatibus amet ducimus similique minima commodi quibusdam, debitis explicabo vel. Porro, tempora beatae esse fuga nobis explicabo!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="tabs-section">
+            <div class="tab-set">
+                <ul class="column1">
+                    <li class="tab-header"><h1>Header</h1></li>
+                    <li><span>Lorem ipsum.</span></li>
+                    <li><span>Lorem ipsum dolor..</span></li>
+                    <li><span>Lorem ipsum dolor. ipsum.</span></li>
+                    <li><span>Lorem ipsum.</span></li>
+                    <li><span>Lorem ipsum dolor..</span></li>
+                    <li><span>Lorem ipsum dolor. ipsum.</span></li>
+                </ul>
+                <ul class="column2">
+                    <li class="tab-header"><h1>Header</h1></li>
+                    <li><span>Lorem ipsum.</span></li>
+                    <li><span>Lorem ipsum dolor..</span></li>
+                    <li><span>Lorem ipsum dolor sit amet. ipsum dolor. ipsum.</span></li>
+                    <li><span>Lorem ipsum.</span></li>
+                    <li><span>Lorem ipsum dolor..</span></li>
+                    <li><span>Lorem ipsum dolor sit amet. ipsum dolor. ipsum.</span></li>
+                </ul>
+                <ul class="column3">
+                    <li class="tab-header"><h1>Header</h1></li>
+                    <li><span>Lorem ipsum.</span></li>
+                    <li><span>Lorem ipsum dolor..</span></li>
+                    <li><span>Lorem ipsum dolor sit amet, consectetur. ipsum dolor. ipsum.</span></li>
+                    <li><span>Lorem ipsum.</span></li>
+                    <li><span>Lorem ipsum dolor..</span></li>
+                    <li><span>Lorem ipsum dolor sit amet. ipsum dolor. ipsum.</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="forms-section">
+        <!-- http://codepen.io/chriscoyier/pen/DmnlJ -->
+            <div class="section-container">
+                <div class="forms-set">
+
+                    <div class="input-text">
+                        <div class="input-container clearfix">
+                            <label>Full Name</label>
+                            <div>
+                                <input type="text" value="name">
+                            </div>
+                        </div>
+                        <div class="input-container clearfix">
+                            <label>Age</label>
+                            <div>
+                                <input type="text" value="age">
+                            </div>
+                        </div>
+                        <div class="input-container clearfix">
+                            <label>Message</label>
+                            <div>
+                                <textarea name="message" id="" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-radio">
+                        <div class="input-container clearfix">
+                            <label>Choice 1</label>
+                            <div>
+                                <input type="radio" value="choice 1" name="choices">
+                            </div>
+                        </div>
+
+                        <div class="input-container clearfix">
+                            <label>Choice 2</label>
+                            <div>
+                                <input type="radio" value="choice 1" name="choices">
+                            </div>
+                        </div>
+
+                        <div class="input-container clearfix">
+                            <label>Choice 3</label>
+                            <div>
+                                <input type="radio" value="choice 1" name="choices">
+                            </div>
+                        </div>
+
+
+                        <div class="input-container clearfix">
+                            <label>Choice 4</label>
+                            <div class="multi-choice">
+                                <label>Choice A</label>
+                                <input type="radio" value="choice A" name="multi-choice">
+                                <label>Choice B</label>
+                                <input type="radio" value="choice B" name="multi-choice" checked>
+                                <label>Choice C</label>
+                                <input type="radio" value="choice C" name="multi-choice">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-checkbox">
+                        <div class="input-container clearfix">
+                            <label>Full Name</label>
+                            <div>
+                                <input type="checkbox" value="name">
+                            </div>
+                        </div>
+                        <div class="input-container clearfix">
+                            <label>Age</label>
+                            <div>
+                                <input type="checkbox" value="age">
+                            </div>
+                        </div>
+                        <div class="input-container clearfix">
+                            <label>Age</label>
+                            <div>
+                                <input type="checkbox" value="age">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-select">
+                        <div class="input-container clearfix">
+                            <label>Select</label>
+                            <div>
+                                <select name="Choices" id="">
+                                    <option value="choice1">Choice1</option>
+                                    <option value="choice2">Choice2</option>
+                                    <option value="choice3">Choice3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+
+        </section>
 
         <!--Side Affixed-->
         <div class="side-note">
