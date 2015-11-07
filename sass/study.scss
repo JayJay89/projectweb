@@ -1,0 +1,116 @@
+@import "all";
+
+body {
+	padding-top: 100px;
+}
+
+.container {
+	width: 100%;
+	padding: 50px 100px;
+	// @include redbor;
+}
+
+.footer {
+    width: 100%;
+    height: 60px;
+    background-color: $wetasphalt;
+    display: table;
+
+    p {
+    	display: table-cell;
+    	vertical-align: middle;
+    	text-align: center;
+    }
+}
+
+section {
+	padding: 50px 0px;
+	margin: 50px 0px;
+	border: 1px solid black;
+	border-width: 2px 0px 2px 0px;
+}
+
+/*=========================================================
+CONTENTS
+=========================================================*/
+
+/* Hide Things with CSS */
+.study-hide-css {
+	> div {
+		position: relative;
+		
+		&:nth-child(odd) {
+			background-color: #e5e5e5;
+		}
+
+		a {
+			display: block;
+		}
+	}
+
+	table, tr, th, td {
+		border: 1px solid black;
+		background-color: white;
+		padding: 5px;
+	}
+
+	.toggle {
+		margin-bottom: 20px;
+	}
+
+	.content-display {
+		border: 1px solid red;
+		padding: 20px 50px;
+		margin-bottom: 20px;
+		display: block;
+
+		&.display-none {
+			border: 1px solid blue;
+			display: none;
+		}
+	}
+	
+	.content-opacity {
+		border: 1px solid red;
+		background-color: lightyellow;
+		padding: 20px 50px;
+		margin-bottom: 20px;	
+		opacity: 1;
+		position: absolute;
+		/*Activate visibility to the link behind it clickable*/
+		// visibility: visible;
+		@include transition (all 0.2s);
+
+		+ a {
+			border: 1px solid red;
+			bottom: 40px;
+		}
+
+		&.zero-opacity {
+			border: 1px solid blue;
+			opacity: 0;
+			// visibility: hidden;
+		}
+	}
+
+	.content-dropdown {
+		border: 1px solid red;
+		padding: 20px 50px;
+		margin-bottom: 20px;
+		height: 100px;
+		visibility: visible;
+		opacity: 1;
+		position: absolute;
+		background-color: lightblue;
+		@include transition (all 0.2s);
+
+		&.collapse-down {
+			// border: none;
+			border: 1px solid red;
+			padding: 0px 50px;
+			height: 0px;
+			visibility: none;
+			opacity: 0;
+		}
+	}
+}

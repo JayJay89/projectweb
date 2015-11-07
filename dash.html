@@ -9,7 +9,7 @@
         <!-- Bootstrap -->
         <link href="stylesheets/reset.css" rel="stylesheet">
         <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="stylesheets/style.css" rel="stylesheet">
+        <link href="stylesheets/dashboard.css" rel="stylesheet">
 
         <style>
         </style>
@@ -23,21 +23,23 @@
     <body class="dashboard-page">
         <!--HEADER-->
         <header class="top-header">
-            <span>
+            <div class="clearfix">
                 <img class="logo" src="img/logo2.png" alt="logo">
-            </span>
-            <a href="index.html" type="button" class="btn btn-default navbar-btn">Log Out</a>
+                <a href="index.html" type="button" class="btn btn-default">Log Out</a>
+            </div>
+
         </header>
 
         <!--Dropdown-->
         <nav class="dashboard-dropdown">
-            <ul class="drop-one">
+            <ul class="drop-level-one">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Articles</a>
-                    <ul class="article-dropdown">
+                <li>
+                    <a href="#">Articles</a>
+                    <ul class="drop-level-two article-dropdown">
                         <li><a href="#">Article 1</a></li>
                         <li><a href="#">Article 2</a>
-                            <ul class="drop-three">
+                            <ul class="drop-level-three">
                                 <li><a href="#">Article 2a</a></li>
                                 <li><a href="#">Article 2b</a></li>
                                 <li><a href="#">Article 2c</a></li>
@@ -45,11 +47,12 @@
                         </li>
                     </ul>
                 </li>
-                <li><a href="#">Tutorials</a>
-                    <ul class="tutorial-dropdown">
+                <li>
+                    <a href="#">Tutorials</a>
+                    <ul class="drop-level-two tutorial-dropdown">
                         <li><a href="#">Tutorial 1</a></li>
                         <li><a href="#">Tutorial 2</a>
-                            <ul class="drop-three">
+                            <ul class="drop-level-three">
                                 <li><a href="#">Tutorial 2a</a></li>
                                 <li><a href="#">Tutorial 2b</a></li>
                                 <li><a href="#">Tutorial 2c</a></li>
@@ -69,18 +72,19 @@
                 <div class="template-preview-container">
 
                     <ul class="template-set">
-                        <li class="template"><img src="http://placehold.it/150x200" alt=""></li>
-                        <li class="template"><img src="http://placehold.it/150x200" alt=""></li>
-                        <li class="template"><img src="http://placehold.it/150x200" alt=""></li>
-                        <li class="template"><img src="http://placehold.it/150x200" alt=""></li>
+                        <li class="template"><img class="img-responsive" src="http://placehold.it/180x230" alt=""></li>
+                        <li class="template"><img class="img-responsive" src="http://placehold.it/180x230" alt=""></li>
+                        <li class="template"><img class="img-responsive" src="http://placehold.it/180x230" alt=""></li>
+                        <li class="template"><img class="img-responsive" src="http://placehold.it/180x230" alt=""></li>
                     </ul>
                 </div>
 
                 <div class="template-select-container">
                     <div class="template-pointer"></div>
                     <ul class="template-set">
+
                         <li class="template">
-                            <img src="http://placehold.it/180x230" alt="">
+                            <img class="img-responsive" src="http://placehold.it/225x300" alt="">
                             <div class="template-option">
                                 <button class="btn btn-default btn-x">X</button>
                                 <div class="button-set">
@@ -94,7 +98,7 @@
                             </div>
                         </li>
                         <li class="template">
-                            <img src="http://placehold.it/180x230" alt="">
+                            <img class="img-responsive" src="http://placehold.it/225x300" alt="">
                             <div class="template-option">
                                 <button class="btn btn-default btn-x">X</button>
                                 <div class="button-set">
@@ -108,7 +112,7 @@
                             </div>
                         </li>
                         <li class="template">
-                            <img src="http://placehold.it/180x230" alt="">
+                            <img class="img-responsive" src="http://placehold.it/225x300" alt="">
                             <div class="template-option">
                                 <button class="btn btn-default btn-x">X</button>
                                 <div class="button-set">
@@ -122,7 +126,7 @@
                             </div>
                         </li>
                         <li class="template">
-                            <img src="http://placehold.it/180x230" alt="">
+                            <img class="img-responsive" src="http://placehold.it/225x300" alt="">
                             <div class="template-option">
                                 <button class="btn btn-default btn-x">X</button>
                                 <div class="button-set">
@@ -136,7 +140,7 @@
                             </div>
                         </li>
                         <li class="template">
-                            <img src="http://placehold.it/180x230" alt="">
+                            <img class="img-responsive" src="http://placehold.it/225x300" alt="">
                             <div class="template-option">
                                 <button class="btn btn-default btn-x">X</button>
                                 <div class="button-set">
@@ -150,7 +154,7 @@
                             </div>
                         </li>
                         <li class="template">
-                            <img src="http://placehold.it/180x230" alt="">
+                            <img class="img-responsive" src="http://placehold.it/225x300" alt="">
                             <div class="template-option">
                                 <button class="btn btn-default btn-x">X</button>
                                 <div class="button-set">
@@ -164,7 +168,7 @@
                             </div>
                         </li>
                         <li class="template">
-                            <img src="http://placehold.it/180x230" alt="">
+                            <img class="img-responsive" src="http://placehold.it/225x300" alt="">
                             <div class="template-option">
                                 <button class="btn btn-default btn-x">X</button>
                                 <div class="button-set">
@@ -178,7 +182,7 @@
                             </div>
                         </li>
                         <li class="template">
-                            <img src="http://placehold.it/180x230" alt="">
+                            <img class="img-responsive" src="http://placehold.it/225x300" alt="">
                             <div class="template-option">
                                 <button class="btn btn-default btn-x">X</button>
                                 <div class="button-set">
@@ -223,37 +227,73 @@
         <section class="tabs-section">
             <div class="tab-set">
                 <ul class="column1">
-                    <li class="tab-header"><h1>Header</h1></li>
-                    <li><span>Lorem ipsum.</span></li>
-                    <li><span>Lorem ipsum dolor..</span></li>
-                    <li><span>Lorem ipsum dolor. ipsum.</span></li>
-                    <li><span>Lorem ipsum.</span></li>
-                    <li><span>Lorem ipsum dolor..</span></li>
-                    <li><span>Lorem ipsum dolor. ipsum.</span></li>
+                    <li class="tab-header"><h3>Categories</h3></li>
+                    <li><span>Category 1</span></li>
+                    <li><span>Category 2</span></li>
+                    <li><span>Category 3</span></li>
+                    <li><span>Category 4</span></li>
+                    <li><span>Category 5</span></li>
+                    <li><span>Category 6</span></li>
                 </ul>
                 <ul class="column2">
-                    <li class="tab-header"><h1>Header</h1></li>
-                    <li><span>Lorem ipsum.</span></li>
-                    <li><span>Lorem ipsum dolor..</span></li>
-                    <li><span>Lorem ipsum dolor sit amet. ipsum dolor. ipsum.</span></li>
-                    <li><span>Lorem ipsum.</span></li>
-                    <li><span>Lorem ipsum dolor..</span></li>
-                    <li><span>Lorem ipsum dolor sit amet. ipsum dolor. ipsum.</span></li>
+                    <li class="tab-header"><h3>Lite</h3></li>
+                    <li>
+                        <span>Category 1</span>
+                        <span>Lorem ipsum.</span>
+                    </li>
+                    <li>
+                        <span>Category 2</span>
+                        <span>Lorem ipsum dolor..</span>
+                    </li>
+                    <li>
+                        <span>Category 3</span>
+                        <span>Lorem ipsum dolor sit amet. ipsum dolor. ipsum.</span>
+                    </li>
+                    <li>
+                        <span>Category 4</span>
+                        <span>Lorem ipsum.</span>
+                    </li>
+                    <li>
+                        <span>Category 5</span>
+                        <span>Lorem ipsum dolor..</span>
+                    </li>
+                    <li>
+                        <span>Category 6</span>
+                        <span>Lorem ipsum dolor sit amet. ipsum dolor. ipsum.</span>
+                    </li>
                 </ul>
                 <ul class="column3">
-                    <li class="tab-header"><h1>Header</h1></li>
-                    <li><span>Lorem ipsum.</span></li>
-                    <li><span>Lorem ipsum dolor..</span></li>
-                    <li><span>Lorem ipsum dolor sit amet, consectetur. ipsum dolor. ipsum.</span></li>
-                    <li><span>Lorem ipsum.</span></li>
-                    <li><span>Lorem ipsum dolor..</span></li>
-                    <li><span>Lorem ipsum dolor sit amet. ipsum dolor. ipsum.</span></li>
+                    <li class="tab-header"><h3>Pro</h3></li>
+                    <li>
+                        <span>Category 1</span>
+                        <span>Lorem ipsum.</span>
+                    </li>
+                    <li>
+                        <span>Category 2</span>
+                        <span>Lorem ipsum dolor..</span>
+                    </li>
+                    <li>
+                        <span>Category 3</span>
+                        <span>Lorem ipsum dolor sit amet, consectetur.</span>
+                    </li>
+                    <li>
+                        <span>Category 4</span>
+                        <span>Lorem ipsum.</span>
+                    </li>
+                    <li>
+                        <span>Category 5</span>
+                        <span>Lorem ipsum dolor..</span>
+                    </li>
+                    <li>
+                        <span>Category 6</span>
+                        <span>Lorem ipsum dolor sit amet. ipsum dolor. ipsum.</span>
+                    </li>
                 </ul>
             </div>
         </section>
 
         <section class="forms-section">
-        <!-- http://codepen.io/chriscoyier/pen/DmnlJ -->
+        <!-- Reference: http://codepen.io/chriscoyier/pen/DmnlJ -->
             <div class="section-container">
                 <div class="forms-set">
 

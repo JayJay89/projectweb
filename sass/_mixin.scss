@@ -1,3 +1,45 @@
+/*Material Design Colors*/
+$turquoise:#1ABC9C;
+$greensea:#16A085;
+$emerald:#2ECC71;
+$nephritis:#27AE60;
+
+$peterriver:#3498DB;
+$belizehole:#2980B9;
+
+$amethyst:#9B59B6;
+$wisteria:#8E44AD;
+
+$sunflower:#F1C40F;
+$orange:#F39C12;
+
+$carrot:#E67E22;
+$pumpkin:#D35400;
+
+$alizarin:#E74C3C;
+$pomegranate:#C0392B;
+
+$clouds:#ECF0F1;
+$silver:#BDC3C7;
+$concrete:#95A5A6;
+$asbestos:#7F8C8D;
+$wetasphalt:#34495E;
+$midnightblue:#2C3E50;
+
+/*quick border*/
+@mixin redbor {
+  border: 1px red solid;
+}
+
+/*clear fixes*/
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
 
 /*background-size*/
 @mixin background-size ($type){
@@ -11,6 +53,13 @@
   -webkit-border-radius: $value;
   -moz-border-radius: $value;
   border-radius: $value;
+}
+
+@mixin fill() {
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
 }
 /*fonts*/
 

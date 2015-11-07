@@ -1,0 +1,817 @@
+/*Material Design Colors*/
+/*quick border*/
+/*clear fixes*/
+/* line 35, ../sass/_mixin.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+/* line 40, ../sass/_mixin.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/*background-size*/
+/*fonts*/
+/*Transition*/
+/*Break Point*/
+/*Using 100% for both html and body will allow the header to stretch 100% as well*/
+/* line 4, ../sass/dashboard.scss */
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 8, ../sass/dashboard.scss */
+a:hover {
+  text-decoration: none;
+}
+
+/* line 11, ../sass/dashboard.scss */
+section {
+  padding: 20px 0px;
+}
+
+/*
+	Bootstrap adds margin to ul
+	This is to overwrite them all
+*/
+/* line 19, ../sass/dashboard.scss */
+ul {
+  margin: 0px;
+}
+
+/* line 22, ../sass/dashboard.scss */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0px;
+}
+
+/* line 25, ../sass/dashboard.scss */
+label {
+  margin: 0px;
+}
+
+/*===========================================
+Landing Page
+===========================================*/
+/* line 33, ../sass/dashboard.scss */
+.landing-page .navbar-btn {
+  margin-right: 15px;
+}
+/* line 37, ../sass/dashboard.scss */
+.landing-page .intro-header {
+  background: url("../img/landingpagebg2.jpg") no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  display: table;
+}
+/* line 45, ../sass/dashboard.scss */
+.landing-page .logo {
+  max-width: 50%;
+}
+/* line 49, ../sass/dashboard.scss */
+.landing-page .vertical-text {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+
+/*===========================================
+Dashboard 
+===========================================*/
+/* line 62, ../sass/dashboard.scss */
+.dashboard-page .side-note {
+  position: fixed;
+  top: 0%;
+  width: 10%;
+  border: 1px solid red;
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+/* line 70, ../sass/dashboard.scss */
+.dashboard-page .top-header {
+  height: 50px;
+  display: table;
+  position: relative;
+  background-color: darkgray;
+  width: 100%;
+}
+/* line 77, ../sass/dashboard.scss */
+.dashboard-page .top-header > div {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+}
+/* line 84, ../sass/dashboard.scss */
+.dashboard-page .top-header img {
+  max-width: 100px;
+  vertical-align: middle;
+}
+/* line 89, ../sass/dashboard.scss */
+.dashboard-page .top-header .btn {
+  position: absolute;
+  right: 5px;
+}
+
+/*===========================================
+Dashboard - Dropdown
+===========================================*/
+/* line 98, ../sass/dashboard.scss */
+.dashboard-dropdown {
+  text-align: left;
+  background-color: gray;
+  position: relative;
+  z-index: 9999;
+}
+@media screen and (min-width: 768px) {
+  /* line 98, ../sass/dashboard.scss */
+  .dashboard-dropdown {
+    height: 40px;
+  }
+}
+/* line 108, ../sass/dashboard.scss */
+.dashboard-dropdown ul {
+  list-style: none;
+  padding: 0px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+/* line 115, ../sass/dashboard.scss */
+.dashboard-dropdown ul:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+/* line 121, ../sass/dashboard.scss */
+.dashboard-dropdown ul li {
+  background-color: #555858;
+  color: white;
+  cursor: pointer;
+  padding: 5px 0px;
+  width: 100%;
+  float: left;
+  font-size: 25px;
+  font-size: 1.5625rem;
+  border: 1px red solid;
+}
+/* line 131, ../sass/dashboard.scss */
+.dashboard-dropdown ul li:hover {
+  background-color: red;
+}
+/* line 135, ../sass/dashboard.scss */
+.dashboard-dropdown ul li a {
+  color: white;
+}
+@media screen and (min-width: 500px) {
+  /* line 121, ../sass/dashboard.scss */
+  .dashboard-dropdown ul li {
+    width: 50%;
+    display: inline-block;
+    padding: 10px 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* line 121, ../sass/dashboard.scss */
+  .dashboard-dropdown ul li {
+    border: 1px solid blue;
+    float: left;
+    width: 110px;
+    font-size: 20px;
+    font-size: 1.25rem;
+    display: block;
+  }
+}
+/* line 155, ../sass/dashboard.scss */
+.dashboard-dropdown ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+}
+/* line 160, ../sass/dashboard.scss */
+.dashboard-dropdown ul ul li {
+  background-color: #333534;
+  width: 50%;
+  position: relative;
+  float: none;
+}
+@media screen and (min-width: 768px) {
+  /* line 160, ../sass/dashboard.scss */
+  .dashboard-dropdown ul ul li {
+    width: 110px;
+  }
+}
+/* line 170, ../sass/dashboard.scss */
+.dashboard-dropdown ul ul li:hover {
+  background-color: green;
+}
+@media screen and (min-width: 500px) {
+  /* line 176, ../sass/dashboard.scss */
+  .dashboard-dropdown ul ul.article-dropdown, .dashboard-dropdown ul ul.tutorial-dropdown {
+    left: -25%;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* line 184, ../sass/dashboard.scss */
+  .dashboard-dropdown ul ul.article-dropdown {
+    left: 110px;
+  }
+  /* line 188, ../sass/dashboard.scss */
+  .dashboard-dropdown ul ul.tutorial-dropdown {
+    left: 220px;
+  }
+}
+/* line 195, ../sass/dashboard.scss */
+.dashboard-dropdown ul ul ul {
+  left: 100%;
+  top: 0;
+}
+/* line 199, ../sass/dashboard.scss */
+.dashboard-dropdown ul ul ul li {
+  background-color: #111111;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  /* line 199, ../sass/dashboard.scss */
+  .dashboard-dropdown ul ul ul li {
+    float: none;
+    width: 110px;
+  }
+}
+/* line 208, ../sass/dashboard.scss */
+.dashboard-dropdown ul ul ul li:hover {
+  background-color: yellow;
+}
+/* line 214, ../sass/dashboard.scss */
+.dashboard-dropdown ul li:hover > ul {
+  display: block;
+}
+
+/*===========================================
+Dashboard - Template Selector
+===========================================*/
+/* line 221, ../sass/dashboard.scss */
+.template-preview-container {
+  padding: 100px 10px 20px;
+  background-color: green;
+}
+/* line 225, ../sass/dashboard.scss */
+.template-preview-container img {
+  display: inline-block;
+}
+
+/* line 230, ../sass/dashboard.scss */
+.template-select-container {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  padding: 40px 0px;
+}
+
+/* line 237, ../sass/dashboard.scss */
+.template-pointer {
+  position: absolute;
+  top: 0%;
+  left: 140px;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid green;
+}
+
+/* line 248, ../sass/dashboard.scss */
+.template-set {
+  text-align: center;
+  padding: 0px;
+}
+/* line 252, ../sass/dashboard.scss */
+.template-select-container .template-set {
+  text-align: center;
+}
+
+/* line 257, ../sass/dashboard.scss */
+.template {
+  display: inline-block;
+  position: relative;
+  margin: 5px;
+  max-width: 225px;
+  max-height: 300px;
+}
+@media screen and (min-width: 768px) {
+  /* line 257, ../sass/dashboard.scss */
+  .template {
+    width: 25%;
+  }
+}
+/* line 268, ../sass/dashboard.scss */
+.template:hover .template-option {
+  opacity: 1;
+  visibility: visible;
+  top: 0px;
+}
+/* line 273, ../sass/dashboard.scss */
+.template:hover .template-option .button-set {
+  margin: 35% 0% 25%;
+}
+@media screen and (min-width: 768px) {
+  /* line 273, ../sass/dashboard.scss */
+  .template:hover .template-option .button-set {
+    margin: 40% 0%;
+  }
+}
+/* line 283, ../sass/dashboard.scss */
+.template-preview-container .template {
+  width: 45%;
+  padding: 10px;
+  max-width: 225px;
+  max-height: 300px;
+}
+
+/* line 291, ../sass/dashboard.scss */
+.template-option {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  -moz-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+@media screen and (min-width: 768px) {
+  /* line 291, ../sass/dashboard.scss */
+  .template-option {
+    top: 45%;
+  }
+}
+/* line 303, ../sass/dashboard.scss */
+.template-option .btn-x {
+  position: absolute;
+  padding: 1px 6px;
+  right: 10px;
+  top: 10px;
+}
+/* line 310, ../sass/dashboard.scss */
+.template-option .button-set {
+  margin: 15% 0% 0% 0%;
+  -moz-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+/* line 315, ../sass/dashboard.scss */
+.template-option .button-set .btn {
+  display: block;
+  margin: 0 auto 5px;
+  padding: 10px 30px;
+  width: 130px;
+  font-size: 25px;
+  font-size: 1.5625rem;
+}
+@media screen and (min-width: 768px) {
+  /* line 315, ../sass/dashboard.scss */
+  .template-option .button-set .btn {
+    padding: 3px 6px;
+    width: 80px;
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+}
+
+/* line 331, ../sass/dashboard.scss */
+.template-info {
+  background-color: gray;
+  position: absolute;
+  bottom: 0px;
+}
+/* line 336, ../sass/dashboard.scss */
+.template-info p {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: left;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 13px;
+  padding: 10px;
+  color: white;
+}
+
+/*===========================================
+Dashboard - Modal
+===========================================*/
+/* line 350, ../sass/dashboard.scss */
+.modal-section {
+  background-color: green;
+  height: 400px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*
+  can't use display table-cell. This would stretch a across the screen and clicking on the section would call the modal
+  Flex is used instead. But note that it isn't supported in IE 8 and 9. It's partially supported in IE
+  */
+}
+/* line 361, ../sass/dashboard.scss */
+.modal-section a {
+  color: white;
+  font-size: 50px;
+  font-size: 3.125rem;
+}
+
+/* line 367, ../sass/dashboard.scss */
+.modalDialog {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  opacity: 0;
+  -moz-transition: opacity 0.2s ease-in;
+  -o-transition: opacity 0.2s ease-in;
+  -webkit-transition: opacity 0.2s ease-in;
+  transition: opacity 0.2s ease-in;
+  /* 	Note that Pointer Events aren't supported in IE8, 9, 10 */
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 384, ../sass/dashboard.scss */
+.modalDialog:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* line 391, ../sass/dashboard.scss */
+.modalDialog > div {
+  min-width: 280px;
+  max-width: 400px;
+  position: relative;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 0px 20px;
+  background: #fff;
+}
+/* line 401, ../sass/dashboard.scss */
+.modalDialog > div .close {
+  position: absolute;
+  background: #606061;
+  color: #FFFFFF;
+  line-height: 24px;
+  right: -12px;
+  text-align: center;
+  top: -10px;
+  width: 24px;
+  font-weight: normal;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  font-size: 24px;
+  font-size: 1.5rem;
+  opacity: 1.0;
+}
+/* line 415, ../sass/dashboard.scss */
+.modalDialog > div .close:hover {
+  background: #00d9ff;
+}
+
+/* line 422, ../sass/dashboard.scss */
+.modal-button-set {
+  display: table;
+  margin: 10px 0px;
+}
+/* line 426, ../sass/dashboard.scss */
+.modal-button-set .btn {
+  display: table-cell;
+  border-radius: 0px;
+}
+@media screen and (max-width: 450px) {
+  /* line 426, ../sass/dashboard.scss */
+  .modal-button-set .btn {
+    padding: 5px;
+  }
+}
+
+/* line 436, ../sass/dashboard.scss */
+.modal-right-side {
+  width: 224px;
+  margin-left: 75px;
+}
+@media screen and (max-width: 450px) {
+  /* line 436, ../sass/dashboard.scss */
+  .modal-right-side {
+    width: 183px;
+    margin-left: 60px;
+  }
+}
+/* line 443, ../sass/dashboard.scss */
+.modal-right-side p {
+  text-align: center;
+  margin-bottom: 0px;
+  background-color: green;
+  color: white;
+  border-radius: 6px;
+}
+
+/* line 451, ../sass/dashboard.scss */
+.modal-line-pointer {
+  border-left: 2px solid gray;
+  border-right: 2px solid gray;
+  height: 10px;
+  position: relative;
+}
+/* line 457, ../sass/dashboard.scss */
+.modal-line-pointer .hr {
+  height: 1px;
+  width: 100%;
+  background-color: gray;
+  position: absolute;
+  top: 4px;
+}
+
+/*===========================================
+Dashboard - Tab
+===========================================*/
+/* line 468, ../sass/dashboard.scss */
+.tabs-section {
+  width: 100%;
+  background-color: white;
+  display: table;
+}
+
+/* line 474, ../sass/dashboard.scss */
+.tab-set {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+/* line 479, ../sass/dashboard.scss */
+.tab-set .tab-header {
+  background-color: violet;
+  padding: 20px 10px;
+}
+/* line 484, ../sass/dashboard.scss */
+.tab-set ul {
+  list-style: none;
+  display: inline-block;
+  padding: 0;
+  margin-right: 10px;
+}
+/* line 491, ../sass/dashboard.scss */
+.tab-set li {
+  border-bottom: 1px solid gray;
+  width: 100%;
+  height: 60px;
+  padding: 10px;
+  display: table;
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  /* line 491, ../sass/dashboard.scss */
+  .tab-set li {
+    width: 200px;
+    padding: 0px 10px;
+  }
+}
+/* line 505, ../sass/dashboard.scss */
+.tab-set span {
+  vertical-align: middle;
+  display: table-cell;
+}
+/* line 510, ../sass/dashboard.scss */
+.tab-set .column2,
+.tab-set .column3 {
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  /* line 510, ../sass/dashboard.scss */
+  .tab-set .column2,
+  .tab-set .column3 {
+    margin-bottom: 0px;
+  }
+}
+/* line 517, ../sass/dashboard.scss */
+.tab-set .column2 span:first-child,
+.tab-set .column3 span:first-child {
+  color: red;
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  /* line 517, ../sass/dashboard.scss */
+  .tab-set .column2 span:first-child,
+  .tab-set .column3 span:first-child {
+    display: none;
+  }
+}
+/* line 525, ../sass/dashboard.scss */
+.tab-set .column2 span:nth-child(2),
+.tab-set .column3 span:nth-child(2) {
+  color: blue;
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  /* line 525, ../sass/dashboard.scss */
+  .tab-set .column2 span:nth-child(2),
+  .tab-set .column3 span:nth-child(2) {
+    display: table-cell;
+  }
+}
+/* line 534, ../sass/dashboard.scss */
+.tab-set .column1 {
+  text-align: right;
+  display: none;
+}
+/* line 538, ../sass/dashboard.scss */
+.tab-set .column1 li {
+  border-bottom: 2px solid green;
+}
+@media screen and (min-width: 768px) {
+  /* line 534, ../sass/dashboard.scss */
+  .tab-set .column1 {
+    display: inline-block;
+  }
+}
+/* line 550, ../sass/dashboard.scss */
+.tab-set .column2 li:not(.tab-header) {
+  background-color: yellow;
+}
+/* line 553, ../sass/dashboard.scss */
+.tab-set .column2 li:not(.tab-header):nth-child(odd) {
+  background-color: orange;
+}
+/* line 561, ../sass/dashboard.scss */
+.tab-set .column3 li:not(.tab-header) {
+  background-color: aquamarine;
+}
+/* line 564, ../sass/dashboard.scss */
+.tab-set .column3 li:not(.tab-header):nth-child(odd) {
+  background-color: lightblue;
+}
+
+/*===========================================
+Dashboard - Form
+===========================================*/
+/* line 574, ../sass/dashboard.scss */
+.forms-section {
+  height: auto;
+  width: 100%;
+  background-color: lightgreen;
+  display: table;
+}
+
+/* line 580, ../sass/dashboard.scss */
+.section-container {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* line 585, ../sass/dashboard.scss */
+.input-container {
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  /* line 588, ../sass/dashboard.scss */
+  .input-container > label {
+    text-align: right;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* line 585, ../sass/dashboard.scss */
+  .input-container {
+    margin-bottom: 10px;
+  }
+}
+
+/* line 600, ../sass/dashboard.scss */
+.forms-set {
+  width: 80%;
+  margin: 0 auto;
+}
+/* line 604, ../sass/dashboard.scss */
+.forms-set > div {
+  border-bottom: 1px solid red;
+  padding: 10px 0px;
+}
+/* line 608, ../sass/dashboard.scss */
+.forms-set > div:first-child {
+  border-top: 1px solid red;
+}
+
+/* line 614, ../sass/dashboard.scss */
+label {
+  width: 40%;
+  float: left;
+  font-size: 30px;
+  font-size: 1.875rem;
+}
+@media screen and (min-width: 768px) {
+  /* line 614, ../sass/dashboard.scss */
+  label {
+    width: 25%;
+    text-align: left;
+    padding-right: 20px;
+  }
+}
+/* line 625, ../sass/dashboard.scss */
+.input-text label {
+  width: 100%;
+  padding: 0px;
+  text-align: left;
+}
+@media screen and (min-width: 768px) {
+  /* line 625, ../sass/dashboard.scss */
+  .input-text label {
+    width: 25%;
+    float: left;
+    text-align: right;
+    padding-right: 20px;
+  }
+}
+
+/* line 639, ../sass/dashboard.scss */
+label + div {
+  line-height: 25px;
+}
+@media screen and (min-width: 768px) {
+  /* line 642, ../sass/dashboard.scss */
+  .input-text label + div {
+    width: 75%;
+    float: right;
+  }
+}
+
+/* line 652, ../sass/dashboard.scss */
+.input-text input {
+  width: 100%;
+}
+/* line 656, ../sass/dashboard.scss */
+.input-text textarea {
+  width: 100%;
+  resize: none;
+}
+
+/* line 667, ../sass/dashboard.scss */
+.input-radio .input-container:nth-child(4) > label {
+  width: 100%;
+  float: none;
+  text-align: center;
+  border: 1px solid black;
+  padding: 20px 0px;
+  border-width: 1px 0px 1px;
+  /*This is inefficient, use max-screen instead to cover that break point*/
+}
+@media screen and (min-width: 768px) {
+  /* line 667, ../sass/dashboard.scss */
+  .input-radio .input-container:nth-child(4) > label {
+    padding: 0px 20px 0px 0px;
+    width: 25%;
+    float: left;
+    text-align: right;
+    border: 0px;
+  }
+}
+/* line 687, ../sass/dashboard.scss */
+.input-radio .multi-choice {
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  /* line 687, ../sass/dashboard.scss */
+  .input-radio .multi-choice {
+    text-align: left;
+  }
+}
+/* line 694, ../sass/dashboard.scss */
+.input-radio .multi-choice input {
+  margin-right: 10px;
+}
+/* line 698, ../sass/dashboard.scss */
+.input-radio .multi-choice label {
+  float: none;
+  margin-right: 5px;
+  width: auto;
+}
+
+/* line 708, ../sass/dashboard.scss */
+.input-select label + div > select {
+  font-size: 30px;
+  font-size: 1.875rem;
+  vertical-align: -2px;
+}
