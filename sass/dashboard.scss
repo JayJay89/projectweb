@@ -11,20 +11,6 @@ a:hover{
 section {
 	padding: 20px 0px;
 }
-
-/*
-	Bootstrap adds margin to ul
-	This is to overwrite them all
-*/
-ul {
-	margin: 0px;
-}
-h1, h2, h3, h4, h5, h6 {
-	margin: 0px;
-}
-label {
-	margin: 0px;
-}
 /*===========================================
 Landing Page
 ===========================================*/
@@ -59,13 +45,6 @@ Landing Page
 Dashboard 
 ===========================================*/
 .dashboard-page {
-	.side-note {
-		position: fixed;
-		top:0%;
-		width:10%;
-		border: 1px solid red;
-		@include font-size(20px);
-	}
 
 	.top-header {
 		height: 50px;
@@ -557,7 +536,7 @@ Dashboard - Tab
 	}
 
 	.column3 {
-
+		margin-right: 0px;
 		li:not(.tab-header) {
 			background-color: aquamarine;
 

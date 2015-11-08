@@ -19,10 +19,12 @@ $pumpkin:#D35400;
 $alizarin:#E74C3C;
 $pomegranate:#C0392B;
 
-$clouds:#ECF0F1;
+$cloud:#ECF0F1;
 $silver:#BDC3C7;
+
 $concrete:#95A5A6;
 $asbestos:#7F8C8D;
+
 $wetasphalt:#34495E;
 $midnightblue:#2C3E50;
 
@@ -40,13 +42,19 @@ $midnightblue:#2C3E50;
 .clearfix:after {
   clear: both;
 }
-
+/*layout*/
+@mixin flex {
+	display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+	display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+}
 /*background-size*/
 @mixin background-size ($type){
-    -webkit-background-size: $type;
-    -moz-background-size: $type;
-    -o-background-size: $type;
-    background-size: $type;
+	-webkit-background-size: $type;
+	-moz-background-size: $type;
+	-o-background-size: $type;
+	background-size: $type;
 }
 
 @mixin border-radius ($value){
@@ -75,11 +83,12 @@ $midnightblue:#2C3E50;
 
 /*Transition*/
 @mixin transition($transition...) {
-    -moz-transition:    $transition;
-    -o-transition:      $transition;
-    -webkit-transition: $transition;
-    transition:         $transition;
+	-moz-transition:    $transition;
+	-o-transition:      $transition;
+	-webkit-transition: $transition;
+	transition:         $transition;
 }
+
 /*Break Point*/
 $xl: 1400px;
 $la: 1200px;
@@ -89,16 +98,44 @@ $xs: 320px;
 
 @mixin min-screen($width) {
   @media screen and (min-width:$width) {
-    @content;
+	@content;
   }
 }
 @mixin max-screen($width) {
   @media screen and (max-width:$width) {
-    @content;
+	@content;
   }
 }
 @mixin screen($min-width,$max-width) {
   @media screen and (min-width:$min-width) and (max-width:$max-width) {
-    @content;
+	@content;
   }
 }
+
+/*Fonts*/
+/*
+  Fool-Proof @font-face
+  A PEN BY Steve Hickey
+  http://codepen.io/javasteve99/pen/hDxpn
+*/
+@mixin font-face($font-family, $file-path, $font-weight, $font-style) {
+  @font-face {
+    font-family: $font-family;
+      src: url('#{$file-path}.eot');
+      src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+           url('#{$file-path}.woff') format('woff'),
+           url('#{$file-path}.ttf') format('truetype'),
+           url('#{$file-path}.svg##{$font-family}') format('svg');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+  // Chrome for Windows rendering fix: http://www.adtrak.co.uk/blog/font-face-chrome-rendering/
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    @font-face {
+      font-family: $font-family;
+        src: url('#{$file-path}.svg##{$font-family}') format('svg');
+    }
+  }
+}
+
+

@@ -1,0 +1,111 @@
+/*Material Design Colors*/
+/*quick border*/
+/*clear fixes*/
+/* line 37, ../sass/_mixin.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+/* line 42, ../sass/_mixin.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/*layout*/
+/*background-size*/
+/*fonts*/
+/*Transition*/
+/*Break Point*/
+/*Fonts*/
+/*
+  Fool-Proof @font-face
+  A PEN BY Steve Hickey
+  http://codepen.io/javasteve99/pen/hDxpn
+*/
+@font-face {
+  font-family: Aller-Light;
+  src: url("../fonts/Aller-Lite.eot");
+  src: url("../fonts/Aller-Lite.eot?#iefix") format("embedded-opentype"), url("../fonts/Aller-Lite.woff") format("woff"), url("../fonts/Aller-Lite.ttf") format("truetype"), url("../fonts/Aller-Lite.svg#Aller-Light") format("svg");
+  font-weight: 100;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: Aller-Light;
+    src: url("../fonts/Aller-Lite.svg#Aller-Light") format("svg");
+  }
+}
+@font-face {
+  font-family: Aller-Light-Italic;
+  src: url("../fonts/Aller-Lite-Italic.eot");
+  src: url("../fonts/Aller-Lite-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/Aller-Lite-Italic.woff") format("woff"), url("../fonts/Aller-Lite-Italic.ttf") format("truetype"), url("../fonts/Aller-Lite-Italic.svg#Aller-Light-Italic") format("svg");
+  font-weight: 100;
+  font-style: italic;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: Aller-Light-Italic;
+    src: url("../fonts/Aller-Lite-Italic.svg#Aller-Light-Italic") format("svg");
+  }
+}
+@font-face {
+  font-family: Aller-Regular;
+  src: url("../fonts/Aller-Regular.eot");
+  src: url("../fonts/Aller-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Aller-Regular.woff") format("woff"), url("../fonts/Aller-Regular.ttf") format("truetype"), url("../fonts/Aller-Regular.svg#Aller-Regular") format("svg");
+  font-weight: 200;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: Aller-Regular;
+    src: url("../fonts/Aller-Regular.svg#Aller-Regular") format("svg");
+  }
+}
+@font-face {
+  font-family: Aller-Regular-Italic;
+  src: url("../fonts/Aller-Italic.eot");
+  src: url("../fonts/Aller-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/Aller-Italic.woff") format("woff"), url("../fonts/Aller-Italic.ttf") format("truetype"), url("../fonts/Aller-Italic.svg#Aller-Regular-Italic") format("svg");
+  font-weight: 200;
+  font-style: italic;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: Aller-Regular-Italic;
+    src: url("../fonts/Aller-Italic.svg#Aller-Regular-Italic") format("svg");
+  }
+}
+@font-face {
+  font-family: Aller-Bold;
+  src: url("../fonts/Aller-Bold.eot");
+  src: url("../fonts/Aller-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Aller-Bold.woff") format("woff"), url("../fonts/Aller-Bold.ttf") format("truetype"), url("../fonts/Aller-Bold.svg#Aller-Bold") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: Aller-Bold;
+    src: url("../fonts/Aller-Bold.svg#Aller-Bold") format("svg");
+  }
+}
+@font-face {
+  font-family: Aller-Bold-Italic;
+  src: url("../fonts/Aller-Bold-Italic.eot");
+  src: url("../fonts/Aller-Bold-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/Aller-Bold-Italic.woff") format("woff"), url("../fonts/Aller-Bold-Italic.ttf") format("truetype"), url("../fonts/Aller-Bold-Italic.svg#Aller-Bold-Italic") format("svg");
+  font-weight: 300;
+  font-style: italic;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: Aller-Bold-Italic;
+    src: url("../fonts/Aller-Bold-Italic.svg#Aller-Bold-Italic") format("svg");
+  }
+}
+/* line 41, ../sass/fooseshoe.scss */
+h1 {
+  color: red;
+  font-family: 'Aller-Bold-Italic', arial, sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}

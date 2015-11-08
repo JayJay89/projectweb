@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Enrico - Study Template</title>
+        <!-- Bootstrap -->
+        <link href="../stylesheets/reset.css" rel="stylesheet">
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../stylesheets/bootstrap-overwrite.css" rel="stylesheet">
+        <link href="../stylesheets/study.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.s7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body class="study">
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Enrico Studies</a>
+            </div>
+            
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="study-master.html">Home</a></li>
+                    <li><a href="#">Next</a></li>
+                    <li><a href="study-magic-number.html">Previous</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <article class="study-float">
+            <header class="container">
+                <h1>Floats Study</h1>
+                <time datetime="2015-11-10">Nov 10 2015</time>
+                <h5><a href="https://css-tricks.com/all-about-floats/">CSS Tricks - Floats</a></h5>
+                <h5><a href="https://css-tricks.com/video-screencasts/42-all-about-floats-screencast/">CSS Screencast - Floats</a></h5>
+                <!-- <h5>JS is involved (study-hide-css.js)</h5> -->
+            </header>
+
+            <section class="container">
+                <img src="https://css-tricks.com/wp-content/csstricks-uploads/web-text-wrap.png" alt="float">
+                <ul>
+                    <li>float is a css positioning property. Elements with float have text flows around them</li>
+                    <li>Floated elements remain a part of the flow of the web page unlike absolutely positioned elements</li>
+                </ul>
+                <p><b>Properties</b>: left, right, none, inherit</p>
+            </section>
+
+            <section class="container">
+                <h1>Float</h1>
+                <p>A normal floater</p>
+                <div class="text-container">
+                    <h1>title</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="floater">I'm a floater</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi reiciendis quasi soluta inventore voluptas. Harum adipisci excepturi, aut quas molestiae consequuntur tempora totam autem assumenda sequi ipsum esse ex delectus tenetur dolore facilis, voluptas aspernatur a suscipit illo hic? Blanditiis!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi reiciendis quasi soluta inventore voluptas. Harum adipisci excepturi, aut quas molestiae consequuntur tempora totam autem assumenda sequi ipsum esse ex delectus tenetur dolore facilis, voluptas aspernatur a suscipit illo hic? Blanditiis!</p>
+                </div>
+            </section>
+
+            <section class="container">
+                <h1>Float Layout</h1>
+                <p>Whe two elements are given float, this will occur. We need a clearfix to solve this problem </p>
+                <pre>
+&lt;div class="main-column"&gt;&lt;/div&gt;
+&lt;div class="side-column"&gt;&lt;/div&gt;</pre>                
+                <div class="float1">
+                    <div class="text-container">
+                        <h1>title</h1>
+                        <div class="main-column">
+                            <p>I float left</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi reiciendis quasi soluta inventore voluptas. Harum adipisci excepturi, aut quas molestiae consequuntur tempora totam autem assumenda sequi ipsum esse ex delectus tenetur dolore facilis, voluptas aspernatur a suscipit illo hic? Blanditiis!</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi reiciendis quasi soluta inventore voluptas. Harum adipisci excepturi, aut quas molestiae consequuntur tempora totam autem assumenda sequi ipsum esse ex delectus tenetur dolore facilis, voluptas aspernatur a suscipit illo hic? Blanditiis!</p>
+                        </div>
+                        <div class="side-column">
+                            <p>I float right</p>
+                            <p>
+                                Side-column.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, harum. Perspiciatis, ut autem fugit saepe mollitia ad temporibus molestiae voluptatibus.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="container">
+                <h1>Clearfix</h1>
+                <p>In this solution, Chris added a div with clear attribute to solve this</p>
+                <pre>
+&lt;div class="main-column"&gt;&lt;/div&gt;
+&lt;div class="side-column"&gt;&lt;/div&gt;
+&lt;div style="clear: both;"&gt;&lt;/div&gt;</pre>
+                <div class="float2">
+                    <div class="text-container">
+                        <h1>title</h1>
+
+                        <div class="main-column">
+                            <p>I float left</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi reiciendis quasi soluta inventore voluptas. Harum adipisci excepturi, aut quas molestiae consequuntur tempora totam autem assumenda sequi ipsum esse ex delectus tenetur dolore facilis, voluptas aspernatur a suscipit illo hic? Blanditiis!</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi reiciendis quasi soluta inventore voluptas. Harum adipisci excepturi, aut quas molestiae consequuntur tempora totam autem assumenda sequi ipsum esse ex delectus tenetur dolore facilis, voluptas aspernatur a suscipit illo hic? Blanditiis!</p>
+                        </div>
+
+                        <div class="side-column">
+                            <p>I float right</p>
+                            <p>
+                                Side-column.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, harum. Perspiciatis, ut autem fugit saepe mollitia ad temporibus molestiae voluptatibus.
+                            </p>
+                        </div>
+
+                        <div style="clear: both;"></div>
+                    </div>
+                </div>
+                <p>However, this solution added extra divs in the HTML which does not have any semantic value. Consider using <span>clearfix</span>class on the div which wraps the floating elements</p>
+                <pre>
+&lt;div class="clearfix"&gt;
+    &lt;div class="main-column"&gt;&lt;/div&gt;
+    &lt;div class="side-column"&gt;&lt;/div&gt;
+&lt;/div&gt; 
+</pre>  
+            </section>
+
+            <section class="container">
+                <h1>Clearfix</h1>
+                <p>An element that has the clear property set on it will not move up adjacent to the float like the float desires, but will move itself down past the float. </p>
+                <pre>
+#footer {
+  clear: both;          
+}
+</pre>
+                <img src="https://css-tricks.com/wp-content/csstricks-uploads/unclearedfooter.png" alt="">
+                <img src="https://css-tricks.com/wp-content/csstricks-uploads/clearedfooter.png" alt="">
+            </section>
+
+
+
+
+        </article>
+
+        <footer class="footer">
+            <p>Enrico Studies</p>
+        </footer>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="../js/bootstrap.min.js"></script>
+    </body>
+</html>

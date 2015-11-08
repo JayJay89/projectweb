@@ -1,0 +1,44 @@
+@import "all";
+
+// @font-face {font-family: 'Aller';src: url(../fonts/Aller-Lite.ttf) format('truetype');}
+// @font-face {font-family: 'Aller';src: url(../fonts/Aller-Lite-Italic.ttf) format('truetype');}
+// @font-face {font-family: 'Aller';src: url(../fonts/Aller-Regular.ttf) format('truetype');}
+// @font-face {font-family: 'Aller';src: url(../fonts/Aller-Italic.ttf) format('truetype');}
+// @font-face {font-family: 'Aller';src: url(../fonts/Aller-Bold.ttf) format('truetype');}
+// @font-face {font-family: 'Aller';src: url(../fonts/Aller-Bold-Italic.ttf) format('truetype');}
+
+@include font-face(Aller-Light, '../fonts/Aller-Lite', 100, normal);
+@include font-face(Aller-Light-Italic, '../fonts/Aller-Lite-Italic', 100, italic);
+@include font-face(Aller-Regular, '../fonts/Aller-Regular', 200, normal);
+@include font-face(Aller-Regular-Italic, '../fonts/Aller-Italic', 200, italic);
+@include font-face(Aller-Bold, '../fonts/Aller-Bold', 300, normal);
+@include font-face(Aller-Bold-Italic, '../fonts/Aller-Bold-Italic', 300, italic);
+
+@mixin Aller-Light {
+  font-family: 'Aller-Light', arial, sans-serif;
+  font-weight: 100; font-style: normal; }
+
+@mixin Aller-Light-Italic {
+  font-family: 'Aller-Light-Italic', arial, sans-serif;
+  font-weight: 100; font-style: italic; }
+
+@mixin Aller-Regular {
+  font-family: 'Aller-Regular', arial, sans-serif;
+  font-weight: 200; font-style: normal; }
+
+@mixin Aller-Regular-Italic {
+  font-family: 'Aller-Regular-Italic', arial, sans-serif;
+  font-weight: 200; font-style: italic; }
+
+@mixin Aller-Bold {
+  font-family: 'Aller-Bold', arial, sans-serif;
+  font-weight: 300; font-style: normal; }
+
+@mixin Aller-Bold-Italic {
+  font-family: 'Aller-Bold-Italic', arial, sans-serif;
+  font-weight: 300; font-style: italic; }
+
+h1 {
+	color: red;
+	@include Aller-Bold-Italic;
+}

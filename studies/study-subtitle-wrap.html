@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Enrico - Study Template</title>
+        <!-- Bootstrap -->
+        <link href="../stylesheets/reset.css" rel="stylesheet">
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../stylesheets/bootstrap-overwrite.css" rel="stylesheet">
+        <link href="../stylesheets/study.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.s7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body class="study">
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Enrico Studies</a>
+            </div>
+            
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="study-master.html">Home</a></li>
+                    <li><a href="study-magic-number.html">Next</a></li>
+                    <li><a href="study-hide-css.html">Previous</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <article class="study-subtitle-wrap">
+            <header class="container">
+                <h1>Subtitle Wrap</h1>
+                <time datetime="2015-11-9">Nov 9 2015</time>
+                <h5><a href="https://css-tricks.com/video-screencasts/140-exploring-css-layout-techniques-while-trying-to-get-a-subtitle-to-wrap/">CSS ScreenCast - Trying To Get a Subtitle to Wrap</a></h5>
+
+            </header>
+            <section class="container">
+
+                <h2>Wrap</h2>
+                <p>In the example below, Chris is trying to get the floating subtitle on the right to fall below the bold subtitle. <p>
+                <hr>
+                <h4>Using float</h4>
+                <p><span>float:right</span> is used on subtitle which resulted in the below, the floated element will be aligned to the top. <p>
+                <p>Note that right now when the screen becomes smaller, subtitle will fall below the line. This is because it's collapsing. Floats don't contribute to the size of the box. </p>
+                <hr>
+                <h4>How do you align subtitle to main-title?</h4>
+                <p><span>vertical-align: bottom; </span>doesn't work because this isn't an inline-object. </p>
+                <p>using <span>padding</span> and <span>margin</span> adjustments are not recommended. These belong to <a href="study-magic-number.html">magic number</a> territory</p>
+
+                <h3 class="title1">
+                    <span class="title-main-title">This is main title</span>
+                    <span class="title-sub-title">This is subtitle lorem</span>
+                </h3>
+            </section>
+
+            <section class="container">
+                <p>Overflow: hidden is added on to title2, the subtitle will be included inside the box line, because it expand to contain it. But right now it's not going to the left side </p>
+
+                <h3 class="title2">
+                    <span class="title-main-title">This is main title</span>
+                    <span class="title-sub-title">This is subtitle</span>
+                </h3>
+            </section>
+
+            <section class="container">
+                <p> By adding <span>width: 100%</span> to subtitle, it'll move to the side, but it doesn't bring it back up anymore </p>
+
+                <h3 class="title3">
+                    <span class="title-main-title">This is main title</span>
+                    <span class="title-sub-title">This is subtitle</span>
+                </h3>
+            </section>
+
+            <section class="container">
+                <p> What about using <span>position: absolute</span> on it? Using <span>bottom: 0px</span>, and <span>right: 0px</span> on it? The following will occur because the document is removed from the document flow </p>
+
+                <h3 class="title4">
+                    <span class="title-main-title">This is main title</span>
+                    <span class="title-sub-title">This is subtitle</span>
+                </h3>
+            </section>
+
+            <section class="container">
+                <p> Adding a media query provides a temporary solution. When the content is too long, the overlapping will still happen. It's a <a href="study-magic-number.html">magic number</a> situation which needs to be avoided</p>
+
+                <h3 class="title5">
+                    <span class="title-main-title">This is main title</span>
+                    <span class="title-sub-title">This is subtitle</span>
+                </h3>
+            </section>
+
+            <section class="container">
+                <p> How about using <span>table-cell</span>? A table is only as wide as it needs to be, and it won't let other elements sits inline with it. It's also quite sturdy as it won't let both elements smash into each other. But it hasn't achieve what Chris wants</p>
+
+                <h3 class="title6">
+                    <span class="title-main-title">This is main title</span>
+                    <span class="title-sub-title">This is subtitle</span>
+
+                </h3>
+            </section>
+
+            <section class="container">
+                <p> Adding media queries to change <span>table</span> to <span>blocks</span>, to drop the subtitles, it works well here, but it's still a <a href="study-magic-number.html">magic number</a> method</p>
+
+                <h3 class="title7">
+                    <span class="title-main-title">This is main title</span>
+                    <span class="title-sub-title">This is subtitle</span>
+                </h3>
+            </section>
+
+            <section class="container">
+                <p> Using <span>flex</span> on title will automatically turn its children into flex as well</p>
+                <p> Using <span>align-items: flex-end;</span> will align the subtitle to the bottom</p>
+                <p> Using <span>justify-content: space-between;</span> will push subtitle to the side</p>
+
+                <h3 class="title8">
+                    <span class="title-main-title">This is main title</span>
+                    <span class="title-sub-title">This is subtitle</span>
+                </h3>
+                <p>Chris decide to use another method instead, he removes <span>justify-content: space-between;</span> and added <span>flex-grow: 1;</span>to main-title. This does not achieve what he needs yet.</p>
+                <h3 class="title9">
+                    <span class="title-main-title">This is main title</span>
+                    <span class="title-sub-title">This is subtitle</span>
+                </h3>
+
+                <p>Chris added <span>white-space: nowrap;</span> to title. Now subtitle won't wrap but it'll not go down yet</p>
+
+                <h3 class="title10">
+                    <span class="title-main-title">This is main title</span>
+                    <span class="title-sub-title">This is subtitle</span>
+                </h3>
+
+                <p>Finally, Chris added <span>flex-wrap: wrap;</span> to title. Now it wraps up nicely</p>
+
+                <h3 class="title11">
+                    <span class="title-main-title">This is main title</span>
+                    <span class="title-sub-title">This is subtitle</span>
+                </h3>
+
+            </section>
+        </article>
+
+        <footer class="footer">
+            <p>Enrico Studies</p>
+        </footer>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="../js/bootstrap.min.js"></script>
+    </body>
+</html>
