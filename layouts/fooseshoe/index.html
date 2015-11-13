@@ -18,8 +18,357 @@
 		<![endif]-->
 	</head>
 	<body class="landing-page">
-		<h1>test</h1>
-		
+		<a href="../../index.html">Back</a>
+
+		<a href="http://stackoverflow.com/questions/15172520/advantages-of-using-displayinline-block-vs-floatleft-in-css"> Float VS Inline-block</a>
+		<p>To Do: refactor Color Mixin</p>
+		<p>To Do: refactor headers</p>
+		<p>To Do: Landscape Banner responsive</p>
+		<p>Making Systems: px doesn't mix well with percentages</p>
+
+		<!--HEADER is repeated on every page-->
+		<header>
+			<section class="header-row">
+				<div class="container">
+					<div class="header-container clearfix">
+						<div class="header-logo"><img src="img/logo.png" alt="search"></div>
+						<ul class="login-tab">
+							<li><img src="img/search.png" alt="search"></li>
+							<li>LOGIN or REGISTER</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<nav class="nav-row ">
+				<div class="container clear">
+					<ul class="nav-bar gapfix">
+						<li class="collapse"><a href="#"><img src="img/nav-icon.png" alt=""></a></li>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Products</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Pages</a></li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+					<ul class="nav-bar right">
+						<li>
+							<img src="img/star.png" alt="favourite">
+							<div class="counter">
+								<a href=""><span>30</span></a>
+							</div>
+						</li>
+						<li>
+							<img src="img/cart.png" alt="cart">
+							<div class="counter teal">
+								<a href="#"><span>0</span></a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+
+		<article>
+			<section class="slider">
+				<div class="container">
+					<div class="slider-info-container">
+						<div class="slider-info">
+							<div class="tag price-tag">
+								<p>$145.99</p>
+							</div>
+							<h1 class="slider-title"> Pink Shoes 2013 Collection</h1>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae eaque ab quaerat quae modi veniam.</p>
+							<ul class="icon-set">
+								<li><a href=""><img src="img/icon_1.png" alt=""></a></li>
+								<li><a href=""><img src="img/icon_2.png" alt=""></a></li>
+								<li><a href=""><img src="img/icon_3.png" alt=""></a></li>
+								<li><a href=""><img src="img/icon_4.png" alt=""></a></li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+				<ul>
+					<li><img class="main-banner img-responsive" src="img/banner1.jpg" alt="banner"></li>
+					<li><img class="main-banner img-responsive" src="img/banner2.jpg" alt="banner"></li>
+					<li><img class="main-banner img-responsive" src="img/banner3.jpg" alt="banner"></li>
+					<li><img class="main-banner img-responsive" src="img/banner4.jpg" alt="banner"></li>
+				</ul>
+			</section>
+
+			<section class="slider-selector">
+				<div class="container">
+					<div class="slider-top"></div>
+					<ul class="gapfix">
+						<li>
+							<a href="#">
+								<span>Pink Shoes</span>  
+								<span>Now at $145,99</span>
+								<img class="hover-image" src="img/banner1.jpg" alt="">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>Anna Field</span> 
+								<span>Limited edition</span>
+								<img class="hover-image" src="img/banner2.jpg" alt="">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>Prada</span>  
+								<span>Summer is coming</span>
+								<img class="hover-image" src="img/banner3.jpg" alt="">
+							</a>
+						</li>
+						<li>
+							<span>Casadei</span>  
+							<span>All colors available</span>
+							<img class="hover-image" src="img/banner4.jpg" alt="">
+						</li>
+						<li>
+							<span>Mellow Yellow</span> 
+							<span>Free delivery</span>
+							<img class="hover-image" src="img/banner4.jpg" alt="">
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="special-offer">
+				<div class="container">
+					<ul class="gapfix three-col">
+						<li>
+							<a href="">
+								<img class="img-responsive" src="img/spec-offer1.jpg" alt="">
+								<div class="hover-text"><p>On Sale</p></div>
+							</a>
+						</li>
+
+						<li>
+							<a href="">
+								<img class="img-responsive" src="img/spec-offer2.jpg" alt="">
+								<div class="hover-text"><p>Special Offers</p></div>
+							</a>
+						</li>
+
+						<li>
+							<a href="">
+								<img class="img-responsive" src="img/spec-offer3.jpg" alt="">
+								<div class="hover-text"><p>Must Have</p></div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="new-arrival">
+				<div class="container">
+					<div class="clearfix">
+						<h3>New arrivals on FooseShoes</h3>
+						<button class="button-outline">Show All</button>
+					</div>
+					<ul class="gapfix three-col">
+						<li class="featured-shoes">
+							<a href="">
+								<img class="img-responsive" src="img/shoe1.jpg" alt="">
+								<div class="tag price-tag affixed-bottom">
+									<p>$145.99</p>
+								</div>
+								<p class="shoe-name">Even&Odd</p>
+							</a>
+						</li>
+
+						<li class="featured-shoes">
+							<a href="">
+								<img class="img-responsive" src="img/shoe2.jpg" alt="">
+								<div class="tag price-tag affixed-bottom">
+									<p>$145.99</p>
+								</div>
+								<div class="tag on-sales-tag affixed-top">
+									<p>on sale!</p>
+								</div>
+								<p class="shoe-name">Even&Odd</p>
+							</a>
+						</li>
+
+						<li class="featured-shoes">
+							<a href="">
+								<img class="img-responsive" src="img/shoe3.jpg" alt="">
+								<div class="tag price-tag affixed-bottom">
+									<p>$145.99</p>
+								</div>
+								<p class="shoe-name">Buffalo Decollete</p>
+							</a>
+						</li>
+					</ul>
+					<div class="clearfix">
+						<h3>Best Sellers of the month</h3>
+						<button class="button-outline">Show All</button>
+					</div>
+					<ul class="gapfix three-col">
+						<li class="featured-shoes">
+							<a href="">
+								<img class="img-responsive" src="img/shoe4.jpg" alt="">
+								<div class="tag price-tag affixed-bottom">
+									<p>$145.99</p>
+								</div>
+								<p class="shoe-name">Even&Odd</p>
+							</a>
+						</li>
+
+						<li class="featured-shoes">
+							<a href="">
+								<img class="img-responsive" src="img/shoe5.jpg" alt="">
+								<div class="tag price-tag affixed-bottom">
+									<p>$145.99</p>
+								</div>
+								<p class="shoe-name">Even&Odd</p>
+							</a>
+						</li>
+
+						<li class="featured-shoes">
+							<a href="">
+								<img class="img-responsive" src="img/shoe6.jpg" alt="">
+								<div class="tag price-tag affixed-bottom">
+									<p>$145.99</p>
+								</div>
+								<div class="tag out-of-stock-tag affixed-top">
+									<p>out of stock</p>
+								</div>
+								<p class="shoe-name">Buffalo Decollete</p>
+							</a>
+						</li>
+					</ul>
+
+				</div>
+			</section>
+			
+			<section class="shoe-news">
+
+				<div class="container">
+
+					<div class="col-3">
+						<div class="text-block">
+							<h5>Free Shipping</h5>
+							<p>Vivamus metus turpis, bibendum vitae euismod vel, vulputate vel nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec erat sem, </p>
+						</div>
+					</div>
+
+					<div class="col-3">
+						<div class="text-block">
+							<h5>Testimonials</h5>
+							<p>vel, vulputate vel nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec erat sem, vehicula id dictum sit [...]
+							</p>
+							<p class="username">- John Doe -</p>
+						</div>
+					</div>
+
+					<div class="col-6">
+						<div class="text-block">
+							<h5>Blog News</h5>
+
+							<div class="post-entry clearfix">
+								<div class="tag date-tag">
+									<p>Apr 01</p>
+								</div>
+								<div class="entry-text">
+									<h5>Nice & clean. The best for you blog!</h5>
+									<p>Vivamus metus turpis, bibendum vitae euismod vel, vulputate vel nibh. </p>
+								</div>
+							</div>
+
+							<div class="post-entry clearfix">
+								<div class="tag date-tag">
+									<p>Apr 01</p>
+								</div>
+								<div class="entry-text">
+									<h5>Nice & clean. The best for you blog!</h5>
+									<p>Vivamus metus turpis, bibendum vitae euismod vel, vulputate vel nibh. </p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</section>
+		</article>
+
+		<footer>
+
+			<section class="footer-widgets">
+				<div class="container">
+					<ul class="gapfix three-col">
+						<li>
+							<h5>text widget</h5>
+							<p>
+								Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+							</p>
+						</li>
+						<li class="twitter-widget">
+							<h5>twitter widget</h5>
+							<p>
+								<a href="#">@ericafustero</a> Why thank you. Your work looks awesome by the way! <a href="#">@treemelody</a>
+							</p>
+							<p>19 days ago</p>
+							<p>
+								<a href="">@roymarvelous</a> You can seek a refund through TF if it is not as advertised - but it is :)
+							</p>
+							<p>21 days ago</p>
+						</li>
+						<li>
+							<h5>flickr widget</h5>
+							<ul class="flickr-widget-grid gapfix three-col">
+								<li><a href=""><img src="img/f_pic1.jpg" alt=""></a></li>
+								<li><a href=""><img src="img/f_pic2.jpg" alt=""></a></li>
+								<li><a href=""><img src="img/f_pic3.jpg" alt=""></a></li>
+								<li><a href=""><img src="img/f_pic4.jpg" alt=""></a></li>
+								<li><a href=""><img src="img/f_pic5.jpg" alt=""></a></li>
+								<li><a href=""><img src="img/f_pic6.jpg" alt=""></a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="footer-social-row">
+				<div class="container clearfix">
+					<div class="gapfix">
+						<input type="text" placeholder="Enter Email for newsletter">
+						<div><img src="img/arrow-next.png" alt=""></div>
+					</div>
+			
+					<ul class="social-icon-row gapfix">
+						<li><a href=""><img src="img/social-icon1.png" alt=""></a></li>
+						<li><a href=""><img src="img/social-icon2.png" alt=""></a></li>
+						<li><a href=""><img src="img/social-icon3.png" alt=""></a></li>
+						<li><a href=""><img src="img/social-icon4.png" alt=""></a></li>
+						<li><a href=""><img src="img/social-icon5.png" alt=""></a></li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="footer-text">
+				<div class="container clearfix">
+					<p class="copyright-text">
+						Copyright © Fooseshoes 2013. <br>
+						Designed by EnzoLiVolti.  
+					</p>
+
+
+					<p class="footer-menu">
+						<a href="">Home</a> /
+						<a href="">Support</a> /
+						<a href="">Terms and Conditions</a> /
+						<a href="">Faqs</a> /
+						<a href="">Contact us</a>
+					</p>
+				</div>
+			</section>
+
+		</footer>
+
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->

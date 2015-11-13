@@ -59,7 +59,8 @@ pre {
 }
 
 p span {
-	display: inline;
+	display: inline-block;
+	line-height: initial;
 }
 
 header {
@@ -470,7 +471,7 @@ CONTENTS
 
 	.main-column,
 	.side-column {
-		padding: 10px;
+		padding: 20px;
 	}
 
 	.main-column {
@@ -485,7 +486,260 @@ CONTENTS
 		background-color: $asbestos;
 	}
 
+	.footer-bar {
+		background-color: $midnightblue;
+		color: $cloud;
+	}
+
 	.float2 {
 		color: red;
+	}
+
+	.float3 {
+		.main-column,
+		.side-column {
+			width: 50%;
+		} 
+
+		.main-column {
+			background-color: $concrete;
+		}
+
+		.footer {
+			width: auto;
+			padding: 20px;
+		}
+	}
+
+	.float4 {
+		.main-column,
+		.side-column {
+			width: 50%;
+		} 
+
+		.main-column {
+			background-color: $concrete;
+		}
+
+		.footer-bar {
+			width: auto;
+			padding: 20px;
+			clear: both;
+		}
+	}
+
+	.float5 {
+		margin-bottom: 20px;
+		.floater {
+			float: right;
+			margin: 5px;
+		}
+	}
+	.float6 {
+		.floater{
+			float: right;
+			margin: 5px;
+		}
+
+		.floater2 {
+			clear: right;
+		}
+	} 
+	.float7 {
+		.floater {
+			float: left;
+			margin: 5px;
+		}
+		.row1 {
+			background-color: $orange;
+		}	
+		.row2 {
+			background-color: $pomegranate;
+		}
+		.row3 {
+			background-color: $greensea;
+		}
+	} 
+}
+
+.study-vertical-align-img-text {
+	.container {
+		.img-container,
+		.txt-container {
+			border: 1px solid green;
+			width: 50%;
+			float: left;
+		}
+		.txt-container > *{
+			display: inline-block;
+			border: 1px solid blue;
+			margin: 0px;
+			padding: 0px;
+		}
+		img {
+			display: inline-block;
+			border: 1px solid red;
+		}
+		.box {
+			min-width: 10px;
+			min-height: 20px;
+			display: inline-block;
+			background-color: $pomegranate;
+		}
+		.tall {
+			height: 80px;
+		}
+		.top > * {
+			vertical-align: top;
+		}
+		.middle > * {
+			vertical-align: middle;
+		}
+		.baseline > * {
+			vertical-align: baseline;
+		}
+		.bottom > * {
+			vertical-align: bottom;
+		}
+		.text-top > * {
+			vertical-align: text-top;
+		}
+		.text-bottom > * {
+			vertical-align: text-bottom;
+		}
+		.va30 > * {
+			vertical-align: 30px;
+		}
+		.va-30 > * {
+			vertical-align: -30px;
+		}
+	}
+}
+
+.study-row-machine {
+	* {
+		box-sizing: border-box;
+	}
+	.box {
+		background-color: white;
+		padding: 5px;
+		border: 1px solid $carrot;
+		float:left;
+		width: 25%;
+		
+		img {
+			max-width: 100%
+		}
+	}
+	.row-machine {
+		width: 80%;
+		margin: 0 auto;
+		border: 2px solid $alizarin;
+		padding: 10px;
+	}
+
+	.rm1 {
+		.box {
+			width: 100%/4;
+		}
+	}
+
+	.rm2 {
+		.box {
+			width: 100%/4;
+			margin-right: 2%;
+		}
+	}
+
+	.work-display {
+		text-align: center;
+		padding: 20px 0px; 
+		margin: 20px 0px;
+		border: 1px solid $midnightblue;
+		border-width: 1px 0px 1px 0px;
+
+		img {
+			max-width: 100%;
+		}
+	}
+
+	.rm3 {
+		.box {
+			width: (100% - (3 * 2%))/4;
+			margin-right: 2%;
+			&:nth-child(4n) {
+				margin-right: 0px;
+			}
+		}
+	}
+
+	.rm4 {
+		.box {
+			$numPerRow: 4;
+			$margin: 2%;
+
+			width: (100% - (($numPerRow - 1) * $margin))/$numPerRow;
+			margin-right: $margin;
+			&:nth-child(#{$numPerRow}n) {
+				margin-right: 0px;
+			}
+		}
+	}
+
+	.rm5 {
+		@mixin rowMachine ($numPerRow, $margin) {
+
+			width: (100% - (($numPerRow - 1) * $margin))/$numPerRow;
+			margin-right: $margin;
+			&:nth-child(#{$numPerRow}n) {
+				margin-right: 0px;
+			}
+		}
+
+		.box {
+			@include rowMachine(5,2%);
+		}
+	}
+
+	.rm6 {
+		@mixin rowMachine ($numPerRow, $margin) {
+
+			width: (100% - (($numPerRow - 1) * $margin))/$numPerRow;
+			margin-right: $margin;
+			&:nth-child(#{$numPerRow}n) {
+				margin-right: 0px;
+			}
+		}
+
+		.box {
+			@include rowMachine(3,2%);
+
+			@include min-screen($sm) {
+				@include rowMachine(5,2%);
+			} 
+		}
+	}
+
+	.rm7 {
+		@mixin rowMachine ($numPerRow, $margin) {
+
+			width: (100% - (($numPerRow - 1) * $margin))/$numPerRow;
+			margin-right: $margin;
+			&:nth-child(n) {
+				margin-right: $margin;
+				margin-bottom: $margin;
+			}
+			&:nth-child(#{$numPerRow}n) {
+				margin-right: 0px;
+			}
+		}
+
+		.box {
+			@include rowMachine(3,2%);
+
+			@include min-screen($sm) {
+				@include rowMachine(5,2%);
+			} 
+		}
 	}
 }

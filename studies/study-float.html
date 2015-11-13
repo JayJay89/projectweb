@@ -64,14 +64,15 @@
                     <h1>title</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                     <div class="floater">I'm a floater</div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi reiciendis quasi soluta inventore voluptas. Harum adipisci excepturi, aut quas molestiae consequuntur tempora totam autem assumenda sequi ipsum esse ex delectus tenetur dolore facilis, voluptas aspernatur a suscipit illo hic? Blanditiis!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi reiciendis quasi soluta inventore voluptas. Harum adipisci excepturi, aut quas molestiae consequuntur tempora totam autem assumenda sequi ipsum esse ex delectus tenetur dolore facilis, voluptas aspernatur a suscipit illo hic? Blanditiis!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur tempore neque officiis numquam, voluptates nemo quia architecto magnam hic eveniet.</p>
                 </div>
             </section>
 
             <section class="container">
                 <h1>Float Layout</h1>
-                <p>Whe two elements are given float, this will occur. We need a clearfix to solve this problem </p>
+                <p> If a parent element contained nothing but floated elements, the height of it would literally collapse to nothing. </p>
+                <p> Whe two elements are given float, this will occur. We need a clearfix to solve this problem </p>
+                <p> We fix it by clearing the float after the floated elements in the container but before the close of the container.</p>
                 <pre>
 &lt;div class="main-column"&gt;&lt;/div&gt;
 &lt;div class="side-column"&gt;&lt;/div&gt;</pre>                
@@ -80,22 +81,19 @@
                         <h1>title</h1>
                         <div class="main-column">
                             <p>I float left</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi reiciendis quasi soluta inventore voluptas. Harum adipisci excepturi, aut quas molestiae consequuntur tempora totam autem assumenda sequi ipsum esse ex delectus tenetur dolore facilis, voluptas aspernatur a suscipit illo hic? Blanditiis!</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi reiciendis quasi soluta inventore voluptas. Harum adipisci excepturi, aut quas molestiae consequuntur tempora totam autem assumenda sequi ipsum esse ex delectus tenetur dolore facilis, voluptas aspernatur a suscipit illo hic? Blanditiis!</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus at commodi, ipsa expedita, magni vitae autem facere laborum repudiandae nemo!</p>
                         </div>
                         <div class="side-column">
                             <p>I float right</p>
-                            <p>
-                                Side-column.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, harum. Perspiciatis, ut autem fugit saepe mollitia ad temporibus molestiae voluptatibus.
-                            </p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis ipsam possimus accusantium atque et expedita nulla inventore, debitis doloremque obcaecati?</p>
                         </div>
                     </div>
                 </div>
             </section>
 
             <section class="container">
-                <h1>Clearfix</h1>
-                <p>In this solution, Chris added a div with clear attribute to solve this</p>
+                <h1>Clearfix - Adding a an empty div</h1>
+                <p>his method is scorned by semantic purists since its presence has no contextual meaning at all to the page and is there purely for presentation. It does, however, get the job done.</p>
                 <pre>
 &lt;div class="main-column"&gt;&lt;/div&gt;
 &lt;div class="side-column"&gt;&lt;/div&gt;
@@ -106,8 +104,7 @@
 
                         <div class="main-column">
                             <p>I float left</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi reiciendis quasi soluta inventore voluptas. Harum adipisci excepturi, aut quas molestiae consequuntur tempora totam autem assumenda sequi ipsum esse ex delectus tenetur dolore facilis, voluptas aspernatur a suscipit illo hic? Blanditiis!</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi reiciendis quasi soluta inventore voluptas. Harum adipisci excepturi, aut quas molestiae consequuntur tempora totam autem assumenda sequi ipsum esse ex delectus tenetur dolore facilis, voluptas aspernatur a suscipit illo hic? Blanditiis!</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates officiis id fugit, temporibus quisquam minus nulla sed voluptatem unde eligendi, iste eum tenetur dolorum quod!</p>
                         </div>
 
                         <div class="side-column">
@@ -130,20 +127,120 @@
             </section>
 
             <section class="container">
-                <h1>Clearfix</h1>
-                <p>An element that has the clear property set on it will not move up adjacent to the float like the float desires, but will move itself down past the float. </p>
-                <pre>
-#footer {
-  clear: both;          
-}
-</pre>
-                <img src="https://css-tricks.com/wp-content/csstricks-uploads/unclearedfooter.png" alt="">
-                <img src="https://css-tricks.com/wp-content/csstricks-uploads/clearedfooter.png" alt="">
+                <h1>Clear Both</h1>
+                <p>Footer is not cleared, which is why it was stucked on the bottom. </p>
+                <div class="float3">
+                    <div class="text-container">
+                        <h1>title</h1>
+
+                        <div class="main-column">
+                            <p><span>float: left;</span></p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et dolore tempora consequuntur, sed quidem cumque molestias odio odit culpa necessitatibus. Est quidem cupiditate consequuntur explicabo expedita architecto qui labore sint porro, eum molestiae quisquam aliquam, beatae. Hic vero placeat, sunt ipsa voluptates eaque id odio, ea a sint commodi officia. Accusantium temporibus laboriosam aut dicta! Dolor pariatur minus animi nisi totam, veritatis aperiam. Earum, tempora.</p>
+                        </div>
+
+                        <div class="side-column">
+                            <p><span>float: right;</span></p>
+                            <p>
+                                Side-column.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, harum. Perspiciatis, ut autem fugit saepe mollitia ad temporibus molestiae voluptatibus.
+                            </p>
+                        </div>
+                        <div class="footer-bar">
+                            <p>
+                                I don't have <span>clear:both;</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum temporibus recusandae, eligendi voluptatibus ullam ab.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </section>
 
+            <section class="container">
+                <h1>Clear Both</h1>
+                <p>Footer is not cleared, which is why it was stucked on the bottom. </p>
+                <div class="float4">
+                    <div class="text-container">
+                        <h1>title</h1>
 
+                        <div class="main-column">
+                            <p><span>float: left;</span></p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores necessitatibus magni, dolorem ad vel praesentium? Porro atque consequuntur repellat ut animi reiciendis sapiente, cupiditate, labore, quos tempora vel? Iusto distinctio sint atque laboriosam, fuga maxime neque, velit reprehenderit rem nisi doloremque iure porro mollitia beatae illum esse quis aliquid nulla ab! Hic doloribus dolorum, voluptatem vero odio, recusandae nam nemo id laborum neque rem debitis.</p>
+                        </div>
 
+                        <div class="side-column">
+                            <p><span>float: right;</span></p>
+                            <p>
+                                Side-column.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, harum. Perspiciatis, ut autem fugit saepe mollitia ad temporibus molestiae voluptatibus.
+                            </p>
+                        </div>
+                        <div class="footer-bar">
+                            <p>
+                                I have <span>clear: both;</span> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum temporibus recusandae, eligendi voluptatibus ullam ab.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="container">
+                <h1>Clear Right</h1>
+                <p>Two box float example</p>
+                <div class="text-container float5">
+                    <h1>title</h1>
+                    <div class="floater floater1"><p>1 <span>float: right;</span></p></div>
+                    <div class="floater floater2"><p>2 <span>float: right;</span></p></div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum officia, aliquid asperiores. Totam voluptatum accusantium nobis ducimus, laudantium tempora rem.</p>
+                </div>
 
+                <div class="text-container float6">
+                    <h1>title</h1>
+                    <div class="floater floater1"><p>1 <span>float: right;</span></p></div>
+                    <div class="floater floater2"><p>2 <span>float: right;</span> <span>clear: right;</span></p></div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam rerum, ipsam corrupti eius repudiandae soluta pariatur, beatae assumenda odio quae.</p>
+                </div>
+            </section>
+
+            <section class="container">
+                <h1>Float box test</h1>
+                <p>In this example, we want to arrange all the boxes with the same color to a row</p>
+                <div class="float7">
+                    <div class="clearfix">
+                        <div class="floater row1"><p><span>float: left;</span></p></div>
+                        <div class="floater row1"><p><span>float: left;</span></p></div>
+                        <div class="floater row1"><p><span>float: left;</span></p></div>
+                        <div class="floater row1"><p><span>float: left;</span></p></div>
+                        <div class="floater row2"><p><span>float: left;</span></p></div>
+                        <div class="floater row2"><p><span>float: left;</span></p></div>
+                        <div class="floater row2"><p><span>float: left;</span></p></div>
+                        <div class="floater row2"><p><span>float: left;</span></p></div>
+                        <div class="floater row3"><p><span>float: left;</span></p></div>
+                        <div class="floater row3"><p><span>float: left;</span></p></div>
+                        <div class="floater row3"><p><span>float: left;</span></p></div>
+                        <div class="floater row3"><p><span>float: left;</span></p></div>
+                    </div>
+                </div>
+                <p>The solution i've used is to apply a clearfix tag on each row</p>
+                <div class="float7">
+                    <div class="clearfix">
+                        <div class="floater row1"><p><span>float: left;</span></p></div>
+                        <div class="floater row1"><p><span>float: left;</span></p></div>
+                        <div class="floater row1"><p><span>float: left;</span></p></div>
+                        <div class="floater row1"><p><span>float: left;</span></p></div>
+                    </div>
+
+                    <div class="clearfix">
+                        <div class="floater row2"><p><span>float: left;</span></p></div>
+                        <div class="floater row2"><p><span>float: left;</span></p></div>
+                        <div class="floater row2"><p><span>float: left;</span></p></div>
+                        <div class="floater row2"><p><span>float: left;</span></p></div>
+                    </div>
+
+                    <div class="clearfix">
+                        <div class="floater row3"><p><span>float: left;</span></p></div>
+                        <div class="floater row3"><p><span>float: left;</span></p></div>
+                        <div class="floater row3"><p><span>float: left;</span></p></div>
+                        <div class="floater row3"><p><span>float: left;</span></p></div>
+                    </div>
+                </div>
+            </section>
         </article>
 
         <footer class="footer">

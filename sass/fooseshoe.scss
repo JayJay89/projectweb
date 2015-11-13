@@ -1,12 +1,5 @@
 @import "all";
 
-// @font-face {font-family: 'Aller';src: url(../fonts/Aller-Lite.ttf) format('truetype');}
-// @font-face {font-family: 'Aller';src: url(../fonts/Aller-Lite-Italic.ttf) format('truetype');}
-// @font-face {font-family: 'Aller';src: url(../fonts/Aller-Regular.ttf) format('truetype');}
-// @font-face {font-family: 'Aller';src: url(../fonts/Aller-Italic.ttf) format('truetype');}
-// @font-face {font-family: 'Aller';src: url(../fonts/Aller-Bold.ttf) format('truetype');}
-// @font-face {font-family: 'Aller';src: url(../fonts/Aller-Bold-Italic.ttf) format('truetype');}
-
 @include font-face(Aller-Light, '../fonts/Aller-Lite', 100, normal);
 @include font-face(Aller-Light-Italic, '../fonts/Aller-Lite-Italic', 100, italic);
 @include font-face(Aller-Regular, '../fonts/Aller-Regular', 200, normal);
@@ -15,30 +8,691 @@
 @include font-face(Aller-Bold-Italic, '../fonts/Aller-Bold-Italic', 300, italic);
 
 @mixin Aller-Light {
-  font-family: 'Aller-Light', arial, sans-serif;
-  font-weight: 100; font-style: normal; }
+	font-family: 'Aller-Light', arial, sans-serif;
+	font-weight: 100; font-style: normal; }
 
 @mixin Aller-Light-Italic {
-  font-family: 'Aller-Light-Italic', arial, sans-serif;
-  font-weight: 100; font-style: italic; }
+	font-family: 'Aller-Light-Italic', arial, sans-serif;
+	font-weight: 100; font-style: italic; }
 
-@mixin Aller-Regular {
-  font-family: 'Aller-Regular', arial, sans-serif;
-  font-weight: 200; font-style: normal; }
+@mixin Aller {
+	font-family: 'Aller-Regular', arial, sans-serif;
+	font-weight: 200; font-style: normal; }
 
-@mixin Aller-Regular-Italic {
-  font-family: 'Aller-Regular-Italic', arial, sans-serif;
-  font-weight: 200; font-style: italic; }
+@mixin Aller-Italic {
+	font-family: 'Aller-Regular-Italic', arial, sans-serif;
+	font-weight: 200; font-style: italic; }
 
 @mixin Aller-Bold {
-  font-family: 'Aller-Bold', arial, sans-serif;
-  font-weight: 300; font-style: normal; }
+	font-family: 'Aller-Bold', arial, sans-serif;
+	font-weight: 300; font-style: normal; }
 
 @mixin Aller-Bold-Italic {
-  font-family: 'Aller-Bold-Italic', arial, sans-serif;
-  font-weight: 300; font-style: italic; }
+	font-family: 'Aller-Bold-Italic', arial, sans-serif;
+	font-weight: 300; font-style: italic; }
 
-h1 {
-	color: red;
-	@include Aller-Bold-Italic;
+$black: #242424;
+$dark-gray: #2e2e2e;
+$light-gray: #7e7e7e;
+$font-gray: #acacac;
+
+$header-border: #383838;
+$nav-border: #eeeeee;
+
+$teal: #57c5a0;
+$dark-teal: #4dae8d;
+
+/*General SHARED*/
+ul li {
+	list-style: none;
+}
+
+.container {
+	// border: 1px dashed blue;
+	border-width: 0px 2px;
+	padding: 0px;
+}
+
+p {
+	@include Aller;
+}
+
+.tag {
+	display: table;
+	vertical-align: middle;
+	width: 60px;
+	height: 60px;
+	
+	p {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		font-size: 11px;
+		text-transform: uppercase;
+	}
+
+	&.price-tag, 
+	&.date-tag {
+		background-color: $teal;
+		color: white;
+	}
+
+	&.on-sales-tag {
+		background-color: $black;
+		color: white;
+	}
+
+	&.out-of-stock-tag {
+		background-color: #f27e4b;
+		color: white;
+	}
+}
+
+.three-col li {
+	$right-margin: 2%;
+
+	display: inline-block;
+	width:(100% - (2 * $right-margin)) / 3;
+	margin-right: $right-margin;
+
+	&:nth-child(3n) {
+		margin-right: 0%;
+	}
+}
+
+/*Header - Logo and Login*/
+$header-bar-height : 45px;
+$logo-font-size	: 20px;
+$login-font-size: 10px;
+
+.header-row {
+	background-color: $black;
+}
+
+.header-container{
+	& > * {
+	  display: inline-block;
+	}
+
+	.login-tab {
+		color: $light-gray;
+		float: right;
+		line-height: $header-bar-height;
+		font-size: $login-font-size;
+		@include Aller;
+
+		li {
+			display: inline-block;
+			padding: 0px 20px;
+			border-right: 2px solid $header-border;
+		}
+	}
+}
+
+.header-logo {
+	@include Aller-Light;
+	text-transform: uppercase;
+	color: $teal;
+	font-size: $logo-font-size;
+	line-height: $header-bar-height;
+}
+
+/*Header - Navigation bar*/
+$nav-bar-height : 70px;
+
+.nav-row {
+	background-color: #fff;
+	line-height: $nav-bar-height ;
+}
+.nav-bar {
+	display: inline-block;
+	/*This height wasn't necessary at first, but gapfix font-size:0px is included, and this is needed*/
+	height: $nav-bar-height ;
+
+	&.right {
+		float: right;
+
+		li {
+			/*This is here because the right floating tabs will remain inline blocks even at $sm size*/
+			display: inline-block;
+		}
+	}
+
+	.collapse {
+		display: inline-block;
+
+		@include min-screen($sm) {
+			display: none;
+		}
+	}
+
+	li {
+		border-left: 1px solid $nav-border;
+		display: none;
+		padding: 0px 20px;
+		font-size: 14px;
+		@include Aller;
+
+		@include min-screen($sm) {
+			display: inline-block;
+		}
+
+		&:last-child{
+			margin-right:0px;
+			border-right: 1px solid $nav-border;
+		}
+
+		> * {
+			display: inline-block;
+		}
+	}
+	$counter-height:25px;
+	$counter-width: $counter-height;
+
+	.counter {
+		position: relative;
+		background-color: $light-gray;
+		border-radius: 5px;
+		vertical-align: middle;
+		width: $counter-width;
+		height: $counter-height;
+		margin-left: 3px;
+
+		&:hover {
+			background-color: $teal;
+		}
+
+		&:active {
+			background-color: $dark-teal;
+		}
+
+		span {
+			line-height: $counter-height;
+			position: absolute;
+			text-align: center;
+			width: 100%;
+			border-radius: 5px;
+			line-height: $counter-height;
+			color: $cloud;
+		}
+	}
+}
+
+/*Section - Slider*/
+/*Current Issue - Is there a better way to write the one below*/
+
+.slider {
+	overflow: hidden;
+
+	/*This are rest of the 3 banners*/
+	.container {
+		position: relative;
+	}
+
+	li {
+		&:nth-child(2),
+		&:nth-child(3),
+		&:nth-child(4)
+		 {
+			display: none;
+		}
+	}
+
+	.main-banner {
+		min-width: 600px;
+	}
+	/*Right Side Info*/
+	.slider-info-container {
+		width: 50%;
+		display: table;
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		padding: 80px 20px 50px;
+	}
+
+	.slider-info {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: left;
+
+		> * {
+			margin-bottom: 5px;
+		}
+
+		.slider-title, p {
+			@include Aller-Light;
+		}
+	}
+
+	.icon-set {
+
+		li {
+			display: inline-block;
+			margin-right: 5px;
+			background-color: #fafaf8;
+			padding: 10px;
+			img {
+
+			}
+		}
+	}
+}
+
+/*Section - Slider Selector*/
+.slider-selector {
+	background-color: $dark-gray;
+
+	$numOfSlides: 5;
+	$topSliderHeight: 10px;
+	// $topSliderHeight-sm: 8px;
+	$span-top-height: 25px;
+	$span-bottom-height: 15px;
+	$li-padding: 10px;
+
+	.container {
+		position: relative;
+	}
+
+	.slider-top {
+		background-color: $teal;
+		height: $topSliderHeight;
+		left: 0%;
+		position: absolute;
+		top: 0px;
+		width: (100%) / $numOfSlides;
+		z-index: 9999;
+
+		/*Suggested Media Query Change*/
+		// @include min-screen ($sm) {
+		// 	height: $topSliderHeight-sm;
+		// }
+	}
+	
+
+	ul {
+		text-align: center;
+		@include Aller;
+
+		li {
+			display: inline-block;
+			padding: ($topSliderHeight + $li-padding) 0px $li-padding;
+			width: 20%;
+			position: relative;
+
+			&:before {
+				background-color: black;
+				content:"";
+				height: $topSliderHeight;
+				left: 0px;
+				position: absolute;
+				top: 0px;
+				width: 100%;
+			}
+
+			&:hover {
+				.hover-image {
+					opacity: 0.7;
+					top: -100%;
+				}
+			}
+
+			span {
+				display: block;
+				font-size: 12px;
+				color: $font-gray;
+				line-height: $span-top-height;
+
+				&:first-child {
+					font-size: 18px;
+					line-height: $span-bottom-height;
+				}
+			}
+			
+			&:nth-child(1) {
+				&:hover {
+					.slider-top {
+						left: 20%;
+					}
+				}
+			}
+		}
+
+		.hover-image {
+			width: 100%;
+			height: $span-top-height + $span-bottom-height + $topSliderHeight + ($li-padding *2);
+			left: 0px;
+			position: absolute;
+			top: 0%;
+			opacity: 0;
+			@include transition (all 0.5s ease-in-out);
+		}
+	}
+}
+
+/*Section - Special Offer*/
+.special-offer {
+	background-color: $black;
+
+	.container {
+		padding: 20px 0px;
+	}
+
+	li {
+		position: relative;
+
+		&:hover {
+			.hover-text {
+				p {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+		
+		img {
+			width: 100%;
+		}
+
+		.hover-text {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			text-align: center;
+			width: 100%;
+
+			p {
+				color: white;
+				font-size: 20px;
+				padding: 20px;
+				background-color: rgba(32,32,32,0.8);
+				text-transform: uppercase;
+				display: inline-block;
+				visibility: hidden;
+				opacity: 0;
+				@include transition (all 0.3s ease);
+				@include Aller-Light;
+			}
+		}
+	}
+}
+
+.new-arrival {
+	background-color: #ebe7df;
+
+	.container {
+		padding: 20px 0px 40px;
+		border-bottom: 1px solid #bcb5a7;
+
+		> div {
+			margin: 20px 0px;
+		}
+	}
+	
+	$line-height: 26px;
+	$button-border-width: 1px;
+
+	h3 {
+		@include Aller-Light;
+		line-height: $line-height + (2 * $button-border-width);
+		display: inline-block;
+		color: $black;
+		
+	}
+
+	button {
+		background-color: rgba(0,0,0,0);
+		border: 1px solid #bcb5a7;
+		border-width: $button-border-width;
+		color: #bcb5a7; 
+		display: inline-block;
+		float: right;
+		font-size: 12px;
+		line-height: $line-height;
+		padding: 0px 20px;
+		@include Aller-Bold;
+		@include border-radius (4px);
+		@include transition (all 0.3s ease);
+
+		&:hover {
+			background-color: $teal;
+			color: $cloud;
+			border: 1px solid $cloud;
+		}
+	}
+
+	.featured-shoes {
+		background-color: white;
+		position: relative;
+		$price-info-left: 10px;
+
+		a {
+			font-size: 16px;
+		}
+
+		.affixed-bottom {
+			position: absolute;
+			bottom: 0px;
+			left: $price-info-left;
+		}
+
+		.affixed-top {
+			position: absolute;
+			top: 0px;
+			right: $price-info-left;
+		}
+
+		/*66px is the size of the price-info*/
+		.shoe-name {
+			border-top: 1px solid #cccccc;
+			padding: 10px 0px;
+			padding-left: ($price-info-left * 2) + 66px;
+		}
+
+		img {
+			margin: 0 auto;
+		}
+	}
+}
+
+/*how to achieve equal height column*/
+.shoe-news {
+	background-color: #ebe7df;
+	
+	.container {
+		padding: 30px 0px;
+		display: table;
+
+		> div {
+			$border-gap: 10px;
+			display: table-cell;
+			background-color: #dfdbd4;
+			border-left: $border-gap solid #ebe7df;
+			border-right: $border-gap solid #ebe7df;
+			padding: 30px 20px;
+			vertical-align: top;
+
+			&:first-child {
+				border-left: 0px;
+			}
+			&:last-child {
+				border-right: 0px;
+			}
+		}
+	}
+
+	.col-3 {
+		width: 25%;
+	}
+	.col-6 {
+		width: 50%;
+	}
+
+	h5 {
+		@include Aller-Bold;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+	}
+
+	p {
+		font-size: 14px;
+	}
+
+	.username {
+		margin: 10px 0px;
+		font-style: italic;
+	}
+
+
+	$post-entry-height: 45px;
+
+	.post-entry {
+		margin-bottom: $post-entry-height/2;
+
+		h5, p {
+			line-height: $post-entry-height/2;
+		}
+
+		h5 {
+			margin: 0px;
+			text-transform: none;
+		}
+
+		.date-tag {
+			float: left;
+			width: $post-entry-height;
+			height: $post-entry-height; 
+			margin-right: 10px;
+
+			p {
+				padding: 0px 10px;
+				line-height: initial;
+			}
+		}
+	}
+}
+
+/*Footer Section*/
+$widget-padding: 20px;
+$widget-margin: 2%;
+
+.footer-widgets {
+	background-color: $black;
+	color: white;
+
+	.container {
+		padding: 30px 0px;
+		border: 1px solid #1c1c1c;
+	}
+
+	h5 {
+		text-transform: uppercase;
+		margin: 20px 0px;
+		color: #6f6f6f;
+	}
+
+	li {
+		font-size: 14px;
+		vertical-align: top;
+		padding: $widget-padding;
+
+		p {
+			font-style: italic;
+			text-align: justify;
+			color: #acacac;
+		}
+
+		a {
+			color: $teal;
+		}
+	}
+
+	.twitter-widget {
+		p, span {
+			margin-bottom: 10px;
+		}
+	}
+
+	img {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	.flickr-widget-grid {
+		li {
+			padding: 0px;
+			margin-bottom: 2%;
+		}
+	}
+}
+
+.footer-social-row {
+	background-color: $black;
+
+	.container {
+		padding: 30px 0px;
+
+		> div {
+			display: inline-block;
+		}
+	}
+	/*input-height needs to be 16px because the icon is 16px tall*/
+	$input-height: 16px;
+	$input-vertical-padding: 10px;
+
+	input {
+		background-color: $dark-gray;
+		border: 0px;
+		color: $font-gray;
+		font-size: $input-height - 2px;
+		line-height: $input-height;
+		margin-left: $widget-padding;
+		padding: $input-vertical-padding 15px;
+		position: relative;
+		vertical-align: middle;
+
+		+ div {
+			background-color: #7d7d7d;
+			display: inline-block;
+			padding: $input-vertical-padding;
+		}
+	}
+
+	.social-icon-row {
+		float: right;
+		margin-right: $widget-padding;
+
+		li {
+			display: inline-block;
+			background-color: $dark-gray;
+			vertical-align: middle;
+			text-align: center;
+			line-height: $input-height + (2 * $input-vertical-padding);
+			width: $input-height + (2 * $input-vertical-padding);
+			margin-left: 10px;
+		}
+	}
+}
+
+.footer-text {
+	background-color: $dark-gray;
+
+	.container {
+		padding: 30px 0px;
+	}
+	
+	$text-line-height: 40px;
+
+	a, p {
+		display: inline-block;
+		font-size: 12px;
+		color: $font-gray;
+	}
+	.copyright-text {
+		line-height: $text-line-height / 2;
+	}
+	.footer-menu {
+		line-height: $text-line-height;
+		float: right;
+	}
 }

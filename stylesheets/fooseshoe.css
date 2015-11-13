@@ -24,6 +24,12 @@
   A PEN BY Steve Hickey
   http://codepen.io/javasteve99/pen/hDxpn
 */
+/*Inline Gap Fix*/
+/* line 150, ../sass/_mixin.scss */
+.gapfix {
+  font-size: 0px;
+}
+
 @font-face {
   font-family: Aller-Light;
   src: url("../fonts/Aller-Lite.eot");
@@ -102,10 +108,648 @@
     src: url("../fonts/Aller-Bold-Italic.svg#Aller-Bold-Italic") format("svg");
   }
 }
-/* line 41, ../sass/fooseshoe.scss */
-h1 {
-  color: red;
-  font-family: 'Aller-Bold-Italic', arial, sans-serif;
+/*General SHARED*/
+/* line 46, ../sass/fooseshoe.scss */
+ul li {
+  list-style: none;
+}
+
+/* line 50, ../sass/fooseshoe.scss */
+.container {
+  border-width: 0px 2px;
+  padding: 0px;
+}
+
+/* line 56, ../sass/fooseshoe.scss */
+p {
+  font-family: 'Aller-Regular', arial, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+/* line 60, ../sass/fooseshoe.scss */
+.tag {
+  display: table;
+  vertical-align: middle;
+  width: 60px;
+  height: 60px;
+}
+/* line 66, ../sass/fooseshoe.scss */
+.tag p {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+/* line 74, ../sass/fooseshoe.scss */
+.tag.price-tag, .tag.date-tag {
+  background-color: #57c5a0;
+  color: white;
+}
+/* line 80, ../sass/fooseshoe.scss */
+.tag.on-sales-tag {
+  background-color: #242424;
+  color: white;
+}
+/* line 85, ../sass/fooseshoe.scss */
+.tag.out-of-stock-tag {
+  background-color: #f27e4b;
+  color: white;
+}
+
+/* line 91, ../sass/fooseshoe.scss */
+.three-col li {
+  display: inline-block;
+  width: 32%;
+  margin-right: 2%;
+}
+/* line 98, ../sass/fooseshoe.scss */
+.three-col li:nth-child(3n) {
+  margin-right: 0%;
+}
+
+/*Header - Logo and Login*/
+/* line 108, ../sass/fooseshoe.scss */
+.header-row {
+  background-color: #242424;
+}
+
+/* line 113, ../sass/fooseshoe.scss */
+.header-container > * {
+  display: inline-block;
+}
+/* line 117, ../sass/fooseshoe.scss */
+.header-container .login-tab {
+  color: #7e7e7e;
+  float: right;
+  line-height: 45px;
+  font-size: 10px;
+  font-family: 'Aller-Regular', arial, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+/* line 124, ../sass/fooseshoe.scss */
+.header-container .login-tab li {
+  display: inline-block;
+  padding: 0px 20px;
+  border-right: 2px solid #383838;
+}
+
+/* line 132, ../sass/fooseshoe.scss */
+.header-logo {
+  font-family: 'Aller-Light', arial, sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  text-transform: uppercase;
+  color: #57c5a0;
+  font-size: 20px;
+  line-height: 45px;
+}
+
+/*Header - Navigation bar*/
+/* line 143, ../sass/fooseshoe.scss */
+.nav-row {
+  background-color: #fff;
+  line-height: 70px;
+}
+
+/* line 147, ../sass/fooseshoe.scss */
+.nav-bar {
+  display: inline-block;
+  /*This height wasn't necessary at first, but gapfix font-size:0px is included, and this is needed*/
+  height: 70px;
+}
+/* line 152, ../sass/fooseshoe.scss */
+.nav-bar.right {
+  float: right;
+}
+/* line 155, ../sass/fooseshoe.scss */
+.nav-bar.right li {
+  /*This is here because the right floating tabs will remain inline blocks even at $sm size*/
+  display: inline-block;
+}
+/* line 161, ../sass/fooseshoe.scss */
+.nav-bar .collapse {
+  display: inline-block;
+}
+@media screen and (min-width: 768px) {
+  /* line 161, ../sass/fooseshoe.scss */
+  .nav-bar .collapse {
+    display: none;
+  }
+}
+/* line 169, ../sass/fooseshoe.scss */
+.nav-bar li {
+  border-left: 1px solid #eeeeee;
+  display: none;
+  padding: 0px 20px;
+  font-size: 14px;
+  font-family: 'Aller-Regular', arial, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+@media screen and (min-width: 768px) {
+  /* line 169, ../sass/fooseshoe.scss */
+  .nav-bar li {
+    display: inline-block;
+  }
+}
+/* line 180, ../sass/fooseshoe.scss */
+.nav-bar li:last-child {
+  margin-right: 0px;
+  border-right: 1px solid #eeeeee;
+}
+/* line 185, ../sass/fooseshoe.scss */
+.nav-bar li > * {
+  display: inline-block;
+}
+/* line 192, ../sass/fooseshoe.scss */
+.nav-bar .counter {
+  position: relative;
+  background-color: #7e7e7e;
+  border-radius: 5px;
+  vertical-align: middle;
+  width: 25px;
+  height: 25px;
+  margin-left: 3px;
+}
+/* line 201, ../sass/fooseshoe.scss */
+.nav-bar .counter:hover {
+  background-color: #57c5a0;
+}
+/* line 205, ../sass/fooseshoe.scss */
+.nav-bar .counter:active {
+  background-color: #4dae8d;
+}
+/* line 209, ../sass/fooseshoe.scss */
+.nav-bar .counter span {
+  line-height: 25px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  border-radius: 5px;
+  line-height: 25px;
+  color: #ECF0F1;
+}
+
+/*Section - Slider*/
+/*Current Issue - Is there a better way to write the one below*/
+/* line 224, ../sass/fooseshoe.scss */
+.slider {
+  overflow: hidden;
+  /*This are rest of the 3 banners*/
+  /*Right Side Info*/
+}
+/* line 228, ../sass/fooseshoe.scss */
+.slider .container {
+  position: relative;
+}
+/* line 233, ../sass/fooseshoe.scss */
+.slider li:nth-child(2), .slider li:nth-child(3), .slider li:nth-child(4) {
+  display: none;
+}
+/* line 241, ../sass/fooseshoe.scss */
+.slider .main-banner {
+  min-width: 600px;
+}
+/* line 245, ../sass/fooseshoe.scss */
+.slider .slider-info-container {
+  width: 50%;
+  display: table;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  padding: 80px 20px 50px;
+}
+/* line 254, ../sass/fooseshoe.scss */
+.slider .slider-info {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: left;
+}
+/* line 259, ../sass/fooseshoe.scss */
+.slider .slider-info > * {
+  margin-bottom: 5px;
+}
+/* line 263, ../sass/fooseshoe.scss */
+.slider .slider-info .slider-title, .slider .slider-info p {
+  font-family: 'Aller-Light', arial, sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+/* line 270, ../sass/fooseshoe.scss */
+.slider .icon-set li {
+  display: inline-block;
+  margin-right: 5px;
+  background-color: #fafaf8;
+  padding: 10px;
+}
+
+/*Section - Slider Selector*/
+/* line 283, ../sass/fooseshoe.scss */
+.slider-selector {
+  background-color: #2e2e2e;
+}
+/* line 293, ../sass/fooseshoe.scss */
+.slider-selector .container {
+  position: relative;
+}
+/* line 297, ../sass/fooseshoe.scss */
+.slider-selector .slider-top {
+  background-color: #57c5a0;
+  height: 10px;
+  left: 0%;
+  position: absolute;
+  top: 0px;
+  width: 20%;
+  z-index: 9999;
+  /*Suggested Media Query Change*/
+}
+/* line 313, ../sass/fooseshoe.scss */
+.slider-selector ul {
+  text-align: center;
+  font-family: 'Aller-Regular', arial, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+/* line 317, ../sass/fooseshoe.scss */
+.slider-selector ul li {
+  display: inline-block;
+  padding: 20px 0px 10px;
+  width: 20%;
+  position: relative;
+}
+/* line 323, ../sass/fooseshoe.scss */
+.slider-selector ul li:before {
+  background-color: black;
+  content: "";
+  height: 10px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+/* line 334, ../sass/fooseshoe.scss */
+.slider-selector ul li:hover .hover-image {
+  opacity: 0.7;
+  top: -100%;
+}
+/* line 340, ../sass/fooseshoe.scss */
+.slider-selector ul li span {
+  display: block;
+  font-size: 12px;
+  color: #acacac;
+  line-height: 25px;
+}
+/* line 346, ../sass/fooseshoe.scss */
+.slider-selector ul li span:first-child {
+  font-size: 18px;
+  line-height: 15px;
+}
+/* line 354, ../sass/fooseshoe.scss */
+.slider-selector ul li:nth-child(1):hover .slider-top {
+  left: 20%;
+}
+/* line 361, ../sass/fooseshoe.scss */
+.slider-selector ul .hover-image {
+  width: 100%;
+  height: 70px;
+  left: 0px;
+  position: absolute;
+  top: 0%;
+  opacity: 0;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+/*Section - Special Offer*/
+/* line 374, ../sass/fooseshoe.scss */
+.special-offer {
+  background-color: #242424;
+}
+/* line 377, ../sass/fooseshoe.scss */
+.special-offer .container {
+  padding: 20px 0px;
+}
+/* line 381, ../sass/fooseshoe.scss */
+.special-offer li {
+  position: relative;
+}
+/* line 386, ../sass/fooseshoe.scss */
+.special-offer li:hover .hover-text p {
+  opacity: 1;
+  visibility: visible;
+}
+/* line 393, ../sass/fooseshoe.scss */
+.special-offer li img {
+  width: 100%;
+}
+/* line 397, ../sass/fooseshoe.scss */
+.special-offer li .hover-text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  width: 100%;
+}
+/* line 404, ../sass/fooseshoe.scss */
+.special-offer li .hover-text p {
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  background-color: rgba(32, 32, 32, 0.8);
+  text-transform: uppercase;
+  display: inline-block;
+  visibility: hidden;
+  opacity: 0;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-family: 'Aller-Light', arial, sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* line 420, ../sass/fooseshoe.scss */
+.new-arrival {
+  background-color: #ebe7df;
+}
+/* line 423, ../sass/fooseshoe.scss */
+.new-arrival .container {
+  padding: 20px 0px 40px;
+  border-bottom: 1px solid #bcb5a7;
+}
+/* line 427, ../sass/fooseshoe.scss */
+.new-arrival .container > div {
+  margin: 20px 0px;
+}
+/* line 435, ../sass/fooseshoe.scss */
+.new-arrival h3 {
+  font-family: 'Aller-Light', arial, sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  line-height: 28px;
+  display: inline-block;
+  color: #242424;
+}
+/* line 443, ../sass/fooseshoe.scss */
+.new-arrival button {
+  background-color: transparent;
+  border: 1px solid #bcb5a7;
+  border-width: 1px;
+  color: #bcb5a7;
+  display: inline-block;
+  float: right;
+  font-size: 12px;
+  line-height: 26px;
+  padding: 0px 20px;
+  font-family: 'Aller-Bold', arial, sans-serif;
   font-weight: 300;
+  font-style: normal;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+/* line 457, ../sass/fooseshoe.scss */
+.new-arrival button:hover {
+  background-color: #57c5a0;
+  color: #ECF0F1;
+  border: 1px solid #ECF0F1;
+}
+/* line 464, ../sass/fooseshoe.scss */
+.new-arrival .featured-shoes {
+  background-color: white;
+  position: relative;
+  /*66px is the size of the price-info*/
+}
+/* line 469, ../sass/fooseshoe.scss */
+.new-arrival .featured-shoes a {
+  font-size: 16px;
+}
+/* line 473, ../sass/fooseshoe.scss */
+.new-arrival .featured-shoes .affixed-bottom {
+  position: absolute;
+  bottom: 0px;
+  left: 10px;
+}
+/* line 479, ../sass/fooseshoe.scss */
+.new-arrival .featured-shoes .affixed-top {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+}
+/* line 486, ../sass/fooseshoe.scss */
+.new-arrival .featured-shoes .shoe-name {
+  border-top: 1px solid #cccccc;
+  padding: 10px 0px;
+  padding-left: 86px;
+}
+/* line 492, ../sass/fooseshoe.scss */
+.new-arrival .featured-shoes img {
+  margin: 0 auto;
+}
+
+/*how to achieve equal height column*/
+/* line 499, ../sass/fooseshoe.scss */
+.shoe-news {
+  background-color: #ebe7df;
+}
+/* line 502, ../sass/fooseshoe.scss */
+.shoe-news .container {
+  padding: 30px 0px;
+  display: table;
+}
+/* line 506, ../sass/fooseshoe.scss */
+.shoe-news .container > div {
+  display: table-cell;
+  background-color: #dfdbd4;
+  border-left: 10px solid #ebe7df;
+  border-right: 10px solid #ebe7df;
+  padding: 30px 20px;
+  vertical-align: top;
+}
+/* line 515, ../sass/fooseshoe.scss */
+.shoe-news .container > div:first-child {
+  border-left: 0px;
+}
+/* line 518, ../sass/fooseshoe.scss */
+.shoe-news .container > div:last-child {
+  border-right: 0px;
+}
+/* line 524, ../sass/fooseshoe.scss */
+.shoe-news .col-3 {
+  width: 25%;
+}
+/* line 527, ../sass/fooseshoe.scss */
+.shoe-news .col-6 {
+  width: 50%;
+}
+/* line 531, ../sass/fooseshoe.scss */
+.shoe-news h5 {
+  font-family: 'Aller-Bold', arial, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+/* line 537, ../sass/fooseshoe.scss */
+.shoe-news p {
+  font-size: 14px;
+}
+/* line 541, ../sass/fooseshoe.scss */
+.shoe-news .username {
+  margin: 10px 0px;
   font-style: italic;
+}
+/* line 549, ../sass/fooseshoe.scss */
+.shoe-news .post-entry {
+  margin-bottom: 22.5px;
+}
+/* line 552, ../sass/fooseshoe.scss */
+.shoe-news .post-entry h5, .shoe-news .post-entry p {
+  line-height: 22.5px;
+}
+/* line 556, ../sass/fooseshoe.scss */
+.shoe-news .post-entry h5 {
+  margin: 0px;
+  text-transform: none;
+}
+/* line 561, ../sass/fooseshoe.scss */
+.shoe-news .post-entry .date-tag {
+  float: left;
+  width: 45px;
+  height: 45px;
+  margin-right: 10px;
+}
+/* line 567, ../sass/fooseshoe.scss */
+.shoe-news .post-entry .date-tag p {
+  padding: 0px 10px;
+  line-height: initial;
+}
+
+/*Footer Section*/
+/* line 579, ../sass/fooseshoe.scss */
+.footer-widgets {
+  background-color: #242424;
+  color: white;
+}
+/* line 583, ../sass/fooseshoe.scss */
+.footer-widgets .container {
+  padding: 30px 0px;
+  border: 1px solid #1c1c1c;
+}
+/* line 588, ../sass/fooseshoe.scss */
+.footer-widgets h5 {
+  text-transform: uppercase;
+  margin: 20px 0px;
+  color: #6f6f6f;
+}
+/* line 594, ../sass/fooseshoe.scss */
+.footer-widgets li {
+  font-size: 14px;
+  vertical-align: top;
+  padding: 20px;
+}
+/* line 599, ../sass/fooseshoe.scss */
+.footer-widgets li p {
+  font-style: italic;
+  text-align: justify;
+  color: #acacac;
+}
+/* line 605, ../sass/fooseshoe.scss */
+.footer-widgets li a {
+  color: #57c5a0;
+}
+/* line 611, ../sass/fooseshoe.scss */
+.footer-widgets .twitter-widget p, .footer-widgets .twitter-widget span {
+  margin-bottom: 10px;
+}
+/* line 616, ../sass/fooseshoe.scss */
+.footer-widgets img {
+  width: 100%;
+  max-width: 100%;
+}
+/* line 622, ../sass/fooseshoe.scss */
+.footer-widgets .flickr-widget-grid li {
+  padding: 0px;
+  margin-bottom: 2%;
+}
+
+/* line 629, ../sass/fooseshoe.scss */
+.footer-social-row {
+  background-color: #242424;
+  /*input-height needs to be 16px because the icon is 16px tall*/
+}
+/* line 632, ../sass/fooseshoe.scss */
+.footer-social-row .container {
+  padding: 30px 0px;
+}
+/* line 635, ../sass/fooseshoe.scss */
+.footer-social-row .container > div {
+  display: inline-block;
+}
+/* line 643, ../sass/fooseshoe.scss */
+.footer-social-row input {
+  background-color: #2e2e2e;
+  border: 0px;
+  color: #acacac;
+  font-size: 14px;
+  line-height: 16px;
+  margin-left: 20px;
+  padding: 10px 15px;
+  position: relative;
+  vertical-align: middle;
+}
+/* line 654, ../sass/fooseshoe.scss */
+.footer-social-row input + div {
+  background-color: #7d7d7d;
+  display: inline-block;
+  padding: 10px;
+}
+/* line 661, ../sass/fooseshoe.scss */
+.footer-social-row .social-icon-row {
+  float: right;
+  margin-right: 20px;
+}
+/* line 665, ../sass/fooseshoe.scss */
+.footer-social-row .social-icon-row li {
+  display: inline-block;
+  background-color: #2e2e2e;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 36px;
+  width: 36px;
+  margin-left: 10px;
+}
+
+/* line 677, ../sass/fooseshoe.scss */
+.footer-text {
+  background-color: #2e2e2e;
+}
+/* line 680, ../sass/fooseshoe.scss */
+.footer-text .container {
+  padding: 30px 0px;
+}
+/* line 686, ../sass/fooseshoe.scss */
+.footer-text a, .footer-text p {
+  display: inline-block;
+  font-size: 12px;
+  color: #acacac;
+}
+/* line 691, ../sass/fooseshoe.scss */
+.footer-text .copyright-text {
+  line-height: 20px;
+}
+/* line 694, ../sass/fooseshoe.scss */
+.footer-text .footer-menu {
+  line-height: 40px;
+  float: right;
 }

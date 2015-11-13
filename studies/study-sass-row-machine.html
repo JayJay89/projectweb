@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Enrico - Sass Row Machine</title>
+        <!-- Bootstrap -->
+        <link href="../stylesheets/reset.css" rel="stylesheet">
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../stylesheets/bootstrap-overwrite.css" rel="stylesheet">
+        <link href="../stylesheets/study.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.s7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body class="study">
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Enrico Studies</a>
+            </div>
+            
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="study-master.html">Home</a></li>
+                    <li><a href="#">Next</a></li>
+                    <li><a href="#">Previous</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <article class="study-row-machine">
+            <header class="container">
+                <h1>Row Machine</h1>
+                <time datetime="2015-11-14">14 Nov 2015</time>
+                <h5><a href="https://css-tricks.com/video-screencasts/132-quick-useful-case-sass-math-mixins/">Sass Row Machine </a></h5>
+                <!-- <h5>JS is involved (study-hide-css.js)</h5> -->
+            </header>
+            <section class="container">
+                <pre>
+@mixin rowMachine ($numPerRow, $margin) {
+
+    width: (100% - (($numPerRow - 1) * $margin))/$numPerRow;
+    margin-right: $margin;
+    &:nth-child(n) {
+        margin-right: $margin;
+        margin-bottom: $margin;
+    }
+    &:nth-child(#{$numPerRow}n) {
+        margin-right: 0px;
+    }
+}
+
+.box {
+    @include rowMachine(3,2%);
+
+    @include min-screen($sm) {
+        @include rowMachine(5,2%);
+    } 
+}                    
+                </pre>
+            </section>
+            <section class="container">
+                <h1>Initial CSS</h1>
+                <p>What we need here is a grid system that displays 4 images per row. Hence, by setting <span>width: 25%</span> on each box, we can achieve that</p>
+                <p>Mathematically, it can be better represented by 100/4 = 25% as we need space for 4 image per row</p>
+                <p><span>max-width: 100%</span> are added on each image so that it follows the size of the box when the screen is smaller. Try removing it to see what occurs!</p>
+                <div class="row-machine clearfix rm1">
+                    <div class="box"><img src="http://placehold.it/250/D35400/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/D35400/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/D35400/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/D35400/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/2C3E50/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/2C3E50/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/2C3E50/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/2C3E50/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/3498DB/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/3498DB/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/3498DB/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/3498DB/ffffff" alt=""></div>
+                </div>
+            </section>
+
+            <section class="container">
+                <h1>Adding Margin to the right</h1>
+                <p>What if we need a margin-right on each of the box? This would pushed the 4th box below and disrupt the alignment</p>
+
+                <div class="row-machine clearfix rm2">
+                    <div class="box"><img src="http://placehold.it/250/D35400/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/D35400/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/D35400/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/D35400/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/2C3E50/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/2C3E50/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/2C3E50/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/2C3E50/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/3498DB/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/3498DB/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/3498DB/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/3498DB/ffffff" alt=""></div>
+                </div>
+            </section>
+            
+            <section class="container">
+                <h1>How to fix that?</h1>
+
+                <div class="work-display">
+                    <img src="study-sass-row-machine.jpg" alt="">
+                </div>
+
+
+                <div class="row-machine clearfix rm3">
+                    <div class="box"><img src="http://placehold.it/250/D35400/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/D35400/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/D35400/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/D35400/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/2C3E50/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/2C3E50/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/2C3E50/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/2C3E50/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/3498DB/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/3498DB/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/3498DB/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/3498DB/ffffff" alt=""></div>
+                </div>
+            </section>
+
+            <section class="container">
+                <h1>Sass-ing it</h1>
+                <p>This is what we have a the moment</p>
+<pre>
+.box {
+    width: (100% - (3 * 2%))/4;
+    margin-right: 2%;
+    &:nth-child(4n) {
+        margin-right: 0px;
+    }
+}
+</pre>
+<pre>
+.box {
+    $numPerRow: 4;
+    $margin: 2%;
+
+    width: (100% - (($numPerRow - 1) * $margin))/$numPerRow;
+    margin-right: $margin;
+    &:nth-child(#{$numPerRow}n) {
+        margin-right: 0px;
+    }
+}
+</pre>
+<h1>Mixin it</h1>
+<pre>
+@mixin rowMachine ($numPerRow, $margin) {
+
+    width: (100% - (($numPerRow - 1) * $margin))/$numPerRow;
+    margin-right: $margin;
+    &:nth-child(#{$numPerRow}n) {
+        margin-right: 0px;
+    }
+}
+
+.box {
+    @include rowMachine(5,2%);
+}
+</pre>
+
+            </section>
+
+            <section class="container">
+                <h1>New Code in Action</h1>
+
+                <div class="row-machine clearfix rm5">
+                    <div class="box"><img src="http://placehold.it/250/D35400/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/D35400/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/D35400/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/D35400/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/2C3E50/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/2C3E50/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/2C3E50/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/2C3E50/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/3498DB/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/3498DB/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/3498DB/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/3498DB/ffffff" alt=""></div>
+                </div>
+            </section>
+
+            <section class="container">
+                <h1>Responsiveness</h1>
+                <p> We have an issue here, when the screen is small there are 3 rows, and the third childs will not have a margin right</p>
+                <p> When it has 5 images in the row, both third-child and fifth-childs does not have a margin-right. It needs to be more specific</p>
+                <div class="row-machine clearfix rm6">
+                    <div class="box"><img src="http://placehold.it/250/D35400/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/D35400/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/D35400/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/D35400/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/2C3E50/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/2C3E50/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/2C3E50/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/2C3E50/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/3498DB/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/3498DB/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/3498DB/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/3498DB/ffffff" alt=""></div>
+                </div>
+            </section>
+
+            <section class="container">
+                <h1>Responsiveness Margin-Right Fix</h1>
+                <p> 
+                To fix this, we'll add in the below:
+<pre>
+    &:nth-child(n) {
+        margin-right: $margin;
+        margin-bottom: $margin;
+    }
+</pre>
+    This line tells css to apply the margin to all childs first. Thus resetting all their margin back to the 2%.
+    Then, only after that, margin-right: 0px be applied on the last child on a row
+                </p>
+                <pre>
+@mixin rowMachine ($numPerRow, $margin) {
+
+    width: (100% - (($numPerRow - 1) * $margin))/$numPerRow;
+    margin-right: $margin;
+    &:nth-child(n) {
+        margin-right: $margin;
+        margin-bottom: $margin;
+    }
+    &:nth-child(#{$numPerRow}n) {
+        margin-right: 0px;
+    }
+}
+
+.box {
+    @include rowMachine(3,2%);
+
+    @include min-screen($sm) {
+        @include rowMachine(5,2%);
+    } 
+}      
+                </pre>
+                <div class="row-machine clearfix rm7">
+                    <div class="box"><img src="http://placehold.it/250/D35400/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/D35400/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/D35400/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/D35400/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/2C3E50/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/2C3E50/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/2C3E50/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/2C3E50/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/3498DB/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/3498DB/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/3498DB/ffffff" alt=""></div>
+                    <div class="box"><img src="http://placehold.it/250/3498DB/ffffff" alt=""></div>
+                </div>
+            </section>
+        </article>
+
+        <footer class="footer">
+            <p>Enrico Studies</p>
+        </footer>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="../js/bootstrap.min.js"></script>
+    </body>
+</html>

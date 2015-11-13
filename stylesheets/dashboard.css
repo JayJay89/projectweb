@@ -24,6 +24,12 @@
   A PEN BY Steve Hickey
   http://codepen.io/javasteve99/pen/hDxpn
 */
+/*Inline Gap Fix*/
+/* line 150, ../sass/_mixin.scss */
+.gapfix {
+  font-size: 0px;
+}
+
 /*Using 100% for both html and body will allow the header to stretch 100% as well*/
 /* line 4, ../sass/dashboard.scss */
 html, body {
