@@ -18,6 +18,7 @@
 /*fonts*/
 /*Transition*/
 /*Break Point*/
+/*Background-size*/
 /*Fonts*/
 /*
   Fool-Proof @font-face
@@ -25,9 +26,15 @@
   http://codepen.io/javasteve99/pen/hDxpn
 */
 /*Inline Gap Fix*/
-/* line 150, ../sass/_mixin.scss */
+/* line 164, ../sass/_mixin.scss */
 .gapfix {
   font-size: 0px;
+}
+
+/* line 168, ../sass/_mixin.scss */
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 /*Using 100% for both html and body will allow the header to stretch 100% as well*/

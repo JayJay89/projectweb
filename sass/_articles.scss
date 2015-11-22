@@ -1,0 +1,79 @@
+
+/*Stylesheet for Studies and Misc*/
+body {
+    padding-top: 100px;
+}
+
+.container {
+    width: 100%;
+    padding: 50px 100px;
+    // @include redbor;
+}
+
+.footer {
+    width: 100%;
+    height: 60px; 
+    background-color: $wetasphalt;
+    color: $concrete;
+    display: table;
+
+    p {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+}
+
+section {
+    padding: 50px 0px;
+    border: 1px solid $asbestos;
+    border-width: 2px 0px 2px 0px;
+    background-color: $cloud;
+    &:nth-child(odd) {
+        background-color:$silver;
+    }
+}
+
+p {
+    // font-size: 17px;
+    line-height: 25px;
+    margin: 10px 0px;
+}
+
+hr {
+    border-top: 1px solid $midnightblue;
+}
+
+p span,
+pre {
+    padding: 2px 5px;
+    font-size: 14px;
+    color: $pumpkin;
+    border: 1px solid gray;
+    background-color: white;
+    @include border-radius (4px);
+
+    em {
+        font-weight: bold;
+        color: red;
+    }
+}
+
+p span {
+    display: inline-block;
+    line-height: initial;
+}
+
+header {
+    h1 {
+        margin-bottom: 20px;
+    }
+    h5 {
+        margin-bottom: 10px;
+    }
+}
+
+time {
+    margin-bottom: 10px;
+    display: block;
+}

@@ -89,6 +89,12 @@ $midnightblue:#2C3E50;
 	transition:         $transition;
 }
 
+@mixin transform($transform...) {
+  -ms-transform: $transform; /* IE 9 */
+  -webkit-transform: $transform; /* Chrome, Safari, Opera */
+  transform: $transform;
+}
+
 /*Break Point*/
 $xl: 1400px;
 $la: 1200px;
@@ -110,6 +116,14 @@ $xs: 320px;
   @media screen and (min-width:$min-width) and (max-width:$max-width) {
 	@content;
   }
+}
+
+/*Background-size*/
+@mixin background-size($bg-size) {
+  -webkit-background-size: $bg-size;
+  -moz-background-size: $bg-size;
+  -o-background-size: $bg-size;
+  background-size: $bg-size;
 }
 
 /*Fonts*/
@@ -149,4 +163,9 @@ $xs: 320px;
 
 .gapfix {
   font-size: 0px;
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
 }

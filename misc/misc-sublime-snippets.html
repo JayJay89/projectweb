@@ -5,12 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>Enrico - Study Template</title>
+        <title>Enrico - Misc Template</title>
         <!-- Bootstrap -->
         <link href="../stylesheets/reset.css" rel="stylesheet">
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../stylesheets/bootstrap-overwrite.css" rel="stylesheet">
-        <link href="../stylesheets/study.css" rel="stylesheet">
+        <link href="../stylesheets/misc.css" rel="stylesheet">
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -32,25 +32,71 @@
             
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="study-master.html">Home</a></li>
-                    <li><a href="#">Next</a></li>
-                    <li><a href="#">Previous</a></li>
+                    <li><a href="misc-master.html">Home</a></li>
                 </ul>
             </div>
         </nav>
         
         <article>
             <header class="container">
-                <h1>Title</h1>
-                <time datetime=""></time>
-                <h5><a href="#">Title</a></h5>
+                <h1>Sublime Snippets</h1>
+                <time datetime="">23-Nov-2015</time>
                 <!-- <h5>JS is involved (study-hide-css.js)</h5> -->
+                <a href="https://css-tricks.com/video-screencasts/120-a-sublime-text-snippet-for-media-query-mixins/">source</a>
             </header>
             <section class="container">
-                
-            </section>
-            <section class="container">
+
+                <h1>adding a sublime text snippet</h1>
+                <ol>
+                    <li>Tools > New Snippet</li>
+                    <li>
+                        a new snippet code should appear
+                        <pre>
+&lt;snippet&gt;
+    &lt;content&gt;&lt;![CDATA[
+Hello, ${1:this} is a ${2:snippet}.
+]]&gt;&lt;/content&gt;
+    &lt;!-- Optional: Set a tabTrigger to define how to trigger the snippet --&gt;
+    &lt;!-- &lt;tabTrigger&gt;hello&lt;/tabTrigger&gt; --&gt;
+    &lt;!-- Optional: Set a scope to limit where the snippet will trigger --&gt;
+    &lt;!-- &lt;scope&gt;source.python&lt;/scope&gt; --&gt;
+&lt;/snippet&gt;
+                        </pre>
+                    </li>
+                    <li>
+                        This is the new snippet by jnowland
+                        <pre>
+&lt;snippet&gt;
+  &lt;content&gt;&lt;![CDATA[
+@include breakpoint(${1:papa-bear / mama-bear / baby-bear}) {
+    ${2:}
+}
  
+]]&gt;&lt;/content&gt;
+  &lt;!-- Optional: Set a tabTrigger to define how to trigger the snippet --&gt;
+    &lt;tabTrigger&gt;mq&lt;/tabTrigger&gt; 
+    &lt;!-- Optional: Set a scope to limit where the snippet will trigger --&gt;
+    &lt;!-- &lt;scope&gt;source.python&lt;/scope&gt; --&gt;
+&lt;/snippet&gt;
+                        </pre>
+                    </li>
+                    <li>
+                        The above snippets allows you to just type "mq" and press tab and get the following result
+                        <pre>
+@include breakpoint(papa-bear / mama-bear / baby-bear) {
+                                
+}
+                        </pre>
+                    </li>
+                    <li>
+                        this saves up a lot of time
+                    </li>
+                </ol>
+            </section>
+
+            <section class="container">
+                <h1>How do I edit the snippets?</h1>
+                <p>preferences > browse package</p>
             </section>
         </article>
 

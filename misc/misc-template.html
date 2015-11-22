@@ -5,13 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>Enrico - Study Template</title>
+        <title>Enrico - Misc Template</title>
         <!-- Bootstrap -->
         <link href="../stylesheets/reset.css" rel="stylesheet">
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../stylesheets/bootstrap-overwrite.css" rel="stylesheet">
-        <link href="../stylesheets/master-template.css" rel="stylesheet">
-
+        <link href="../stylesheets/study.css" rel="stylesheet">
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -19,30 +18,34 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body>
+    <body class="study">
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="navbar-header">
-                <a class="navbar-brand" href="../index.html">Enrico Studies</a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Enrico Studies</a>
+            </div>
+            
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="misc-master.html">Home</a></li>
+                </ul>
             </div>
         </nav>
         
-        <article class="master-page">
+        <article>
             <header class="container">
-                <h1>Study Master Page</h1>
-                <h5>This is contains a list of the studies</h5>
+                <h1>Title</h1>
+                <time datetime=""></time>
+                <h5><a href="#">Title</a></h5>
+                <!-- <h5>JS is involved (study-hide-css.js)</h5> -->
             </header>
             <section class="container">
-            <p>Current list is sorted by earliest to latest. Click to sort alphabetically</p>
-            <input type="button" id="test" value="Sort List (click again to reverse)"/>
-                <ul id="list">
-                    <li><a href="study-hide-css.html">Hiding Things With CSS</a></li>
-                    <li><a href="study-subtitle-wrap.html">Trying To Get a Subtitle to Wrap</a></li>
-                    <li><a href="study-magic-number.html">Magic Numbers</a></li>
-                    <li><a href="study-float.html">Floats</a></li>
-                    <li><a href="study-vertical-align.html">Vertical Align</a></li>
-                    <li><a href="study-sass-row-machine.html">Sass Row Machine</a></li>
-                </ul>
+                
             </section>
             <section class="container">
  
@@ -57,6 +60,5 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="../js/bootstrap.min.js"></script>
-        <script src="../js/study-master-sort.js"></script>
     </body>
 </html>

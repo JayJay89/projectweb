@@ -1,0 +1,25 @@
+@import "all";
+@import "articles";
+
+.master-page {
+	ul {
+		li {
+			&:first-child {
+				margin-top: 10px
+			}
+
+			&:nth-child(odd) {
+				background-color: $orange;
+			}
+
+			background-color: $sunflower;
+			padding: 10px 30px;
+			display: block;
+			max-width: 35%;
+			@include font-size (30px);
+			a {
+				color: $belizehole;
+			}
+		}
+	}
+}
