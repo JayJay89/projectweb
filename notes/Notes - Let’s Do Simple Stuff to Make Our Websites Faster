@@ -1,0 +1,32 @@
+
+https://css-tricks.com/video-screencasts/114-lets-do-simple-stuff-to-make-our-websites-faster/
+
+Let’s Do Simple Stuff to Make Our Websites Faster
+
+start with things with low effort and big impact
+- Load 0.5 seconds faster not 0.005 seconds faster 
+- A single person can do without coordinating with anyone else
+- Don't require complex or mature processes
+- Require minimal or no ongoing maintenance efforts
+- Focus more on the front end
+
+Steve Souders
+The Performance Golden Rule
+
+Chrome Web Inspector - Network Tab
+
+1.) Turn on HTTP Compression! - GZIP or deflate
+gzipwtf.com
+
+2.) Cache the Stuff - server and client side 
+break cache?
+
+3.) Losslessly optimize images
+Code kit - optimize
+imageoptim.com
+
+4.) combine CSS and JS
+http://css-tricks.com/one-two-three
+code kit - squish files
+
+5.) Sprite Images

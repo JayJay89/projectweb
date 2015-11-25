@@ -57,11 +57,16 @@ section {
 /*===========================================
 Landing Page
 ===========================================*/
-/* line 19, ../sass/dashboard.scss */
+/* line 18, ../sass/dashboard.scss */
+.landing-page {
+  width: 100%;
+  height: 100%;
+}
+/* line 22, ../sass/dashboard.scss */
 .landing-page .navbar-btn {
   margin-right: 15px;
 }
-/* line 23, ../sass/dashboard.scss */
+/* line 26, ../sass/dashboard.scss */
 .landing-page .intro-header {
   background: url("../img/landingpagebg2.jpg") no-repeat center center scroll;
   -webkit-background-size: cover;
@@ -72,11 +77,11 @@ Landing Page
   height: 100%;
   display: table;
 }
-/* line 31, ../sass/dashboard.scss */
+/* line 34, ../sass/dashboard.scss */
 .landing-page .logo {
   max-width: 50%;
 }
-/* line 35, ../sass/dashboard.scss */
+/* line 38, ../sass/dashboard.scss */
 .landing-page .vertical-text {
   display: table-cell;
   vertical-align: middle;
@@ -89,64 +94,74 @@ Landing Page
 /*===========================================
 Dashboard 
 ===========================================*/
-/* line 49, ../sass/dashboard.scss */
-.dashboard-page .top-header {
-  height: 50px;
+/* line 53, ../sass/dashboard.scss */
+.dashboard-top-header {
+  background-color: darkgray;
   display: table;
   position: relative;
-  background-color: darkgray;
   width: 100%;
 }
 /* line 56, ../sass/dashboard.scss */
-.dashboard-page .top-header > div {
-  display: table-cell;
+.dashboard-top-header p {
+  text-align: center;
+  color: white;
+}
+/* line 65, ../sass/dashboard.scss */
+.dashboard-top-header .center-logo {
   text-align: center;
   vertical-align: middle;
-  position: relative;
+  border: 1px solid red;
+  line-height: 50px;
 }
-/* line 63, ../sass/dashboard.scss */
-.dashboard-page .top-header img {
+/* line 72, ../sass/dashboard.scss */
+.dashboard-top-header img {
   max-width: 100px;
-  vertical-align: middle;
+  display: inline-block;
 }
-/* line 68, ../sass/dashboard.scss */
-.dashboard-page .top-header .btn {
-  position: absolute;
-  right: 5px;
+/* line 77, ../sass/dashboard.scss */
+.dashboard-top-header .btn {
+  float: right;
+  margin-top: 9px;
+  border: 0px;
+  height: 32px;
 }
 
 /*===========================================
 Dashboard - Dropdown
 ===========================================*/
-/* line 77, ../sass/dashboard.scss */
+/* line 88, ../sass/dashboard.scss */
 .dashboard-dropdown {
   text-align: left;
   background-color: gray;
   position: relative;
   z-index: 9999;
+  font-style: 10px;
 }
 @media screen and (min-width: 768px) {
-  /* line 77, ../sass/dashboard.scss */
+  /* line 88, ../sass/dashboard.scss */
   .dashboard-dropdown {
     height: 40px;
   }
 }
-/* line 87, ../sass/dashboard.scss */
-.dashboard-dropdown ul {
+/* line 98, ../sass/dashboard.scss */
+.dashboard-dropdown .active {
+  background-color: red;
+}
+/* line 102, ../sass/dashboard.scss */
+.dashboard-dropdown ul.drop-level-one {
   list-style: none;
   padding: 0px;
   position: relative;
   text-align: center;
-  width: 100%;
 }
-/* line 94, ../sass/dashboard.scss */
-.dashboard-dropdown ul:after {
+/* line 108, ../sass/dashboard.scss */
+.dashboard-dropdown ul.drop-level-one:after {
   content: "";
   clear: both;
   display: block;
 }
-/* line 100, ../sass/dashboard.scss */
-.dashboard-dropdown ul li {
+/* line 114, ../sass/dashboard.scss */
+.dashboard-dropdown ul.drop-level-one li {
   background-color: #555858;
   color: white;
   cursor: pointer;
@@ -155,27 +170,26 @@ Dashboard - Dropdown
   float: left;
   font-size: 25px;
   font-size: 1.5625rem;
-  border: 1px red solid;
 }
-/* line 110, ../sass/dashboard.scss */
-.dashboard-dropdown ul li:hover {
+/* line 123, ../sass/dashboard.scss */
+.dashboard-dropdown ul.drop-level-one li:hover {
   background-color: red;
 }
-/* line 114, ../sass/dashboard.scss */
-.dashboard-dropdown ul li a {
+/* line 127, ../sass/dashboard.scss */
+.dashboard-dropdown ul.drop-level-one li a {
   color: white;
 }
 @media screen and (min-width: 500px) {
-  /* line 100, ../sass/dashboard.scss */
-  .dashboard-dropdown ul li {
+  /* line 114, ../sass/dashboard.scss */
+  .dashboard-dropdown ul.drop-level-one li {
     width: 50%;
     display: inline-block;
     padding: 10px 20px;
   }
 }
 @media screen and (min-width: 768px) {
-  /* line 100, ../sass/dashboard.scss */
-  .dashboard-dropdown ul li {
+  /* line 114, ../sass/dashboard.scss */
+  .dashboard-dropdown ul.drop-level-one li {
     border: 1px solid blue;
     float: left;
     width: 110px;
@@ -184,153 +198,178 @@ Dashboard - Dropdown
     display: block;
   }
 }
-/* line 134, ../sass/dashboard.scss */
-.dashboard-dropdown ul ul {
+/* line 147, ../sass/dashboard.scss */
+.dashboard-dropdown ul.drop-level-two {
   display: none;
   position: absolute;
   top: 100%;
+  width: 100%;
+  left: 0%;
 }
-/* line 139, ../sass/dashboard.scss */
-.dashboard-dropdown ul ul li {
+/* line 154, ../sass/dashboard.scss */
+.dashboard-dropdown ul.drop-level-two li {
   background-color: #333534;
-  width: 50%;
+  width: 100%;
   position: relative;
   float: none;
 }
 @media screen and (min-width: 768px) {
-  /* line 139, ../sass/dashboard.scss */
-  .dashboard-dropdown ul ul li {
+  /* line 154, ../sass/dashboard.scss */
+  .dashboard-dropdown ul.drop-level-two li {
     width: 110px;
   }
 }
-/* line 149, ../sass/dashboard.scss */
-.dashboard-dropdown ul ul li:hover {
-  background-color: green;
+/* line 164, ../sass/dashboard.scss */
+.dashboard-dropdown ul.drop-level-two li:hover {
+  background-color: gray;
 }
-@media screen and (min-width: 500px) {
-  /* line 155, ../sass/dashboard.scss */
-  .dashboard-dropdown ul ul.article-dropdown, .dashboard-dropdown ul ul.tutorial-dropdown {
+@media screen and (min-width: 992px) {
+  /* line 170, ../sass/dashboard.scss */
+  .dashboard-dropdown ul.drop-level-two.article-dropdown, .dashboard-dropdown ul.drop-level-two.tutorial-dropdown {
     left: -25%;
   }
 }
 @media screen and (min-width: 768px) {
-  /* line 163, ../sass/dashboard.scss */
-  .dashboard-dropdown ul ul.article-dropdown {
+  /* line 178, ../sass/dashboard.scss */
+  .dashboard-dropdown ul.drop-level-two.article-dropdown {
     left: 110px;
   }
-  /* line 167, ../sass/dashboard.scss */
-  .dashboard-dropdown ul ul.tutorial-dropdown {
+  /* line 182, ../sass/dashboard.scss */
+  .dashboard-dropdown ul.drop-level-two.tutorial-dropdown {
     left: 220px;
   }
 }
-/* line 174, ../sass/dashboard.scss */
-.dashboard-dropdown ul ul ul {
+/* line 188, ../sass/dashboard.scss */
+.dashboard-dropdown ul.drop-level-three {
   left: 100%;
   top: 0;
+  position: absolute;
+  display: none;
 }
-/* line 178, ../sass/dashboard.scss */
-.dashboard-dropdown ul ul ul li {
+/* line 193, ../sass/dashboard.scss */
+.dashboard-dropdown ul.drop-level-three li {
   background-color: #111111;
   width: 100%;
 }
 @media screen and (min-width: 768px) {
-  /* line 178, ../sass/dashboard.scss */
-  .dashboard-dropdown ul ul ul li {
+  /* line 193, ../sass/dashboard.scss */
+  .dashboard-dropdown ul.drop-level-three li {
     float: none;
     width: 110px;
   }
 }
-/* line 187, ../sass/dashboard.scss */
-.dashboard-dropdown ul ul ul li:hover {
+/* line 202, ../sass/dashboard.scss */
+.dashboard-dropdown ul.drop-level-three li:hover {
   background-color: yellow;
 }
-/* line 193, ../sass/dashboard.scss */
+/* line 208, ../sass/dashboard.scss */
 .dashboard-dropdown ul li:hover > ul {
-  display: block;
+  display: inline-block;
+}
+/* line 211, ../sass/dashboard.scss */
+.dashboard-dropdown ul li.active > ul {
+  display: inline-block;
 }
 
 /*===========================================
 Dashboard - Template Selector
 ===========================================*/
-/* line 200, ../sass/dashboard.scss */
-.template-preview-container {
-  padding: 100px 10px 20px;
+/* line 218, ../sass/dashboard.scss */
+.template-section {
   background-color: green;
+  padding: 20px 0px;
 }
-/* line 204, ../sass/dashboard.scss */
-.template-preview-container img {
+/* line 223, ../sass/dashboard.scss */
+.template-section img {
   display: inline-block;
 }
+/* line 227, ../sass/dashboard.scss */
+.template-section p {
+  color: white;
+  margin: 20px;
+  text-align: center;
+}
 
-/* line 209, ../sass/dashboard.scss */
+/* line 234, ../sass/dashboard.scss */
+.template-grid {
+  padding: 0px;
+}
+
+/* line 238, ../sass/dashboard.scss */
 .template-select-container {
   position: relative;
-  width: 90%;
   margin: 0 auto;
   padding: 40px 0px;
 }
 
-/* line 216, ../sass/dashboard.scss */
-.template-pointer {
-  position: absolute;
-  top: 0%;
-  left: 140px;
-  width: 0;
-  height: 0;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-top: 20px solid green;
-}
-
-/* line 227, ../sass/dashboard.scss */
+/* line 244, ../sass/dashboard.scss */
 .template-set {
   text-align: center;
   padding: 0px;
 }
-/* line 231, ../sass/dashboard.scss */
-.template-select-container .template-set {
-  text-align: center;
-}
 
-/* line 236, ../sass/dashboard.scss */
+/* line 249, ../sass/dashboard.scss */
 .template {
   display: inline-block;
   position: relative;
-  margin: 5px;
   max-width: 225px;
   max-height: 300px;
 }
-@media screen and (min-width: 768px) {
-  /* line 236, ../sass/dashboard.scss */
-  .template {
-    width: 25%;
-  }
-}
-/* line 247, ../sass/dashboard.scss */
+/* line 257, ../sass/dashboard.scss */
 .template:hover .template-option {
   opacity: 1;
   visibility: visible;
   top: 0px;
 }
-/* line 252, ../sass/dashboard.scss */
+/* line 262, ../sass/dashboard.scss */
 .template:hover .template-option .button-set {
   margin: 35% 0% 25%;
 }
 @media screen and (min-width: 768px) {
-  /* line 252, ../sass/dashboard.scss */
+  /* line 262, ../sass/dashboard.scss */
   .template:hover .template-option .button-set {
     margin: 40% 0%;
   }
 }
-/* line 262, ../sass/dashboard.scss */
+/* line 272, ../sass/dashboard.scss */
 .template-preview-container .template {
-  width: 45%;
-  padding: 10px;
+  width: 23.5%;
+  margin-right: 2%;
   max-width: 225px;
   max-height: 300px;
+  position: relative;
+  cursor: pointer;
+}
+/* line 278, ../sass/dashboard.scss */
+.template-preview-container .template:last-child {
+  margin-right: 0%;
+}
+/* line 287, ../sass/dashboard.scss */
+.template-preview-container .template img {
+  width: 100%;
+}
+/* line 292, ../sass/dashboard.scss */
+.template .template-pointer {
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid red;
+  position: absolute;
+  /*the green padding is 20px + the size of the arrow*/
+  bottom: -40px;
+  left: 50%;
+  -ms-transform: translateX(-50%);
+  /* IE 9 */
+  -webkit-transform: translateX(-50%);
+  /* Chrome, Safari, Opera */
+  transform: translateX(-50%);
+  display: none;
+}
+/* line 303, ../sass/dashboard.scss */
+.template .template-pointer.active {
+  display: block;
 }
 
-/* line 270, ../sass/dashboard.scss */
+/* line 309, ../sass/dashboard.scss */
 .template-option {
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
@@ -344,19 +383,19 @@ Dashboard - Template Selector
   transition: all 0.4s ease-out;
 }
 @media screen and (min-width: 768px) {
-  /* line 270, ../sass/dashboard.scss */
+  /* line 309, ../sass/dashboard.scss */
   .template-option {
     top: 45%;
   }
 }
-/* line 282, ../sass/dashboard.scss */
+/* line 321, ../sass/dashboard.scss */
 .template-option .btn-x {
   position: absolute;
   padding: 1px 6px;
   right: 10px;
   top: 10px;
 }
-/* line 289, ../sass/dashboard.scss */
+/* line 328, ../sass/dashboard.scss */
 .template-option .button-set {
   margin: 15% 0% 0% 0%;
   -moz-transition: all 0.4s ease-out;
@@ -364,7 +403,7 @@ Dashboard - Template Selector
   -webkit-transition: all 0.4s ease-out;
   transition: all 0.4s ease-out;
 }
-/* line 294, ../sass/dashboard.scss */
+/* line 333, ../sass/dashboard.scss */
 .template-option .button-set .btn {
   display: block;
   margin: 0 auto 5px;
@@ -374,7 +413,7 @@ Dashboard - Template Selector
   font-size: 1.5625rem;
 }
 @media screen and (min-width: 768px) {
-  /* line 294, ../sass/dashboard.scss */
+  /* line 333, ../sass/dashboard.scss */
   .template-option .button-set .btn {
     padding: 3px 6px;
     width: 80px;
@@ -383,13 +422,13 @@ Dashboard - Template Selector
   }
 }
 
-/* line 310, ../sass/dashboard.scss */
+/* line 349, ../sass/dashboard.scss */
 .template-info {
   background-color: gray;
   position: absolute;
   bottom: 0px;
 }
-/* line 315, ../sass/dashboard.scss */
+/* line 354, ../sass/dashboard.scss */
 .template-info p {
   display: table-cell;
   vertical-align: middle;
@@ -404,7 +443,7 @@ Dashboard - Template Selector
 /*===========================================
 Dashboard - Modal
 ===========================================*/
-/* line 329, ../sass/dashboard.scss */
+/* line 368, ../sass/dashboard.scss */
 .modal-section {
   background-color: green;
   height: 400px;
@@ -417,14 +456,14 @@ Dashboard - Modal
   Flex is used instead. But note that it isn't supported in IE 8 and 9. It's partially supported in IE
   */
 }
-/* line 340, ../sass/dashboard.scss */
+/* line 379, ../sass/dashboard.scss */
 .modal-section a {
   color: white;
   font-size: 50px;
   font-size: 3.125rem;
 }
 
-/* line 346, ../sass/dashboard.scss */
+/* line 385, ../sass/dashboard.scss */
 .modalDialog {
   position: fixed;
   top: 0;
@@ -445,13 +484,13 @@ Dashboard - Modal
   align-items: center;
 }
 
-/* line 363, ../sass/dashboard.scss */
+/* line 402, ../sass/dashboard.scss */
 .modalDialog:target {
   opacity: 1;
   pointer-events: auto;
 }
 
-/* line 370, ../sass/dashboard.scss */
+/* line 409, ../sass/dashboard.scss */
 .modalDialog > div {
   min-width: 280px;
   max-width: 400px;
@@ -461,7 +500,7 @@ Dashboard - Modal
   margin: 0px 20px;
   background: #fff;
 }
-/* line 380, ../sass/dashboard.scss */
+/* line 419, ../sass/dashboard.scss */
 .modalDialog > div .close {
   position: absolute;
   background: #606061;
@@ -479,41 +518,30 @@ Dashboard - Modal
   font-size: 1.5rem;
   opacity: 1.0;
 }
-/* line 394, ../sass/dashboard.scss */
+/* line 433, ../sass/dashboard.scss */
 .modalDialog > div .close:hover {
   background: #00d9ff;
 }
 
-/* line 401, ../sass/dashboard.scss */
+/* line 440, ../sass/dashboard.scss */
 .modal-button-set {
-  display: table;
   margin: 10px 0px;
 }
-/* line 405, ../sass/dashboard.scss */
+/* line 445, ../sass/dashboard.scss */
 .modal-button-set .btn {
-  display: table-cell;
   border-radius: 0px;
-}
-@media screen and (max-width: 450px) {
-  /* line 405, ../sass/dashboard.scss */
-  .modal-button-set .btn {
-    padding: 5px;
-  }
+  width: 25%;
+  min-width: 50px;
+  text-align: center;
+  padding: 2px 0px;
 }
 
-/* line 415, ../sass/dashboard.scss */
+/* line 453, ../sass/dashboard.scss */
 .modal-right-side {
-  width: 224px;
-  margin-left: 75px;
+  width: 75%;
+  margin-left: 25%;
 }
-@media screen and (max-width: 450px) {
-  /* line 415, ../sass/dashboard.scss */
-  .modal-right-side {
-    width: 183px;
-    margin-left: 60px;
-  }
-}
-/* line 422, ../sass/dashboard.scss */
+/* line 457, ../sass/dashboard.scss */
 .modal-right-side p {
   text-align: center;
   margin-bottom: 0px;
@@ -522,14 +550,14 @@ Dashboard - Modal
   border-radius: 6px;
 }
 
-/* line 430, ../sass/dashboard.scss */
+/* line 466, ../sass/dashboard.scss */
 .modal-line-pointer {
   border-left: 2px solid gray;
   border-right: 2px solid gray;
   height: 10px;
   position: relative;
 }
-/* line 436, ../sass/dashboard.scss */
+/* line 472, ../sass/dashboard.scss */
 .modal-line-pointer .hr {
   height: 1px;
   width: 100%;
@@ -541,32 +569,32 @@ Dashboard - Modal
 /*===========================================
 Dashboard - Tab
 ===========================================*/
-/* line 447, ../sass/dashboard.scss */
+/* line 483, ../sass/dashboard.scss */
 .tabs-section {
   width: 100%;
   background-color: white;
   display: table;
 }
 
-/* line 453, ../sass/dashboard.scss */
+/* line 489, ../sass/dashboard.scss */
 .tab-set {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
 }
-/* line 458, ../sass/dashboard.scss */
+/* line 494, ../sass/dashboard.scss */
 .tab-set .tab-header {
   background-color: violet;
   padding: 20px 10px;
 }
-/* line 463, ../sass/dashboard.scss */
+/* line 499, ../sass/dashboard.scss */
 .tab-set ul {
   list-style: none;
   display: inline-block;
   padding: 0;
   margin-right: 10px;
 }
-/* line 470, ../sass/dashboard.scss */
+/* line 506, ../sass/dashboard.scss */
 .tab-set li {
   border-bottom: 1px solid gray;
   width: 100%;
@@ -577,87 +605,87 @@ Dashboard - Tab
   font-size: 1.25rem;
 }
 @media screen and (min-width: 768px) {
-  /* line 470, ../sass/dashboard.scss */
+  /* line 506, ../sass/dashboard.scss */
   .tab-set li {
     width: 200px;
     padding: 0px 10px;
   }
 }
-/* line 484, ../sass/dashboard.scss */
+/* line 520, ../sass/dashboard.scss */
 .tab-set span {
   vertical-align: middle;
   display: table-cell;
 }
-/* line 489, ../sass/dashboard.scss */
+/* line 525, ../sass/dashboard.scss */
 .tab-set .column2,
 .tab-set .column3 {
   margin-bottom: 20px;
 }
 @media screen and (min-width: 768px) {
-  /* line 489, ../sass/dashboard.scss */
+  /* line 525, ../sass/dashboard.scss */
   .tab-set .column2,
   .tab-set .column3 {
     margin-bottom: 0px;
   }
 }
-/* line 496, ../sass/dashboard.scss */
+/* line 532, ../sass/dashboard.scss */
 .tab-set .column2 span:first-child,
 .tab-set .column3 span:first-child {
   color: red;
   display: block;
 }
 @media screen and (min-width: 768px) {
-  /* line 496, ../sass/dashboard.scss */
+  /* line 532, ../sass/dashboard.scss */
   .tab-set .column2 span:first-child,
   .tab-set .column3 span:first-child {
     display: none;
   }
 }
-/* line 504, ../sass/dashboard.scss */
+/* line 540, ../sass/dashboard.scss */
 .tab-set .column2 span:nth-child(2),
 .tab-set .column3 span:nth-child(2) {
   color: blue;
   display: block;
 }
 @media screen and (min-width: 768px) {
-  /* line 504, ../sass/dashboard.scss */
+  /* line 540, ../sass/dashboard.scss */
   .tab-set .column2 span:nth-child(2),
   .tab-set .column3 span:nth-child(2) {
     display: table-cell;
   }
 }
-/* line 513, ../sass/dashboard.scss */
+/* line 549, ../sass/dashboard.scss */
 .tab-set .column1 {
   text-align: right;
   display: none;
 }
-/* line 517, ../sass/dashboard.scss */
+/* line 553, ../sass/dashboard.scss */
 .tab-set .column1 li {
   border-bottom: 2px solid green;
 }
 @media screen and (min-width: 768px) {
-  /* line 513, ../sass/dashboard.scss */
+  /* line 549, ../sass/dashboard.scss */
   .tab-set .column1 {
     display: inline-block;
   }
 }
-/* line 529, ../sass/dashboard.scss */
+/* line 565, ../sass/dashboard.scss */
 .tab-set .column2 li:not(.tab-header) {
   background-color: yellow;
 }
-/* line 532, ../sass/dashboard.scss */
+/* line 568, ../sass/dashboard.scss */
 .tab-set .column2 li:not(.tab-header):nth-child(odd) {
   background-color: orange;
 }
-/* line 538, ../sass/dashboard.scss */
+/* line 574, ../sass/dashboard.scss */
 .tab-set .column3 {
   margin-right: 0px;
 }
-/* line 540, ../sass/dashboard.scss */
+/* line 576, ../sass/dashboard.scss */
 .tab-set .column3 li:not(.tab-header) {
   background-color: aquamarine;
 }
-/* line 543, ../sass/dashboard.scss */
+/* line 579, ../sass/dashboard.scss */
 .tab-set .column3 li:not(.tab-header):nth-child(odd) {
   background-color: lightblue;
 }
@@ -665,53 +693,52 @@ Dashboard - Tab
 /*===========================================
 Dashboard - Form
 ===========================================*/
-/* line 553, ../sass/dashboard.scss */
+/* line 589, ../sass/dashboard.scss */
 .forms-section {
   height: auto;
   width: 100%;
   background-color: lightgreen;
   display: table;
 }
-
-/* line 559, ../sass/dashboard.scss */
-.section-container {
+/* line 595, ../sass/dashboard.scss */
+.forms-section .container {
   display: table-cell;
   vertical-align: middle;
 }
 
-/* line 564, ../sass/dashboard.scss */
+/* line 602, ../sass/dashboard.scss */
 .input-container {
   margin-bottom: 20px;
 }
 @media screen and (min-width: 768px) {
-  /* line 567, ../sass/dashboard.scss */
+  /* line 605, ../sass/dashboard.scss */
   .input-container > label {
     text-align: right;
   }
 }
 @media screen and (min-width: 768px) {
-  /* line 564, ../sass/dashboard.scss */
+  /* line 602, ../sass/dashboard.scss */
   .input-container {
     margin-bottom: 10px;
   }
 }
 
-/* line 579, ../sass/dashboard.scss */
+/* line 617, ../sass/dashboard.scss */
 .forms-set {
   width: 80%;
   margin: 0 auto;
 }
-/* line 583, ../sass/dashboard.scss */
+/* line 621, ../sass/dashboard.scss */
 .forms-set > div {
   border-bottom: 1px solid red;
   padding: 10px 0px;
 }
-/* line 587, ../sass/dashboard.scss */
+/* line 625, ../sass/dashboard.scss */
 .forms-set > div:first-child {
   border-top: 1px solid red;
 }
 
-/* line 593, ../sass/dashboard.scss */
+/* line 631, ../sass/dashboard.scss */
 label {
   width: 40%;
   float: left;
@@ -719,21 +746,21 @@ label {
   font-size: 1.875rem;
 }
 @media screen and (min-width: 768px) {
-  /* line 593, ../sass/dashboard.scss */
+  /* line 631, ../sass/dashboard.scss */
   label {
     width: 25%;
     text-align: left;
     padding-right: 20px;
   }
 }
-/* line 604, ../sass/dashboard.scss */
+/* line 642, ../sass/dashboard.scss */
 .input-text label {
   width: 100%;
   padding: 0px;
   text-align: left;
 }
 @media screen and (min-width: 768px) {
-  /* line 604, ../sass/dashboard.scss */
+  /* line 642, ../sass/dashboard.scss */
   .input-text label {
     width: 25%;
     float: left;
@@ -742,29 +769,29 @@ label {
   }
 }
 
-/* line 618, ../sass/dashboard.scss */
+/* line 656, ../sass/dashboard.scss */
 label + div {
   line-height: 25px;
 }
 @media screen and (min-width: 768px) {
-  /* line 621, ../sass/dashboard.scss */
+  /* line 659, ../sass/dashboard.scss */
   .input-text label + div {
     width: 75%;
     float: right;
   }
 }
 
-/* line 631, ../sass/dashboard.scss */
+/* line 669, ../sass/dashboard.scss */
 .input-text input {
   width: 100%;
 }
-/* line 635, ../sass/dashboard.scss */
+/* line 673, ../sass/dashboard.scss */
 .input-text textarea {
   width: 100%;
   resize: none;
 }
 
-/* line 646, ../sass/dashboard.scss */
+/* line 684, ../sass/dashboard.scss */
 .input-radio .input-container:nth-child(4) > label {
   width: 100%;
   float: none;
@@ -775,7 +802,7 @@ label + div {
   /*This is inefficient, use max-screen instead to cover that break point*/
 }
 @media screen and (min-width: 768px) {
-  /* line 646, ../sass/dashboard.scss */
+  /* line 684, ../sass/dashboard.scss */
   .input-radio .input-container:nth-child(4) > label {
     padding: 0px 20px 0px 0px;
     width: 25%;
@@ -784,30 +811,92 @@ label + div {
     border: 0px;
   }
 }
-/* line 666, ../sass/dashboard.scss */
+/* line 704, ../sass/dashboard.scss */
 .input-radio .multi-choice {
   text-align: center;
 }
 @media screen and (min-width: 768px) {
-  /* line 666, ../sass/dashboard.scss */
+  /* line 704, ../sass/dashboard.scss */
   .input-radio .multi-choice {
     text-align: left;
   }
 }
-/* line 673, ../sass/dashboard.scss */
+/* line 711, ../sass/dashboard.scss */
 .input-radio .multi-choice input {
   margin-right: 10px;
 }
-/* line 677, ../sass/dashboard.scss */
+/* line 715, ../sass/dashboard.scss */
 .input-radio .multi-choice label {
   float: none;
   margin-right: 5px;
   width: auto;
 }
 
-/* line 687, ../sass/dashboard.scss */
+/* line 725, ../sass/dashboard.scss */
 .input-select label + div > select {
   font-size: 30px;
   font-size: 1.875rem;
   vertical-align: -2px;
+}
+
+/*===========================================
+Dashboard - LabelJump-Form
+===========================================*/
+/* line 737, ../sass/dashboard.scss */
+.labeljump-form .container {
+  border: 1px solid red;
+  padding: 50px 0px;
+}
+/* line 742, ../sass/dashboard.scss */
+.labeljump-form .form-container {
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 50px;
+}
+@media screen and (min-width: 768px) {
+  /* line 742, ../sass/dashboard.scss */
+  .labeljump-form .form-container {
+    width: 30%;
+  }
+}
+/* line 750, ../sass/dashboard.scss */
+.labeljump-form .form-container:last-child {
+  margin-bottom: 0px;
+}
+/* line 755, ../sass/dashboard.scss */
+.labeljump-form input, .labeljump-form label {
+  display: block;
+  width: 100%;
+  line-height: 30px;
+  border: 0px;
+  font-size: 15px;
+  padding-left: 10px;
+}
+/* line 764, ../sass/dashboard.scss */
+.labeljump-form input {
+  z-index: 1;
+  background-color: transparent;
+  border-bottom: 2px solid #E67E22;
+}
+/* line 768, ../sass/dashboard.scss */
+.labeljump-form input:focus {
+  outline: none;
+}
+/* line 771, ../sass/dashboard.scss */
+.labeljump-form input:focus + label {
+  top: -100%;
+  color: #3498DB;
+  font-size: 16px;
+}
+/* line 779, ../sass/dashboard.scss */
+.labeljump-form label {
+  z-index: -1;
+  top: 0px;
+  position: absolute;
+  color: rgba(0, 0, 0, 0.2);
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }

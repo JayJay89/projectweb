@@ -9,17 +9,22 @@ ul {
   padding: 0px;
 }
 
-/* line 10, ../sass/bootstrap-overwrite.scss */
+/* line 11, ../sass/bootstrap-overwrite.scss */
+ul li {
+  list-style: none;
+}
+
+/* line 14, ../sass/bootstrap-overwrite.scss */
 label {
   margin: 0px;
 }
 
-/* line 14, ../sass/bootstrap-overwrite.scss */
+/* line 18, ../sass/bootstrap-overwrite.scss */
 a {
   color: black;
   text-decoration: none;
 }
-/* line 17, ../sass/bootstrap-overwrite.scss */
+/* line 21, ../sass/bootstrap-overwrite.scss */
 a:hover, a:active, a:link, a:focus {
   color: black;
   text-decoration: none;

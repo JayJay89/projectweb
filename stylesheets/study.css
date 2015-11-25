@@ -18,6 +18,7 @@
 /*fonts*/
 /*Transition*/
 /*Break Point*/
+/*Background-size*/
 /*Fonts*/
 /*
   Fool-Proof @font-face
@@ -25,9 +26,15 @@
   http://codepen.io/javasteve99/pen/hDxpn
 */
 /*Inline Gap Fix*/
-/* line 156, ../sass/_mixin.scss */
+/* line 164, ../sass/_mixin.scss */
 .gapfix {
   font-size: 0px;
+}
+
+/* line 168, ../sass/_mixin.scss */
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 /*Stylesheet for Studies and Misc*/
@@ -793,4 +800,53 @@ CONTENTS
   .study-row-machine .rm7 .box:nth-child(5n) {
     margin-right: 0px;
   }
+}
+
+/* line 673, ../sass/study.scss */
+.study-css-positioning div[class^="pos"] {
+  background-color: #E74C3C;
+  width: 50%;
+  float: left;
+}
+/* line 678, ../sass/study.scss */
+.study-css-positioning .divbox {
+  width: 150px;
+  height: 150px;
+  background-color: #BADA55;
+  position: relative;
+}
+/* line 685, ../sass/study.scss */
+.study-css-positioning .code {
+  width: 50%;
+  float: left;
+}
+/* line 691, ../sass/study.scss */
+.study-css-positioning .pos2 .divbox {
+  position: static;
+}
+/* line 697, ../sass/study.scss */
+.study-css-positioning .pos3 .divbox {
+  position: relative;
+  top: 50px;
+}
+/* line 704, ../sass/study.scss */
+.study-css-positioning .pos4 .divbox {
+  position: relative;
+}
+/* line 706, ../sass/study.scss */
+.study-css-positioning .pos4 .divbox span {
+  position: absolute;
+  bottom: 0px;
+}
+/* line 714, ../sass/study.scss */
+.study-css-positioning .pos5 .divbox {
+  position: fixed;
+  z-index: 1000;
+  top: 80px;
+  right: 2px;
+  background-color: #F39C12;
+}
+/* line 720, ../sass/study.scss */
+.study-css-positioning .pos5 .divbox span {
+  position: relative;
 }

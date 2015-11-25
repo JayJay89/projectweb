@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Enrico - Study Template</title>
+        <!-- Bootstrap -->
+        <link href="../stylesheets/reset.css" rel="stylesheet">
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../stylesheets/bootstrap-overwrite.css" rel="stylesheet">
+        <link href="../stylesheets/study.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.s7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body class="study">
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">Enrico Studies</a>
+            </div>
+            
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="study-master.html">Home</a></li>
+                    <li><a href="#">Next</a></li>
+                    <li><a href="#">Previous</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <article class="study-css-positioning">
+
+            <header class="container">
+                <h1>CSS Positioning</h1>
+                <time datetime="">1st Dec 2015</time>
+                <h5><a href="https://css-tricks.com/video-screencasts/110-quick-overview-of-css-position-values/">Source</a></h5>
+                <!-- <h5>JS is involved (study-hide-css.js)</h5> -->
+            </header>
+
+            <section class="container">
+                <h2>Relative Position</h2>
+                <p>The box went 10px to the left side because the position is set as relative</p>
+                <div class="pos1">
+                    stuff above
+                    <div class="divbox">Im divbox</div>
+                    stuff below
+                </div>
+                <div class="code">
+                    <pre>
+.divbox {
+    width: 150px;
+    height: 150px;
+    background-color: #BADA55;
+    position: relative;
+    left: 10px;
+}                    </pre>
+                </div>
+            </section>
+
+            <section class="container">
+                <h2>Static Position</h2>
+                <p>If set as static then it won't move</p>
+                <div class="pos2">
+                    stuff above
+                    <div class="divbox">Im divbox</div>
+                    stuff below
+                </div>
+                <div class="code">
+                    <pre>
+.divbox {
+    width: 150px;
+    height: 150px;
+    background-color: #BADA55;
+    position: static;
+    left: 10px;
+}                    </pre>
+                </div>
+            </section>
+
+            <section class="container">
+                <h2>Static Position</h2>
+                <p>Note that if the top is set as 50px, it'll be pushed down. However, notice that the position it occupied is still there. The stuff above and below wasn't pushed down.</p>
+                <div class="pos3">
+                    stuff above
+                    <div class="divbox">Im divbox</div>
+                    stuff below
+                </div>
+                <div class="code">
+                    <pre>
+.divbox {
+    width: 150px;
+    height: 150px;
+    background-color: #BADA55;
+    position: relative;
+    left: 10px;
+    top: 50px
+}                    </pre>
+                </div>
+            </section>
+
+            <section class="container">
+                <h2>Absolute Position</h2>
+                <p>Absolute removes element from the document flow</p>
+                <div class="pos4">
+                    stuff above
+                    <div class="divbox">
+                        <span>
+                            Im divbox
+                        </span>
+                    </div>
+                    stuff below
+                </div>
+                <div class="code">
+                    <pre>
+.divbox {
+    position: relative;
+
+    span {
+        position: absolute;
+        bottom: 0px;
+    }
+}             
+                    </pre>
+                </div>
+            </section>
+
+
+            <section class="container">
+                <h2>Fixed Position</h2>
+                <p>Absolute removes element from the document flow</p>
+                <div class="pos5">
+                    stuff above
+                    <br>
+                    the div below me was fixed on top
+                    <div class="divbox">
+                        <span>
+                            Im divbox with fixed position
+                        </span>
+                    </div>
+                    <br>
+                    stuff below
+                </div>
+                <div class="code">
+                    <pre>
+.divbox {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    padding: 20px;
+    top: 0px;
+    left: 0px;
+    border: 5px solid red;
+}</pre>
+                </div>
+            </section>
+
+            <section class="container">
+                <p>Z-index doesn't work on statically positioned objects</p>
+                <p>However, if you still need to use position static, and you need to overlay objects, you can use a margin-top: -10px to shift its position</p>
+                <p>setting the below will stretch the div to the whole page</p>
+                <pre>
+div {
+position: fixed;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background: red;
+}
+                </pre>
+                <p>Hence if you need to cover the page but leave a 10px border on its surrounding</p>
+                 <pre>
+ div {
+ position: fixed;
+ top: 10px;
+ bottom: 10px;
+ left: 10px;
+ right: 10px;
+ background: red;
+ }
+                 </pre>
+                 <p>This technique is suitable for creating modal boxes with dim background</p>
+                <pre>
+div {
+position: fixed;
+top: 10px;
+bottom: 10px;
+left: 10px;
+right: 10px;
+background: rgba(0,0,0,0.5);
+}               </pre>
+            </section>
+
+        </article>
+
+        <footer class="footer">
+            <p>Enrico Studies</p>
+        </footer>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="../js/bootstrap.min.js"></script>
+    </body>
+</html>
