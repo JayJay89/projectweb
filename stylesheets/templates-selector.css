@@ -103,13 +103,90 @@ header {
   border: 1px solid red;
 }
 
-/* line 66, ../sass/templates-selector.scss */
-.templates ul {
+/* line 67, ../sass/templates-selector.scss */
+.templates .category-tab {
+  border: 1px solid green;
   text-align: center;
 }
-/* line 68, ../sass/templates-selector.scss */
-.templates ul li {
+/* line 71, ../sass/templates-selector.scss */
+.templates .category-tab > a {
+  display: inline-block;
+  border: 1px solid red;
+  font-size: 35px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+/* line 78, ../sass/templates-selector.scss */
+.templates .category-tab > a.active {
+  background-color: #ECF0F1;
+}
+/* line 82, ../sass/templates-selector.scss */
+.templates .category-tab > a:last-child {
+  margin-right: 0px;
+}
+/* line 88, ../sass/templates-selector.scss */
+.templates ul {
+  text-align: center;
+  display: none;
+}
+/* line 92, ../sass/templates-selector.scss */
+.templates ul.active {
+  display: block;
+}
+/* line 96, ../sass/templates-selector.scss */
+.templates ul .template {
   display: inline-block;
   vertical-align: top;
   margin: 5px;
+  position: relative;
+  cursor: pointer;
+}
+/* line 103, ../sass/templates-selector.scss */
+.templates ul .template:hover .onhover-content {
+  display: block;
+}
+/* line 108, ../sass/templates-selector.scss */
+.templates ul .template .onhover-content {
+  display: none;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* line 115, ../sass/templates-selector.scss */
+.templates ul .template .create-or-pro {
+  font-size: 25px;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding: 0px;
+  line-height: 50px;
+  text-transform: uppercase;
+}
+/* line 126, ../sass/templates-selector.scss */
+.templates ul .template .icon {
+  position: absolute;
+}
+/* line 130, ../sass/templates-selector.scss */
+.templates ul .template .preview-icon {
+  font-size: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* line 137, ../sass/templates-selector.scss */
+.templates ul .template .shortlist-icon {
+  right: 20px;
+  top: 20px;
+  position: absolute;
+}
+/* line 142, ../sass/templates-selector.scss */
+.templates ul .template .shortlist-icon i {
+  font-size: initial;
+  background-color: #ECF0F1;
+  padding: 10px;
+  margin-right: 5px;
 }

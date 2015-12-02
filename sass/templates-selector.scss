@@ -63,12 +63,89 @@ $category-dropdown-size: 36px;
 }
 
 .templates {
+    
+    .category-tab {
+        border: 1px solid green;
+        text-align: center;
+
+        > a {
+            display: inline-block;
+            border: 1px solid red;
+            font-size: 35px;
+            margin-right: 10px;
+            cursor: pointer;
+
+            &.active {
+                background-color: $cloud;
+            }
+
+            &:last-child {
+                margin-right: 0px
+            }
+        }
+    }
+
     ul {
-    text-align: center;
-        li {
+        text-align: center;
+        display: none;
+        
+        &.active {
+            display: block;
+        }
+        
+        .template {
             display: inline-block;
             vertical-align: top;
             margin: 5px;
+            position: relative;
+            cursor: pointer;
+            &:hover {
+                .onhover-content {
+                    display: block;
+                }
+            }
+
+            .onhover-content {
+                display: none;
+                @include fill;
+                position: absolute;
+                background-color: rgba(0,0,0,0.5);
+            }
+
+            .create-or-pro{
+                font-size: 25px;
+                width: 100%;
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+                padding: 0px;
+                line-height: 50px;
+                text-transform: uppercase;
+            }
+
+            .icon {
+                position: absolute;
+            }
+
+            .preview-icon {
+                font-size: 50px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .shortlist-icon {
+                right: 20px;
+                top: 20px;
+                position: absolute;
+                
+                i {
+                    font-size: initial;
+                    background-color: $cloud;
+                    padding: 10px;
+                    margin-right: 5px;
+                }
+            }
         }
     }
 }

@@ -116,32 +116,39 @@
   }
 }
 /*General SHARED*/
-/* line 46, ../sass/fooseshoe.scss */
+/* line 47, ../sass/fooseshoe.scss */
 ul li {
   list-style: none;
 }
 
-/* line 50, ../sass/fooseshoe.scss */
+/* line 51, ../sass/fooseshoe.scss */
 .container {
+  border: 1px dashed blue;
   border-width: 0px 2px;
-  padding: 0px;
+  padding: 0px 20px;
+}
+@media screen and (min-width: 768px) {
+  /* line 51, ../sass/fooseshoe.scss */
+  .container {
+    padding: 0px;
+  }
 }
 
-/* line 56, ../sass/fooseshoe.scss */
+/* line 61, ../sass/fooseshoe.scss */
 p {
   font-family: 'Aller-Regular', arial, sans-serif;
   font-weight: 200;
   font-style: normal;
 }
 
-/* line 60, ../sass/fooseshoe.scss */
+/* line 65, ../sass/fooseshoe.scss */
 .tag {
   display: table;
   vertical-align: middle;
-  width: 60px;
   height: 60px;
+  padding: 0px 10px;
 }
-/* line 66, ../sass/fooseshoe.scss */
+/* line 71, ../sass/fooseshoe.scss */
 .tag p {
   display: table-cell;
   vertical-align: middle;
@@ -149,42 +156,52 @@ p {
   font-size: 11px;
   text-transform: uppercase;
 }
-/* line 74, ../sass/fooseshoe.scss */
+/* line 79, ../sass/fooseshoe.scss */
 .tag.price-tag, .tag.date-tag {
   background-color: #57c5a0;
   color: white;
 }
-/* line 80, ../sass/fooseshoe.scss */
+/* line 85, ../sass/fooseshoe.scss */
 .tag.on-sales-tag {
   background-color: #242424;
   color: white;
 }
-/* line 85, ../sass/fooseshoe.scss */
+/* line 90, ../sass/fooseshoe.scss */
 .tag.out-of-stock-tag {
   background-color: #f27e4b;
   color: white;
 }
 
-/* line 91, ../sass/fooseshoe.scss */
+/* line 96, ../sass/fooseshoe.scss */
 .three-col li {
-  display: inline-block;
-  width: 32%;
-  margin-right: 2%;
+  display: block;
+  width: 80%;
+  margin: 20px auto;
 }
-/* line 98, ../sass/fooseshoe.scss */
-.three-col li:nth-child(3n) {
-  margin-right: 0%;
+@media screen and (min-width: 500px) {
+  /* line 96, ../sass/fooseshoe.scss */
+  .three-col li {
+    display: inline-block;
+    width: 32%;
+    margin-right: 2%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  /* line 109, ../sass/fooseshoe.scss */
+  .three-col li:nth-child(3n) {
+    margin-right: 0%;
+  }
 }
 
 /*Index Parallax Page*/
-/* line 112, ../sass/fooseshoe.scss */
+/* line 124, ../sass/fooseshoe.scss */
 .affixed-top {
   position: fixed;
   top: 0;
   z-index: 9999;
 }
 
-/* line 118, ../sass/fooseshoe.scss */
+/* line 130, ../sass/fooseshoe.scss */
 .parallax {
   height: 100vh;
   perspective: 1px;
@@ -194,7 +211,7 @@ p {
 }
 
 /*using max-width will cause the image to be squashed*/
-/* line 126, ../sass/fooseshoe.scss */
+/* line 138, ../sass/fooseshoe.scss */
 .flex-fill {
   display: flex;
   justify-content: center;
@@ -202,19 +219,19 @@ p {
   overflow: hidden;
   position: relative;
 }
-/* line 133, ../sass/fooseshoe.scss */
+/* line 145, ../sass/fooseshoe.scss */
 .flex-fill img {
   flex-shrink: 0;
   min-width: 100%;
   min-height: 100%;
 }
-/* line 139, ../sass/fooseshoe.scss */
+/* line 151, ../sass/fooseshoe.scss */
 .group-3 .flex-fill {
   justify-content: flex-start;
   align-items: stretch;
 }
 
-/* line 145, ../sass/fooseshoe.scss */
+/* line 157, ../sass/fooseshoe.scss */
 .parallax-layer {
   position: absolute;
   top: 0px;
@@ -223,7 +240,7 @@ p {
   right: 0px;
   opacity: 1;
 }
-/* line 150, ../sass/fooseshoe.scss */
+/* line 162, ../sass/fooseshoe.scss */
 .parallax-layer .container {
   text-align: center;
   position: absolute;
@@ -238,7 +255,7 @@ p {
   border-right: 5px solid red;
   border-left: 5px solid red;
 }
-/* line 160, ../sass/fooseshoe.scss */
+/* line 172, ../sass/fooseshoe.scss */
 .parallax-layer .container p {
   font-size: 35%;
 }
@@ -256,7 +273,7 @@ p {
 
 	The further the value is from 0 the more pronounced the parallax effect (i.e. translateZ(-10px) will scroll slower than translateZ(-1px)).
 */
-/* line 180, ../sass/fooseshoe.scss */
+/* line 192, ../sass/fooseshoe.scss */
 .parallax-layer-back {
   /*translate(-7px) fixes the gap alignment issue*/
   -ms-transform: translateZ(-1px) translateX(-7px) scale(2);
@@ -267,7 +284,7 @@ p {
   z-index: -1;
 }
 
-/* line 186, ../sass/fooseshoe.scss */
+/* line 198, ../sass/fooseshoe.scss */
 .parallax-layer-base {
   -ms-transform: translateZ(0);
   /* IE 9 */
@@ -276,23 +293,23 @@ p {
   transform: translateZ(0);
   z-index: 0;
 }
-/* line 191, ../sass/fooseshoe.scss */
+/* line 203, ../sass/fooseshoe.scss */
 .group-2 .parallax-layer-base .container {
   color: white;
   background-color: rgba(0, 0, 0, 0.8);
 }
-/* line 197, ../sass/fooseshoe.scss */
+/* line 209, ../sass/fooseshoe.scss */
 .group-3 .parallax-layer-base {
   border: 0px solid blue;
   border-top-width: 10px;
   border-bottom-width: 10px;
 }
-/* line 202, ../sass/fooseshoe.scss */
+/* line 214, ../sass/fooseshoe.scss */
 .group-2 .parallax-layer-base, .group-4 .parallax-layer-base {
   background-color: transparent;
 }
 
-/* line 208, ../sass/fooseshoe.scss */
+/* line 220, ../sass/fooseshoe.scss */
 .parallax-group {
   position: relative;
   height: 100vh;
@@ -301,16 +318,16 @@ p {
 
 /*Home Page*/
 /*Header - Logo and Login*/
-/* line 221, ../sass/fooseshoe.scss */
+/* line 233, ../sass/fooseshoe.scss */
 .header-row {
   background-color: #242424;
 }
 
-/* line 226, ../sass/fooseshoe.scss */
+/* line 238, ../sass/fooseshoe.scss */
 .header-container > * {
   display: inline-block;
 }
-/* line 230, ../sass/fooseshoe.scss */
+/* line 242, ../sass/fooseshoe.scss */
 .header-container .login-tab {
   color: #7e7e7e;
   float: right;
@@ -319,19 +336,19 @@ p {
   font-weight: 200;
   font-style: normal;
 }
-/* line 236, ../sass/fooseshoe.scss */
+/* line 248, ../sass/fooseshoe.scss */
 .header-container .login-tab li {
   display: inline-block;
   padding: 0px 20px;
   border-right: 2px solid #383838;
   font-size: 10px;
 }
-/* line 241, ../sass/fooseshoe.scss */
+/* line 253, ../sass/fooseshoe.scss */
 .header-container .login-tab li a {
   color: #7e7e7e;
 }
 
-/* line 249, ../sass/fooseshoe.scss */
+/* line 261, ../sass/fooseshoe.scss */
 .header-logo {
   font-family: 'Aller-Light', arial, sans-serif;
   font-weight: 100;
@@ -343,63 +360,124 @@ p {
 }
 
 /*Header - Navigation bar*/
-/* line 259, ../sass/fooseshoe.scss */
+/* line 271, ../sass/fooseshoe.scss */
 .nav-row {
   background-color: #fff;
   line-height: 70px;
 }
 
-/* line 263, ../sass/fooseshoe.scss */
-.nav-bar {
+/* line 276, ../sass/fooseshoe.scss */
+.collapse-bar {
   display: inline-block;
-  /*This height wasn't necessary at first, but gapfix font-size:0px is included, and this is needed*/
-  height: 70px;
-}
-/* line 268, ../sass/fooseshoe.scss */
-.nav-bar.right {
-  float: right;
-}
-/* line 271, ../sass/fooseshoe.scss */
-.nav-bar.right li {
-  /*This is here because the right floating tabs will remain inline blocks even at $sm size*/
-  display: inline-block;
-}
-/* line 277, ../sass/fooseshoe.scss */
-.nav-bar .collapse {
-  display: inline-block;
+  float: left;
 }
 @media screen and (min-width: 768px) {
-  /* line 277, ../sass/fooseshoe.scss */
-  .nav-bar .collapse {
+  /* line 276, ../sass/fooseshoe.scss */
+  .collapse-bar {
+    float: none;
+  }
+}
+
+/* line 284, ../sass/fooseshoe.scss */
+.hamburger {
+  padding: 0px 20px;
+  display: inline-block;
+  background-color: #ECF0F1;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  /* line 284, ../sass/fooseshoe.scss */
+  .hamburger {
     display: none;
   }
 }
-/* line 285, ../sass/fooseshoe.scss */
-.nav-bar li {
-  border-left: 1px solid #eeeeee;
+/* line 294, ../sass/fooseshoe.scss */
+.hamburger + .nav-bar {
+  position: absolute;
+}
+@media screen and (min-width: 768px) {
+  /* line 294, ../sass/fooseshoe.scss */
+  .hamburger + .nav-bar {
+    position: relative;
+    right: 0px;
+  }
+}
+/* line 304, ../sass/fooseshoe.scss */
+.hamburger.active + .nav-bar {
+  display: inline-block;
+}
+
+/* line 310, ../sass/fooseshoe.scss */
+.nav-bar {
   display: none;
+  /*This height wasn't necessary at first, but gapfix font-size:0px is included, and this is needed*/
+  height: 70px;
+  z-index: 1;
+}
+@media screen and (min-width: 768px) {
+  /* line 310, ../sass/fooseshoe.scss */
+  .nav-bar {
+    height: 70px;
+    display: inline-block;
+    position: relative;
+  }
+}
+/* line 324, ../sass/fooseshoe.scss */
+.nav-bar.left li:hover {
+  background-color: #ECF0F1;
+}
+/* line 330, ../sass/fooseshoe.scss */
+.nav-bar.right {
+  float: right;
+  display: inline-block;
+}
+/* line 334, ../sass/fooseshoe.scss */
+.nav-bar.right li {
+  /*This is here because the right floating tabs will remain inline blocks even at $sm size*/
+  display: inline-block;
   padding: 0px 20px;
+  border-left: 1px solid #eeeeee;
+  line-height: 70px;
+  border-bottom: none;
+}
+/* line 344, ../sass/fooseshoe.scss */
+.nav-bar li {
+  background-color: white;
+  padding: 10px 40px;
   font-size: 14px;
+  line-height: 20px;
+  border-bottom: 1px solid #eeeeee;
+  text-align: center;
   font-family: 'Aller-Regular', arial, sans-serif;
   font-weight: 200;
   font-style: normal;
 }
 @media screen and (min-width: 768px) {
-  /* line 285, ../sass/fooseshoe.scss */
+  /* line 344, ../sass/fooseshoe.scss */
   .nav-bar li {
+    border-bottom: none;
     display: inline-block;
+    padding: 0px 20px;
+    border-left: 1px solid #eeeeee;
+    line-height: 70px;
   }
 }
-/* line 296, ../sass/fooseshoe.scss */
+/* line 361, ../sass/fooseshoe.scss */
 .nav-bar li:last-child {
   margin-right: 0px;
   border-right: 1px solid #eeeeee;
 }
-/* line 301, ../sass/fooseshoe.scss */
+/* line 366, ../sass/fooseshoe.scss */
 .nav-bar li > * {
   display: inline-block;
 }
-/* line 308, ../sass/fooseshoe.scss */
+/* line 370, ../sass/fooseshoe.scss */
+.nav-bar li.disabled {
+  opacity: 0.5;
+  background-color: #ECF0F1;
+  pointer-events: none;
+}
+/* line 377, ../sass/fooseshoe.scss */
 .nav-bar .counter {
   position: relative;
   background-color: #7e7e7e;
@@ -409,15 +487,15 @@ p {
   height: 25px;
   margin-left: 3px;
 }
-/* line 317, ../sass/fooseshoe.scss */
+/* line 390, ../sass/fooseshoe.scss */
 .nav-bar .counter:hover {
   background-color: #57c5a0;
 }
-/* line 321, ../sass/fooseshoe.scss */
+/* line 394, ../sass/fooseshoe.scss */
 .nav-bar .counter:active {
   background-color: #4dae8d;
 }
-/* line 325, ../sass/fooseshoe.scss */
+/* line 398, ../sass/fooseshoe.scss */
 .nav-bar .counter span {
   line-height: 25px;
   position: absolute;
@@ -430,123 +508,199 @@ p {
 
 /*Section - Slider*/
 /*Current Issue - Is there a better way to write the one below*/
-/* line 339, ../sass/fooseshoe.scss */
+/* line 412, ../sass/fooseshoe.scss */
 .slider {
   overflow: hidden;
+  background-color: #ECF0F1;
   /*This are rest of the 3 banners*/
   /*Right Side Info*/
 }
-/* line 343, ../sass/fooseshoe.scss */
+/* line 416, ../sass/fooseshoe.scss */
 .slider .container {
   position: relative;
 }
-/* line 348, ../sass/fooseshoe.scss */
+/* line 421, ../sass/fooseshoe.scss */
 .slider li:nth-child(2), .slider li:nth-child(3), .slider li:nth-child(4) {
   display: none;
 }
-/* line 356, ../sass/fooseshoe.scss */
+/* line 429, ../sass/fooseshoe.scss */
 .slider .main-banner {
+  width: 100%;
   min-width: 600px;
 }
-/* line 360, ../sass/fooseshoe.scss */
+/* line 435, ../sass/fooseshoe.scss */
 .slider .slider-info-container {
-  width: 50%;
+  width: 100%;
+  margin: 20px auto;
   display: table;
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  padding: 80px 20px 50px;
 }
-/* line 369, ../sass/fooseshoe.scss */
+@media screen and (min-width: 992px) {
+  /* line 435, ../sass/fooseshoe.scss */
+  .slider .slider-info-container {
+    margin-top: 60px;
+    padding: 0px;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* line 435, ../sass/fooseshoe.scss */
+  .slider .slider-info-container {
+    position: absolute;
+    width: 50%;
+    right: 0px;
+    top: 0px;
+    margin-top: 30px;
+    padding-right: 20px;
+  }
+}
+/* line 456, ../sass/fooseshoe.scss */
 .slider .slider-info {
   display: table-cell;
   vertical-align: middle;
-  text-align: left;
+  text-align: center;
 }
-/* line 374, ../sass/fooseshoe.scss */
+@media screen and (min-width: 768px) {
+  /* line 456, ../sass/fooseshoe.scss */
+  .slider .slider-info {
+    text-align: left;
+    text-align: left;
+    text-align: left;
+  }
+}
+/* line 467, ../sass/fooseshoe.scss */
 .slider .slider-info > * {
   margin-bottom: 5px;
 }
-/* line 378, ../sass/fooseshoe.scss */
+/* line 471, ../sass/fooseshoe.scss */
 .slider .slider-info .slider-title, .slider .slider-info p {
   font-family: 'Aller-Light', arial, sans-serif;
   font-weight: 100;
   font-style: normal;
 }
-/* line 385, ../sass/fooseshoe.scss */
+/* line 475, ../sass/fooseshoe.scss */
+.slider .slider-info .tag {
+  height: 30px;
+}
+@media screen and (min-width: 992px) {
+  /* line 475, ../sass/fooseshoe.scss */
+  .slider .slider-info .tag {
+    height: 60px;
+    width: 60px;
+  }
+}
+/* line 484, ../sass/fooseshoe.scss */
+.slider .slider-info .slider-title {
+  font-size: 25px;
+}
+@media screen and (min-width: 992px) {
+  /* line 484, ../sass/fooseshoe.scss */
+  .slider .slider-info .slider-title {
+    font-size: 36px;
+  }
+}
+/* line 495, ../sass/fooseshoe.scss */
 .slider .icon-set li {
   display: inline-block;
   margin-right: 5px;
   background-color: #fafaf8;
-  padding: 10px;
+  padding: 2px;
+}
+@media screen and (min-width: 768px) {
+  /* line 495, ../sass/fooseshoe.scss */
+  .slider .icon-set li {
+    padding: 10px;
+  }
 }
 
 /*Section - Slider Selector*/
-/* line 398, ../sass/fooseshoe.scss */
+/* line 509, ../sass/fooseshoe.scss */
 .slider-selector {
   background-color: #2e2e2e;
 }
-/* line 408, ../sass/fooseshoe.scss */
+/* line 519, ../sass/fooseshoe.scss */
 .slider-selector .container {
   position: relative;
+  padding: 0px;
 }
-/* line 412, ../sass/fooseshoe.scss */
+/* line 524, ../sass/fooseshoe.scss */
 .slider-selector .slider-top {
   background-color: #57c5a0;
-  height: 10px;
-  left: 0%;
   position: absolute;
-  top: 0px;
-  width: 20%;
   z-index: 9999;
+  display: block;
+  width: 10px;
+  height: 60px;
+  top: 0;
   /*Suggested Media Query Change*/
 }
-/* line 428, ../sass/fooseshoe.scss */
+@media screen and (min-width: 768px) {
+  /* line 524, ../sass/fooseshoe.scss */
+  .slider-selector .slider-top {
+    width: 20%;
+    top: 0;
+    left: 0;
+    height: 10px;
+  }
+}
+/* line 545, ../sass/fooseshoe.scss */
 .slider-selector ul {
   text-align: center;
   font-family: 'Aller-Regular', arial, sans-serif;
   font-weight: 200;
   font-style: normal;
 }
-/* line 432, ../sass/fooseshoe.scss */
+/* line 549, ../sass/fooseshoe.scss */
 .slider-selector ul li {
-  display: inline-block;
-  padding: 20px 0px 10px;
-  width: 20%;
+  width: 100%;
+  padding: 10px 0px;
   position: relative;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
-/* line 438, ../sass/fooseshoe.scss */
+@media screen and (min-width: 768px) {
+  /* line 549, ../sass/fooseshoe.scss */
+  .slider-selector ul li {
+    display: inline-block;
+    padding: 20px 0px 10px;
+    width: 20%;
+  }
+}
+/* line 562, ../sass/fooseshoe.scss */
 .slider-selector ul li:before {
   background-color: black;
   content: "";
-  height: 10px;
   left: 0px;
   position: absolute;
   top: 0px;
-  width: 100%;
+  width: 10px;
+  height: 60px;
 }
-/* line 449, ../sass/fooseshoe.scss */
+@media screen and (min-width: 768px) {
+  /* line 562, ../sass/fooseshoe.scss */
+  .slider-selector ul li:before {
+    display: block;
+    width: 100%;
+    height: 10px;
+  }
+}
+/* line 579, ../sass/fooseshoe.scss */
 .slider-selector ul li:hover .hover-image {
   opacity: 0.7;
   top: -100%;
 }
-/* line 455, ../sass/fooseshoe.scss */
+/* line 585, ../sass/fooseshoe.scss */
 .slider-selector ul li span {
   display: block;
-  font-size: 12px;
+  font-size: 6px;
   color: #acacac;
+  font-size: 13px;
   line-height: 25px;
 }
-/* line 461, ../sass/fooseshoe.scss */
+/* line 592, ../sass/fooseshoe.scss */
 .slider-selector ul li span:first-child {
   font-size: 18px;
   line-height: 15px;
 }
-/* line 469, ../sass/fooseshoe.scss */
-.slider-selector ul li:nth-child(1):hover .slider-top {
-  left: 20%;
-}
-/* line 476, ../sass/fooseshoe.scss */
+/* line 599, ../sass/fooseshoe.scss */
 .slider-selector ul .hover-image {
   width: 100%;
   height: 70px;
@@ -554,35 +708,42 @@ p {
   position: absolute;
   top: 0%;
   opacity: 0;
+  display: none;
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
+@media screen and (min-width: 768px) {
+  /* line 599, ../sass/fooseshoe.scss */
+  .slider-selector ul .hover-image {
+    display: block;
+  }
+}
 
 /*Section - Special Offer*/
-/* line 489, ../sass/fooseshoe.scss */
+/* line 618, ../sass/fooseshoe.scss */
 .special-offer {
   background-color: #242424;
 }
-/* line 492, ../sass/fooseshoe.scss */
+/* line 621, ../sass/fooseshoe.scss */
 .special-offer .container {
   padding: 20px 0px;
 }
-/* line 496, ../sass/fooseshoe.scss */
+/* line 625, ../sass/fooseshoe.scss */
 .special-offer li {
   position: relative;
 }
-/* line 501, ../sass/fooseshoe.scss */
+/* line 630, ../sass/fooseshoe.scss */
 .special-offer li:hover .hover-text p {
   opacity: 1;
   visibility: visible;
 }
-/* line 508, ../sass/fooseshoe.scss */
+/* line 637, ../sass/fooseshoe.scss */
 .special-offer li img {
   width: 100%;
 }
-/* line 512, ../sass/fooseshoe.scss */
+/* line 641, ../sass/fooseshoe.scss */
 .special-offer li .hover-text {
   position: absolute;
   top: 50%;
@@ -590,7 +751,7 @@ p {
   text-align: center;
   width: 100%;
 }
-/* line 519, ../sass/fooseshoe.scss */
+/* line 648, ../sass/fooseshoe.scss */
 .special-offer li .hover-text p {
   color: white;
   font-size: 20px;
@@ -609,21 +770,26 @@ p {
   font-style: normal;
 }
 
-/* line 535, ../sass/fooseshoe.scss */
+/* line 666, ../sass/fooseshoe.scss */
 .product-display {
   background-color: #ebe7df;
   /*products.html*/
 }
-/* line 538, ../sass/fooseshoe.scss */
+/* line 669, ../sass/fooseshoe.scss */
 .product-display .container {
-  padding: 20px 0px 40px;
   border-bottom: 1px solid #bcb5a7;
 }
-/* line 542, ../sass/fooseshoe.scss */
+/* line 673, ../sass/fooseshoe.scss */
 .product-display .container > div {
   margin: 20px 0px;
 }
-/* line 550, ../sass/fooseshoe.scss */
+@media screen and (min-width: 768px) {
+  /* line 669, ../sass/fooseshoe.scss */
+  .product-display .container {
+    padding: 20px 0px 40px;
+  }
+}
+/* line 685, ../sass/fooseshoe.scss */
 .product-display h3 {
   font-family: 'Aller-Light', arial, sans-serif;
   font-weight: 100;
@@ -632,61 +798,61 @@ p {
   display: inline-block;
   color: #242424;
 }
-/* line 556, ../sass/fooseshoe.scss */
+/* line 691, ../sass/fooseshoe.scss */
 .product-display h3 span {
   color: #bcb5a7;
   font-size: 15px;
   margin-left: 10px;
 }
-/* line 564, ../sass/fooseshoe.scss */
+/* line 699, ../sass/fooseshoe.scss */
 .product-display .view-and-sort {
   float: right;
   /*image height is 15px*/
   /*padding is divided by 2 to account for top and bottom padding*/
   /*-1px is to account for the border-height*/
 }
-/* line 567, ../sass/fooseshoe.scss */
+/* line 702, ../sass/fooseshoe.scss */
 .product-display .view-and-sort > * {
   display: inline-block;
   vertical-align: middle;
   margin-right: 10px;
   line-height: 30px;
 }
-/* line 573, ../sass/fooseshoe.scss */
+/* line 708, ../sass/fooseshoe.scss */
 .product-display .view-and-sort > *:last-child {
   margin-right: 0px;
 }
-/* line 578, ../sass/fooseshoe.scss */
+/* line 713, ../sass/fooseshoe.scss */
 .product-display .view-and-sort p {
   color: #bcb5a7;
   font-size: 14px;
 }
-/* line 586, ../sass/fooseshoe.scss */
+/* line 721, ../sass/fooseshoe.scss */
 .product-display .view-and-sort > img {
   padding: 6.5px;
   border: 1px solid #bcb5a7;
 }
-/* line 591, ../sass/fooseshoe.scss */
+/* line 726, ../sass/fooseshoe.scss */
 .product-display .view-and-sort .input-sort {
   border: 1px solid #bcb5a7;
   background-color: #ebe7df;
   height: 30px;
 }
-/* line 596, ../sass/fooseshoe.scss */
+/* line 731, ../sass/fooseshoe.scss */
 .product-display .view-and-sort .input-sort > * {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 601, ../sass/fooseshoe.scss */
+/* line 736, ../sass/fooseshoe.scss */
 .product-display .view-and-sort .input-sort p {
   padding: 0px 0px 0px 20px;
   font-size: 14px;
 }
-/* line 606, ../sass/fooseshoe.scss */
+/* line 741, ../sass/fooseshoe.scss */
 .product-display .view-and-sort .input-sort img {
   padding: 7.5px;
 }
-/* line 612, ../sass/fooseshoe.scss */
+/* line 747, ../sass/fooseshoe.scss */
 .product-display button {
   background-color: transparent;
   border: 1px solid #bcb5a7;
@@ -708,85 +874,121 @@ p {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-/* line 626, ../sass/fooseshoe.scss */
+/* line 761, ../sass/fooseshoe.scss */
 .product-display button:hover {
   background-color: #57c5a0;
   color: #ECF0F1;
   border: 1px solid #ECF0F1;
 }
-/* line 633, ../sass/fooseshoe.scss */
+/* line 768, ../sass/fooseshoe.scss */
 .product-display ul {
   margin-bottom: 20px;
 }
-/* line 637, ../sass/fooseshoe.scss */
+/* line 772, ../sass/fooseshoe.scss */
 .product-display .featured-shoes {
   background-color: white;
   position: relative;
   /*66px is the size of the price-info*/
 }
-/* line 642, ../sass/fooseshoe.scss */
+/* line 777, ../sass/fooseshoe.scss */
 .product-display .featured-shoes a {
   font-size: 16px;
+  white-space: nowrap;
 }
-/* line 646, ../sass/fooseshoe.scss */
+/* line 782, ../sass/fooseshoe.scss */
 .product-display .featured-shoes .affixed-bottom {
   position: absolute;
   bottom: 0px;
   left: 10px;
 }
-/* line 652, ../sass/fooseshoe.scss */
+@media screen and (min-width: 500px) and (max-width: 768px) {
+  /* line 782, ../sass/fooseshoe.scss */
+  .product-display .featured-shoes .affixed-bottom {
+    position: relative;
+    left: 0px;
+  }
+}
+/* line 793, ../sass/fooseshoe.scss */
 .product-display .featured-shoes .affixed-top {
   position: absolute;
   top: 0px;
   right: 10px;
 }
-/* line 659, ../sass/fooseshoe.scss */
+/* line 800, ../sass/fooseshoe.scss */
 .product-display .featured-shoes .shoe-name {
   border-top: 1px solid #cccccc;
   padding: 10px 0px;
   padding-left: 86px;
 }
-/* line 665, ../sass/fooseshoe.scss */
+@media screen and (min-width: 500px) and (max-width: 768px) {
+  /* line 800, ../sass/fooseshoe.scss */
+  .product-display .featured-shoes .shoe-name {
+    padding: 10px;
+  }
+}
+/* line 810, ../sass/fooseshoe.scss */
 .product-display .featured-shoes img {
   margin: 0 auto;
 }
+@media screen and (min-width: 500px) and (max-width: 768px) {
+  /* line 814, ../sass/fooseshoe.scss */
+  .product-display .featured-shoes .price-tag {
+    padding: 0px;
+    width: 100%;
+    height: 30px;
+  }
+  /* line 819, ../sass/fooseshoe.scss */
+  .product-display .featured-shoes .price-tag p {
+    font-size: 13px;
+  }
+}
 
 /*how to achieve equal height column*/
-/* line 672, ../sass/fooseshoe.scss */
+/* line 828, ../sass/fooseshoe.scss */
 .shoe-news {
   background-color: #ebe7df;
 }
-/* line 675, ../sass/fooseshoe.scss */
+/* line 831, ../sass/fooseshoe.scss */
 .shoe-news .container {
   padding: 30px 0px;
   display: table;
 }
-/* line 679, ../sass/fooseshoe.scss */
+/* line 835, ../sass/fooseshoe.scss */
 .shoe-news .container > div {
-  display: table-cell;
+  display: block;
   background-color: #dfdbd4;
-  border-left: 10px solid #ebe7df;
-  border-right: 10px solid #ebe7df;
-  padding: 30px 20px;
+  padding: 20px;
+  margin: 20px;
   vertical-align: top;
 }
-/* line 688, ../sass/fooseshoe.scss */
-.shoe-news .container > div:first-child {
-  border-left: 0px;
+@media screen and (min-width: 768px) {
+  /* line 835, ../sass/fooseshoe.scss */
+  .shoe-news .container > div {
+    display: table-cell;
+    border-left: 10px solid #ebe7df;
+    border-right: 10px solid #ebe7df;
+    padding: 30px 20px;
+  }
+  /* line 848, ../sass/fooseshoe.scss */
+  .shoe-news .container > div:first-child {
+    border-left: 0px;
+  }
+  /* line 851, ../sass/fooseshoe.scss */
+  .shoe-news .container > div:last-child {
+    border-right: 0px;
+  }
 }
-/* line 691, ../sass/fooseshoe.scss */
-.shoe-news .container > div:last-child {
-  border-right: 0px;
+@media screen and (min-width: 768px) {
+  /* line 859, ../sass/fooseshoe.scss */
+  .shoe-news .col-3 {
+    width: 25%;
+  }
+  /* line 862, ../sass/fooseshoe.scss */
+  .shoe-news .col-6 {
+    width: 50%;
+  }
 }
-/* line 697, ../sass/fooseshoe.scss */
-.shoe-news .col-3 {
-  width: 25%;
-}
-/* line 700, ../sass/fooseshoe.scss */
-.shoe-news .col-6 {
-  width: 50%;
-}
-/* line 704, ../sass/fooseshoe.scss */
+/* line 866, ../sass/fooseshoe.scss */
 .shoe-news h5 {
   font-family: 'Aller-Bold', arial, sans-serif;
   font-weight: 300;
@@ -794,70 +996,78 @@ p {
   text-transform: uppercase;
   margin-bottom: 10px;
 }
-/* line 710, ../sass/fooseshoe.scss */
+/* line 872, ../sass/fooseshoe.scss */
 .shoe-news p {
   font-size: 14px;
 }
-/* line 714, ../sass/fooseshoe.scss */
+/* line 876, ../sass/fooseshoe.scss */
 .shoe-news .username {
   margin: 10px 0px;
   font-style: italic;
 }
-/* line 722, ../sass/fooseshoe.scss */
+/* line 884, ../sass/fooseshoe.scss */
 .shoe-news .post-entry {
   margin-bottom: 22.5px;
 }
-/* line 725, ../sass/fooseshoe.scss */
+/* line 887, ../sass/fooseshoe.scss */
 .shoe-news .post-entry h5, .shoe-news .post-entry p {
   line-height: 22.5px;
 }
-/* line 729, ../sass/fooseshoe.scss */
+/* line 891, ../sass/fooseshoe.scss */
 .shoe-news .post-entry h5 {
   margin: 0px;
   text-transform: none;
 }
-/* line 734, ../sass/fooseshoe.scss */
+/* line 896, ../sass/fooseshoe.scss */
 .shoe-news .post-entry .date-tag {
   float: left;
   width: 45px;
   height: 45px;
   margin-right: 10px;
 }
-/* line 740, ../sass/fooseshoe.scss */
+/* line 902, ../sass/fooseshoe.scss */
 .shoe-news .post-entry .date-tag p {
   padding: 0px 10px;
   line-height: initial;
 }
 
 /*Page 2 -- Products Page*/
-/* line 749, ../sass/fooseshoe.scss */
+/* line 911, ../sass/fooseshoe.scss */
 .shoe-category {
   background-color: #2e2e2e;
   color: #acacac;
 }
-/* line 758, ../sass/fooseshoe.scss */
+/* line 920, ../sass/fooseshoe.scss */
 .shoe-category ul {
   padding: 20px 0px;
 }
-/* line 761, ../sass/fooseshoe.scss */
+/* line 923, ../sass/fooseshoe.scss */
 .shoe-category ul li {
   display: inline-block;
   background-color: #242424;
   color: #acacac;
   font-size: 14px;
   padding: 15px 20px;
-  line-height: 14px;
-  width: 22.75%;
-  margin-right: 3%;
   text-align: center;
   vertical-align: middle;
   position: relative;
+  width: 100%;
+  margin-bottom: 10px;
 }
-/* line 773, ../sass/fooseshoe.scss */
+@media screen and (min-width: 768px) {
+  /* line 923, ../sass/fooseshoe.scss */
+  .shoe-category ul li {
+    line-height: 14px;
+    width: 22.75%;
+    margin-right: 3%;
+    margin-bottom: 0px;
+  }
+}
+/* line 941, ../sass/fooseshoe.scss */
 .shoe-category ul li p {
   display: inline-block;
 }
-/* line 776, ../sass/fooseshoe.scss */
+/* line 945, ../sass/fooseshoe.scss */
 .shoe-category ul li img {
   background-color: white;
   float: right;
@@ -867,106 +1077,130 @@ p {
   -moz-border-radius: 7px;
   border-radius: 7px;
 }
-/* line 784, ../sass/fooseshoe.scss */
+/* line 953, ../sass/fooseshoe.scss */
 .shoe-category ul li:first-child {
   background-color: #2e2e2e;
   text-align: left;
   font-size: 16px;
 }
-/* line 790, ../sass/fooseshoe.scss */
+/* line 959, ../sass/fooseshoe.scss */
 .shoe-category ul li:last-child {
   margin-right: 0%;
 }
-/* line 794, ../sass/fooseshoe.scss */
+/* line 963, ../sass/fooseshoe.scss */
 .shoe-category ul li a {
   color: #acacac;
 }
 
 /*Footer Section*/
-/* line 806, ../sass/fooseshoe.scss */
+/* line 975, ../sass/fooseshoe.scss */
 .footer-widgets {
   background-color: #242424;
   color: white;
 }
-/* line 810, ../sass/fooseshoe.scss */
+/* line 979, ../sass/fooseshoe.scss */
 .footer-widgets .container {
   padding: 30px 0px;
   border: 1px solid #1c1c1c;
 }
-/* line 815, ../sass/fooseshoe.scss */
+/* line 984, ../sass/fooseshoe.scss */
 .footer-widgets h5 {
   text-transform: uppercase;
   margin: 20px 0px;
   color: #6f6f6f;
 }
-/* line 821, ../sass/fooseshoe.scss */
+/* line 990, ../sass/fooseshoe.scss */
 .footer-widgets li {
   font-size: 14px;
   vertical-align: top;
   padding: 20px;
 }
-/* line 826, ../sass/fooseshoe.scss */
+/* line 995, ../sass/fooseshoe.scss */
 .footer-widgets li p {
   font-style: italic;
   text-align: justify;
   color: #acacac;
 }
-/* line 832, ../sass/fooseshoe.scss */
+/* line 1001, ../sass/fooseshoe.scss */
 .footer-widgets li a {
   color: #57c5a0;
 }
-/* line 838, ../sass/fooseshoe.scss */
+/* line 1007, ../sass/fooseshoe.scss */
 .footer-widgets .twitter-widget p, .footer-widgets .twitter-widget span {
   margin-bottom: 10px;
 }
-/* line 843, ../sass/fooseshoe.scss */
+/* line 1012, ../sass/fooseshoe.scss */
 .footer-widgets img {
   width: 100%;
   max-width: 100%;
 }
-/* line 849, ../sass/fooseshoe.scss */
+/* line 1018, ../sass/fooseshoe.scss */
 .footer-widgets .flickr-widget-grid li {
   padding: 0px;
   margin-bottom: 2%;
 }
 
-/* line 856, ../sass/fooseshoe.scss */
+/* line 1025, ../sass/fooseshoe.scss */
 .footer-social-row {
   background-color: #242424;
   /*input-height needs to be 16px because the icon is 16px tall*/
 }
-/* line 859, ../sass/fooseshoe.scss */
+/* line 1028, ../sass/fooseshoe.scss */
 .footer-social-row .container {
   padding: 30px 0px;
 }
-/* line 862, ../sass/fooseshoe.scss */
+/* line 1031, ../sass/fooseshoe.scss */
 .footer-social-row .container > div {
-  display: inline-block;
+  display: block;
+  width: 80%;
+  margin: 0 auto;
 }
-/* line 870, ../sass/fooseshoe.scss */
+@media screen and (min-width: 768px) {
+  /* line 1031, ../sass/fooseshoe.scss */
+  .footer-social-row .container > div {
+    width: auto;
+    display: inline-block;
+  }
+}
+/* line 1047, ../sass/fooseshoe.scss */
 .footer-social-row input {
   background-color: #2e2e2e;
   border: 0px;
   color: #acacac;
   font-size: 14px;
   line-height: 16px;
-  margin-left: 20px;
   padding: 10px 15px;
   position: relative;
   vertical-align: middle;
+  width: 85%;
 }
-/* line 881, ../sass/fooseshoe.scss */
+@media screen and (min-width: 768px) {
+  /* line 1047, ../sass/fooseshoe.scss */
+  .footer-social-row input {
+    margin-left: 20px;
+    width: initial;
+  }
+}
+/* line 1063, ../sass/fooseshoe.scss */
 .footer-social-row input + div {
   background-color: #7d7d7d;
   display: inline-block;
   padding: 10px;
 }
-/* line 888, ../sass/fooseshoe.scss */
+/* line 1070, ../sass/fooseshoe.scss */
 .footer-social-row .social-icon-row {
-  float: right;
-  margin-right: 20px;
+  text-align: center;
+  margin-top: 20px;
 }
-/* line 892, ../sass/fooseshoe.scss */
+@media screen and (min-width: 768px) {
+  /* line 1070, ../sass/fooseshoe.scss */
+  .footer-social-row .social-icon-row {
+    float: right;
+    margin-right: 20px;
+    margin-top: 0px;
+  }
+}
+/* line 1080, ../sass/fooseshoe.scss */
 .footer-social-row .social-icon-row li {
   display: inline-block;
   background-color: #2e2e2e;
@@ -977,25 +1211,25 @@ p {
   margin-left: 10px;
 }
 
-/* line 904, ../sass/fooseshoe.scss */
+/* line 1092, ../sass/fooseshoe.scss */
 .footer-text {
   background-color: #2e2e2e;
 }
-/* line 907, ../sass/fooseshoe.scss */
+/* line 1095, ../sass/fooseshoe.scss */
 .footer-text .container {
   padding: 30px 0px;
 }
-/* line 913, ../sass/fooseshoe.scss */
+/* line 1101, ../sass/fooseshoe.scss */
 .footer-text a, .footer-text p {
   display: inline-block;
   font-size: 12px;
   color: #acacac;
 }
-/* line 918, ../sass/fooseshoe.scss */
+/* line 1106, ../sass/fooseshoe.scss */
 .footer-text .copyright-text {
   line-height: 20px;
 }
-/* line 921, ../sass/fooseshoe.scss */
+/* line 1110, ../sass/fooseshoe.scss */
 .footer-text .footer-menu {
   line-height: 40px;
   float: right;

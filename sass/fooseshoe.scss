@@ -43,14 +43,19 @@ $teal: #57c5a0;
 $dark-teal: #4dae8d;
 
 /*General SHARED*/
+
 ul li {
 	list-style: none;
 }
 
 .container {
-	// border: 1px dashed blue;
+	border: 1px dashed blue;
 	border-width: 0px 2px;
-	padding: 0px;
+	padding: 0px 20px;
+	
+	@include min-screen ($sm) {
+		padding: 0px;
+	}
 }
 
 p {
@@ -60,9 +65,9 @@ p {
 .tag {
 	display: table;
 	vertical-align: middle;
-	width: 60px;
 	height: 60px;
-	
+	padding: 0px 10px;
+
 	p {
 		display: table-cell;
 		vertical-align: middle;
@@ -89,14 +94,21 @@ p {
 }
 
 .three-col li {
-	$right-margin: 2%;
+	display: block;
+	width: 80%;
+	margin: 20px auto;
 
-	display: inline-block;
-	width:(100% - (2 * $right-margin)) / 3;
-	margin-right: $right-margin;
+	@include min-screen (500px) {
+		$right-margin: 2%;
 
-	&:nth-child(3n) {
-		margin-right: 0%;
+		display: inline-block;
+		width:(100% - (2 * $right-margin)) / 3;
+		margin-right: $right-margin;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		&:nth-child(3n) {
+			margin-right: 0%;
+		}
 	}
 }
 
@@ -260,37 +272,90 @@ $nav-bar-height : 70px;
 	background-color: #fff;
 	line-height: $nav-bar-height ;
 }
-.nav-bar {
+
+.collapse-bar {
 	display: inline-block;
+	float: left;
+	@include min-screen($sm) {
+		float: none;
+	}
+}
+
+.hamburger {
+	padding: 0px 20px;
+	display: inline-block;
+	background-color: $cloud;
+	cursor: pointer;
+
+	@include min-screen($sm) {
+		display: none;
+	}
+
+	+ .nav-bar {
+		position: absolute;
+
+		@include min-screen($sm) {
+			position: relative;
+			right: 0px;
+		}
+	}
+
+	&.active {
+		+ .nav-bar {
+			display: inline-block;
+		} 
+	}
+}
+
+.nav-bar {
+	display: none;
 	/*This height wasn't necessary at first, but gapfix font-size:0px is included, and this is needed*/
-	height: $nav-bar-height ;
+	height: $nav-bar-height;
+	z-index: 1;
+
+	@include min-screen($sm) {
+		height: $nav-bar-height ;
+		display: inline-block;
+		position: relative;
+	}
+
+	&.left {
+		li {
+			&:hover {
+				background-color: $cloud;
+			}
+		}
+	}
 
 	&.right {
 		float: right;
+		display: inline-block;
 
 		li {
 			/*This is here because the right floating tabs will remain inline blocks even at $sm size*/
 			display: inline-block;
+			padding: 0px 20px;
+			border-left: 1px solid $nav-border;
+			line-height: $nav-bar-height;
+			border-bottom: none;
 		}
 	}
-
-	.collapse {
-		display: inline-block;
-
-		@include min-screen($sm) {
-			display: none;
-		}
-	}
-
+	
 	li {
-		border-left: 1px solid $nav-border;
-		display: none;
-		padding: 0px 20px;
+		background-color: white;
+		padding: 10px 40px;
 		font-size: 14px;
+		line-height: 20px;
+		border-bottom: 1px solid $nav-border;
+		text-align: center;
 		@include Aller;
 
 		@include min-screen($sm) {
+			border-bottom: none;
 			display: inline-block;
+			padding: 0px 20px;
+			border-left: 1px solid $nav-border;
+			line-height: $nav-bar-height;
 		}
 
 		&:last-child{
@@ -301,11 +366,19 @@ $nav-bar-height : 70px;
 		> * {
 			display: inline-block;
 		}
+
+		&.disabled {
+		  opacity: 0.5;
+		  background-color: $cloud;
+		  pointer-events: none;
+		}
 	}
-	$counter-height:25px;
-	$counter-width: $counter-height;
 
 	.counter {
+
+		$counter-height: 25px;
+		$counter-width: $counter-height;
+
 		position: relative;
 		background-color: $light-gray;
 		border-radius: 5px;
@@ -338,7 +411,7 @@ $nav-bar-height : 70px;
 /*Current Issue - Is there a better way to write the one below*/
 .slider {
 	overflow: hidden;
-
+	background-color: $cloud;
 	/*This are rest of the 3 banners*/
 	.container {
 		position: relative;
@@ -354,22 +427,42 @@ $nav-bar-height : 70px;
 	}
 
 	.main-banner {
+		width: 100%;
 		min-width: 600px;
 	}
+
 	/*Right Side Info*/
 	.slider-info-container {
-		width: 50%;
+		width: 100%;
+		margin: 20px auto;
 		display: table;
-		position: absolute;
-		right: 0px;
-		top: 0px;
-		padding: 80px 20px 50px;
+
+		@include min-screen($md) {
+			margin-top: 60px;
+			padding: 0px;
+		}
+
+		@include min-screen($sm) {
+			position: absolute;
+			width: 50%;
+			right: 0px;
+			top: 0px;
+			margin-top: 30px;
+			padding-right: 20px;
+
+		}
 	}
 
 	.slider-info {
 		display: table-cell;
 		vertical-align: middle;
-		text-align: left;
+		text-align: center;
+
+		@include min-screen ($sm) {
+			text-align: left;
+			text-align: left;
+			text-align: left;
+		}
 
 		> * {
 			margin-bottom: 5px;
@@ -377,6 +470,23 @@ $nav-bar-height : 70px;
 
 		.slider-title, p {
 			@include Aller-Light;
+		}
+
+		.tag {
+			height: 30px;
+
+			@include min-screen ($md) {
+				height: 60px;
+				width: 60px;
+			}
+		}
+
+		.slider-title {
+			font-size: 25px;
+
+			@include min-screen ($md) {
+				font-size: 36px;
+			} 
 		}
 	}
 
@@ -386,9 +496,10 @@ $nav-bar-height : 70px;
 			display: inline-block;
 			margin-right: 5px;
 			background-color: #fafaf8;
-			padding: 10px;
-			img {
+			padding: 2px;
 
+			@include min-screen ($sm) {
+				padding: 10px;
 			}
 		}
 	}
@@ -407,42 +518,61 @@ $nav-bar-height : 70px;
 
 	.container {
 		position: relative;
+		padding: 0px;
 	}
 
 	.slider-top {
 		background-color: $teal;
-		height: $topSliderHeight;
-		left: 0%;
 		position: absolute;
-		top: 0px;
-		width: (100%) / $numOfSlides;
 		z-index: 9999;
-
+		display: block;
+		width: 10px;
+		height:$span-top-height + $span-bottom-height + (2 * $li-padding);
+		top: 0;
 		/*Suggested Media Query Change*/
 		// @include min-screen ($sm) {
 		// 	height: $topSliderHeight-sm;
 		// }
+
+		@include min-screen($sm) {
+			width: (100%) / $numOfSlides;
+			top: 0;
+			left: 0;
+			height: $topSliderHeight;
+		}
 	}
 	
-
 	ul {
 		text-align: center;
 		@include Aller;
 
 		li {
-			display: inline-block;
-			padding: ($topSliderHeight + $li-padding) 0px $li-padding;
-			width: 20%;
+			width: 100%;
+			padding: $li-padding 0px;
 			position: relative;
+			cursor: pointer;
+			border: 1px solid rgba(0,0,0,0.2);
+
+			@include min-screen($sm) {
+				display: inline-block;
+				padding: ($topSliderHeight + $li-padding) 0px $li-padding;
+				width: 20%;
+			}
 
 			&:before {
 				background-color: black;
 				content:"";
-				height: $topSliderHeight;
 				left: 0px;
 				position: absolute;
 				top: 0px;
-				width: 100%;
+				width: 10px;
+				height: $span-top-height + $span-bottom-height + (2 * $li-padding);
+
+				@include min-screen($sm) {
+					display: block;
+					width: 100%;
+					height: $topSliderHeight;
+				}
 			}
 
 			&:hover {
@@ -454,21 +584,14 @@ $nav-bar-height : 70px;
 
 			span {
 				display: block;
-				font-size: 12px;
+				font-size: 6px;
 				color: $font-gray;
+				font-size: 13px;
 				line-height: $span-top-height;
 
 				&:first-child {
 					font-size: 18px;
 					line-height: $span-bottom-height;
-				}
-			}
-			
-			&:nth-child(1) {
-				&:hover {
-					.slider-top {
-						left: 20%;
-					}
 				}
 			}
 		}
@@ -480,7 +603,13 @@ $nav-bar-height : 70px;
 			position: absolute;
 			top: 0%;
 			opacity: 0;
+			display: none;
 			@include transition (all 0.5s ease-in-out);
+			
+
+			@include min-screen($sm) {
+				display: block;
+			}
 		}
 	}
 }
@@ -527,6 +656,8 @@ $nav-bar-height : 70px;
 				opacity: 0;
 				@include transition (all 0.3s ease);
 				@include Aller-Light;
+
+
 			}
 		}
 	}
@@ -536,11 +667,15 @@ $nav-bar-height : 70px;
 	background-color: #ebe7df;
 
 	.container {
-		padding: 20px 0px 40px;
+		
 		border-bottom: 1px solid #bcb5a7;
-
+		
 		> div {
 			margin: 20px 0px;
+		}
+
+		@include min-screen($sm) {
+			padding: 20px 0px 40px;
 		}
 	}
 	
@@ -641,12 +776,18 @@ $nav-bar-height : 70px;
 
 		a {
 			font-size: 16px;
+			white-space: nowrap;
 		}
 
 		.affixed-bottom {
 			position: absolute;
 			bottom: 0px;
 			left: $price-info-left;
+
+			@include screen(500px,$sm) {
+				position: relative;
+				left: 0px;
+			}
 		}
 
 		.affixed-top {
@@ -660,10 +801,25 @@ $nav-bar-height : 70px;
 			border-top: 1px solid #cccccc;
 			padding: 10px 0px;
 			padding-left: ($price-info-left * 2) + 66px;
+
+			@include screen(500px,$sm) {
+				padding: $price-info-left;
+			};
 		}
 
 		img {
 			margin: 0 auto;
+		}
+
+		.price-tag {
+			@include screen(500px,$sm) {
+				padding: 0px;
+				width: 100%;
+				height: 30px;
+				p {
+					font-size: 13px;
+				}
+			}
 		}
 	}
 }
@@ -678,29 +834,35 @@ $nav-bar-height : 70px;
 
 		> div {
 			$border-gap: 10px;
-			display: table-cell;
+			display: block;
 			background-color: #dfdbd4;
-			border-left: $border-gap solid #ebe7df;
-			border-right: $border-gap solid #ebe7df;
-			padding: 30px 20px;
+			padding: 20px;
+			margin: 20px;
 			vertical-align: top;
 
-			&:first-child {
-				border-left: 0px;
-			}
-			&:last-child {
-				border-right: 0px;
+			@include min-screen($sm) {
+				display: table-cell;
+				border-left: $border-gap solid #ebe7df;
+				border-right: $border-gap solid #ebe7df;
+				padding: 30px 20px;
+				&:first-child {
+					border-left: 0px;
+				}
+				&:last-child {
+					border-right: 0px;
+				}
 			}
 		}
 	}
 
-	.col-3 {
-		width: 25%;
+	@include min-screen($sm) {
+		.col-3 {
+			width: 25%;
+		}
+		.col-6 {
+			width: 50%;
+		}
 	}
-	.col-6 {
-		width: 50%;
-	}
-
 	h5 {
 		@include Aller-Bold;
 		text-transform: uppercase;
@@ -764,15 +926,22 @@ $nav-bar-height : 70px;
 			color: $font-gray;
 			font-size: $font-size;
 			padding: 15px 20px;
-			line-height: $line-height;
-			width: (100% - (3 * $margin-right))/4 ;
-			margin-right: $margin-right;
 			text-align: center;
 			vertical-align: middle;
 			position: relative;
+			width: 100%;
+			margin-bottom: 10px;
+			@include min-screen($sm) {
+				line-height: $line-height;
+				width: (100% - (3 * $margin-right))/4 ;
+				margin-right: $margin-right;
+				margin-bottom: 0px;
+			}
+
 			p {
 				display: inline-block;
 			}
+
 			img {
 				background-color: white;
 				float: right;
@@ -860,9 +1029,17 @@ $widget-margin: 2%;
 		padding: 30px 0px;
 
 		> div {
-			display: inline-block;
+			display: block;
+			width: 80%;
+			margin: 0 auto;
+			@include min-screen ($sm) {
+				width: auto;
+				display: inline-block;
+			}
 		}
 	}
+	
+
 	/*input-height needs to be 16px because the icon is 16px tall*/
 	$input-height: 16px;
 	$input-vertical-padding: 10px;
@@ -873,10 +1050,15 @@ $widget-margin: 2%;
 		color: $font-gray;
 		font-size: $input-height - 2px;
 		line-height: $input-height;
-		margin-left: $widget-padding;
 		padding: $input-vertical-padding 15px;
 		position: relative;
 		vertical-align: middle;
+		width: 85%;
+		
+		@include min-screen ($sm) {
+			margin-left: $widget-padding;
+			width: initial;
+		}
 
 		+ div {
 			background-color: #7d7d7d;
@@ -886,8 +1068,14 @@ $widget-margin: 2%;
 	}
 
 	.social-icon-row {
-		float: right;
-		margin-right: $widget-padding;
+		text-align: center;
+		margin-top: 20px;	
+		@include min-screen ($sm) {
+			float: right;
+			margin-right: $widget-padding;
+			margin-top: 0px;
+
+		}
 
 		li {
 			display: inline-block;
@@ -918,6 +1106,7 @@ $widget-margin: 2%;
 	.copyright-text {
 		line-height: $text-line-height / 2;
 	}
+
 	.footer-menu {
 		line-height: $text-line-height;
 		float: right;

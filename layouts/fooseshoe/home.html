@@ -19,16 +19,7 @@
 	</head>
 	<body>
 		<a href="../../index.html">Back</a>
-		<a href="http://stackoverflow.com/questions/15172520/advantages-of-using-displayinline-block-vs-floatleft-in-css"> Float VS Inline-block</a>
-		<p>To Do: refactor Color Mixin</p>
-		<p>To Do: refactor headers</p>
-		<p>To Do: Landscape Banner responsive</p>
-		<p>To Do: Refactor all anchor tags</p>
-		<p>To Add: a tags on login and register</p>
-		<p>Making Systems: px doesn't mix well with percentages</p>
-		<p>Inputs cannot support pseudo css</p>
-		<p>Create a general padding space, is it 20px or 10px?</p>
-		<p>Study equal column: current one in uses tables and it uses borders to simulate gap </p>
+
 
 		<!--HEADER is repeated on every page-->
 		<header>
@@ -51,14 +42,22 @@
 
 			<nav class="nav-row ">
 				<div class="container clear">
-					<ul class="nav-bar gapfix">
-						<li class="collapse"><a href="#"><img src="img/nav-icon.png" alt=""></a></li>
-						<li><a href="home.html">Home</a></li>
-						<li><a href="products.html">Products</a></li>
-						<li class="disabled"><a href="#">About</a></li>
-						<li class="disabled"><a href="#">Blog</a></li>
-						<li class="disabled"><a href="#">Contact</a></li>
-					</ul>
+					<div class="collapse-bar">
+
+						<div class="hamburger">
+							<a href="#"><img src="img/nav-icon.png" alt=""></a>
+						</div>
+
+						<ul class="nav-bar left gapfix">
+							<li><a href="home.html">Home</a></li>
+							<li><a href="products.html">Products</a></li>
+							<li><a href="learn.html">Learn</a></li>
+							<li class="disabled"><a href="#">Blog</a></li>
+							<li class="disabled"><a href="#">Contact</a></li>
+						</ul>
+
+					</div>
+
 					<ul class="nav-bar right gapfix">
 						<li>
 							<img src="img/star.png" alt="favourite">
@@ -381,5 +380,6 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 		<script src="../../js/bootstrap.min.js"></script>
+		<script src="../../js/fooseshoe.js"></script>
 	</body>
 </html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<title>Enrico</title>
+		<!-- Bootstrap -->
+		<link href="../../css/bootstrap.min.css" rel="stylesheet">
+		<link href="../../stylesheets/bootstrap-overwrite.css" rel="stylesheet">
+		<link href="../../stylesheets/fooseshoe.css" rel="stylesheet">
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the pagetransform: translateZ(0); via file:// -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.s7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<a href="../../index.html">Back</a>
+<!-- 		<a href="http://stackoverflow.com/questions/15172520/advantages-of-using-displayinline-block-vs-floatleft-in-css"> Float VS Inline-block</a>
+		<p>To Do: refactor Color Mixin</p>
+		<p>To Do: refactor headers</p>
+		<p>To Do: Landscape Banner responsive</p>
+		<p>To Do: Refactor all anchor tags</p>
+		<p>To Add: a tags on login and register</p>
+		<p>Making Systems: px doesn't mix well with percentages</p>
+		<p>Inputs cannot support pseudo css</p>
+		<p>Create a general padding space, is it 20px or 10px?</p>
+		<p>Study equal column: current one in uses tables and it uses borders to simulate gap </p> -->
+
+		<!--HEADER is repeated on every page-->
+		<header>
+			<section class="header-row">
+				<div class="container">
+					<div class="header-container clearfix">
+						<div class="header-logo">
+						<a href="index.html">
+							<img src="img/logo.png" alt="search">
+						</a>
+						</div>
+						<!-- Putting gapfix right here will cause some misalignment-->
+						<ul class="login-tab">
+							<li><a href=""><img src="img/search.png" alt="search"></a></li>
+							<li><a href="">LOGIN</a> or <a href="">REGISTER</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<nav class="nav-row ">
+				<div class="container clear">
+					<div class="collapse-bar">
+
+						<div class="hamburger">
+							<a href="#"><img src="img/nav-icon.png" alt=""></a>
+						</div>
+
+						<ul class="nav-bar left gapfix">
+							<li><a href="home.html">Home</a></li>
+							<li><a href="products.html">Products</a></li>
+							<li><a href="learn.html">Learn</a></li>
+							<li class="disabled"><a href="#">Blog</a></li>
+							<li class="disabled"><a href="#">Contact</a></li>
+						</ul>
+
+					</div>
+
+					<ul class="nav-bar right gapfix">
+						<li>
+							<img src="img/star.png" alt="favourite">
+							<div class="counter">
+								<a href=""><span>30</span></a>
+							</div>
+						</li>
+						<li>
+							<img src="img/cart.png" alt="cart">
+							<div class="counter teal">
+								<a href="#"><span>0</span></a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+
+		<article>
+			<section class="what-i-learn">
+				<div class="container">
+				<a href="http://stackoverflow.com/questions/15172520/advantages-of-using-displayinline-block-vs-floatleft-in-css"> Float VS Inline-block</a>
+					<h1>What I've learned</h1>
+					<br>
+					<h3>Parallax Scrolling</h3>
+					<br>
+					<p>Broken on firefox</p>
+					<p>Using image in div instead of background images</p>
+					<p>Using flexboxes so IE will hate it</p>
+					<br>
+					
+
+					<h3>Home Page</h3>
+					<br>
+					<p>To Do: refactor Color Mixin</p>
+					<p>To Do: refactor headers</p>
+					<p>To Do: Refactor all anchor tags</p>
+					<p>Making Systems: px doesn't mix well with percentages</p>
+					<p>Inputs cannot support pseudo css</p>
+					<p>Create a general padding space, is it 20px or 10px?</p>
+					<p>Study equal column: current one in uses tables and it uses borders to simulate gap </p>
+					<br>
+
+					<h3>Review</h3>
+					<p>I need to find a way to combat inline-block gaps, the current one is setting a gapfix: 0px. This requires putting font size on all its child. Using font-size: initial on its childrens doesn't work as well</p>
+					<p>While designing navbars, Do I use line-height for vertical size control? and vertical-align: middle. For its side, do I use padding left and right?</p>
+					<p>While designing a system with mixins, note that sass doesn't support calculation between % and px. But there's a fix for that! use native css calc() function</p>
+					<p>While designing .shoe-name, i forgot to take into account that text might be broken down into two lines, and that alter the design of the layout. In this case Buffalo Decollete was broken down into two lines</p>
+					<p>While designing the dropdown for hamburger, I need to think about the design before working on the HTML. The HTML need to work on both normal and small size. Think about the design first before laying down the HTML frame</p>
+					<p>Inputs does not support Pseudo Elements and hence the searchbar icon cannot be applied on the right side of the bar that way.</p>
+					<p>I need to set a general padding space, so that I will not randomly set padding spaces whenever I need them</p>
+					<p>I also need to identify the elements which are shared, which are repeated multiple times, and plan them accordingly</p>
+					<p>Image with max-width: 100% will be resizeable. Ideally use min-width and max-width</p>
+					<p>I need to find a better solution to equal height design. The current one employs border to simulate gap between the boxes</p>
+					<p>Using class names such as .col-3, .col-6 isn't helpful. These classes are given widths like 33.3% and 66.6%. However, at smaller size screens, they will be given 100% width. Hence, the class name isn't semantically correct</p>
+					<p>All given class name should be functionally related.</p>
+					<br>
+				</div>
+			</section>
+		</article>
+
+		<footer>
+
+			<section class="footer-widgets">
+				<div class="container">
+					<ul class="gapfix three-col">
+						<li>
+							<h5>text widget</h5>
+							<p>
+								Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+							</p>
+						</li>
+						<li class="twitter-widget">
+							<h5>twitter widget</h5>
+							<p>
+								<a href="#">@ericafustero</a> Why thank you. Your work looks awesome by the way! <a href="#">@treemelody</a>
+							</p>
+							<p>19 days ago</p>
+							<p>
+								<a href="">@roymarvelous</a> You can seek a refund through TF if it is not as advertised - but it is :)
+							</p>
+							<p>21 days ago</p>
+						</li>
+						<li>
+							<h5>flickr widget</h5>
+							<ul class="flickr-widget-grid gapfix three-col">
+								<li><a href=""><img src="img/f_pic1.jpg" alt=""></a></li>
+								<li><a href=""><img src="img/f_pic2.jpg" alt=""></a></li>
+								<li><a href=""><img src="img/f_pic3.jpg" alt=""></a></li>
+								<li><a href=""><img src="img/f_pic4.jpg" alt=""></a></li>
+								<li><a href=""><img src="img/f_pic5.jpg" alt=""></a></li>
+								<li><a href=""><img src="img/f_pic6.jpg" alt=""></a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="footer-social-row">
+				<div class="container clearfix">
+					<div class="gapfix">
+						<input type="text" placeholder="Enter Email for newsletter">
+						<div><img src="img/arrow-next.png" alt=""></div>
+					</div>
+			
+					<ul class="social-icon-row gapfix">
+						<li><a href=""><img src="img/social-icon1.png" alt=""></a></li>
+						<li><a href=""><img src="img/social-icon2.png" alt=""></a></li>
+						<li><a href=""><img src="img/social-icon3.png" alt=""></a></li>
+						<li><a href=""><img src="img/social-icon4.png" alt=""></a></li>
+						<li><a href=""><img src="img/social-icon5.png" alt=""></a></li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="footer-text">
+				<div class="container clearfix">
+					<p class="copyright-text">
+						Copyright © Fooseshoes 2013. <br>
+						Designed by EnzoLiVolti.  
+					</p>
+
+
+					<p class="footer-menu">
+						<a href="">Home</a> /
+						<a href="">Support</a> /
+						<a href="">Terms and Conditions</a> /
+						<a href="">Faqs</a> /
+						<a href="">Contact us</a>
+					</p>
+				</div>
+			</section>
+		</footer>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="../../js/bootstrap.min.js"></script>
+		<script src="../../js/fooseshoe.js"></script>
+	</body>
+</html>
