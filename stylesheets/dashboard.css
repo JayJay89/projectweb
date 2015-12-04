@@ -26,12 +26,17 @@
   http://codepen.io/javasteve99/pen/hDxpn
 */
 /*Inline Gap Fix*/
-/* line 164, ../sass/_mixin.scss */
+/* line 170, ../sass/_mixin.scss */
 .gapfix {
   font-size: 0px;
 }
 
-/* line 168, ../sass/_mixin.scss */
+/* line 174, ../sass/_mixin.scss */
+.gapfix > * {
+  font-size: initial;
+}
+
+/* line 178, ../sass/_mixin.scss */
 .disabled {
   opacity: 0.5;
   pointer-events: none;

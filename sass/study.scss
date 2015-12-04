@@ -723,3 +723,51 @@ CONTENTS
 		}
 	}
 }
+
+.study-one-true-layout {
+	.col-1, .col-2 {
+		width: 50%;
+		display: table-cell;
+		border: 1px solid red;
+		margin-right: -4px;
+		vertical-align: middle;
+		// text-align: center;
+	}
+
+	#one-true {
+		.col {
+			padding: 20px;
+
+			p {
+				font-size: 10px;
+				line-height: 15px
+			}
+
+			&:nth-child(odd) {
+				background-color: white;
+				
+			}
+		}
+	}
+
+	.step-1 {
+		#one-true {
+			.col {
+				width: 25%;
+				float: left;
+			}
+		}
+	}
+
+	.step-2 {
+		#one-true {
+			overflow: hidden;
+			.col {
+				width: 25%;
+				float: left;
+				margin-bottom: -99999px;
+				padding-bottom: 99999px;
+			}
+		}
+	}
+}

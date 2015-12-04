@@ -1,0 +1,247 @@
+/*Notes*/
+/*
+close-button is 20px
+modal size is 980px
+header-color: 
+*/
+
+@import "all";
+$gap-size: 15px;
+$base-font-size: 13px;
+
+/*Colors*/
+$light-blue: #90CAD6;
+$cloud-white: white;
+$gray: #c6d6da;
+$border-gray: #809a9f;
+$btn-1-color: #9FA7B0;
+$btn-2-color: #368393;
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-size: $base-font-size;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+}
+
+.container {
+    background-image: url(../layouts/revised-ui-test/bg.png);
+    background-size: contain;
+    // height: 100%;
+    width: 100%;
+}
+
+h2 {
+    font-size: $base-font-size + 2px;
+    font-weight: bold;
+    margin: $gap-size 0px;
+}
+
+header {
+    padding:15px $gap-size;
+    background-color: $light-blue;
+
+    h1 {
+        word-spacing: 2px;
+        font-weight: bold;
+        font-size: $base-font-size;
+        color: white;
+        text-transform: uppercase;
+        display: inline;
+    }
+
+    .close-icon {
+        float: right;
+    }
+}
+
+
+.modal-tab {
+    width: 100%;
+    max-width: 1200px;
+    /*Set this off for responsive design*/
+    // min-width: 980px;
+    margin: 40px auto;
+    @include box-shadow (1px 3px 12px #97A3BB);
+    @include min-screen ($xs) {
+        width: 90%;
+    }
+}
+
+.modal-tab-body {
+    background-color: #F4F5F7;
+    padding: $gap-size;
+    position: relative;
+}
+
+.preview {
+    padding: 0px;
+    background-color: $cloud-white;
+    margin-bottom: 10px;
+
+    img {
+        float: none;
+        @include min-screen ($md) {
+            padding: 0px;
+        }
+    }
+
+    /*15px is the gapsize*/
+    @include min-screen ($md) {
+        padding: 150px 0px;
+        width: calc(50% - #{$gap-size});
+        margin-right: $gap-size;
+        margin-bottom: 0px;
+    }
+}
+$settings-icon-height: 25px;
+$settings-icon-padding: 5px;
+
+.icon {
+    position: absolute;
+    right: 0px;
+    background-color: $cloud-white;
+    padding: $settings-icon-padding;
+}
+
+.settings {
+    padding: 0px;
+    overflow: hidden;
+
+    span {
+        line-height: $settings-icon-height;
+        display: inline-block;
+    }
+    @include min-screen ($md) {
+        position: absolute;
+        top: $gap-size;
+        bottom: $gap-size;
+        right: $gap-size;
+        width: calc(50% - #{$gap-size});
+    }
+
+    .column1,
+    .column2 {
+        padding: 0px;
+        margin-top: $settings-icon-height + (2 * $settings-icon-padding);
+        @include min-screen ($sm) {
+            /*Equal Column*/
+            margin-bottom: -99999px;
+            padding-bottom: 99999px;
+        }
+    }
+
+    .column1 {
+        background-color: $cloud-white;
+        
+        @include min-screen ($sm) {
+            border-right: 1px solid $gray;
+        }
+    }
+
+    .column2 {
+        /*These provide space for save and cancel button at mobile view*/
+        /*Used a max-screen here for special purposes*/
+
+        @include max-screen ($sm) {
+            padding-bottom: $gap-size * 4;
+            margin-top: 0px;
+        }
+
+        background-color: $cloud-white;
+    }
+}
+
+.general-tab,
+.color-tab,
+.advance-tab {
+    display: inline-block;
+    background-color: $cloud-white;
+    margin-top: $gap-size;
+    margin-bottom: 0px;
+
+    @include min-screen ($sm) {
+        margin-top: 0px;
+    }
+}
+
+.general-tab {
+    margin-top: 0px;
+    div {
+        &:nth-child(3) {
+            border-bottom: 1px solid $gray;
+        }
+    }
+}
+
+.general-tab, 
+.color-tab,
+.advance-tab {
+    $div-height: 23px;
+
+    /*minumum-height is 23px, any further will cause the alignment to run*/
+    div {
+        padding: $gap-size/2 0px;
+    }
+
+    p {
+        line-height: $div-height;
+    }
+
+    select {
+        float: right;
+        height: $div-height;
+        background-color: white;
+        border: 1px solid $border-gray;
+    }
+
+    p, select {
+        display: inline-block;
+        
+    }
+}
+
+.color-tab {
+
+    div {
+        padding: $gap-size/2 0px;
+    }
+
+    input, label {
+        margin: 0px;
+        float: left;
+        font-size: $base-font-size;
+    }
+    input {
+        margin-right: 5px;
+    }
+
+}
+
+.advance-tab {
+
+    input[type="text"] {
+        width: 100%;
+    }
+}
+
+.button-set {
+    position: absolute;
+    bottom: $gap-size;
+    right: $gap-size;
+    
+    a {
+        color: white;
+        padding: 5px 10px;
+        @include border-radius (4px);
+        text-transform: uppercase;
+
+        &:nth-child(1) {
+            background-color: $btn-1-color;
+        }
+        &:nth-child(2) {
+            background-color: $btn-2-color;
+        }
+    }
+}
+

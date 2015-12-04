@@ -1,0 +1,316 @@
+/*Notes*/
+/*
+close-button is 20px
+modal size is 980px
+header-color: 
+*/
+/*Material Design Colors*/
+/*quick border*/
+/*clear fixes*/
+/* line 37, ../sass/_mixin.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+/* line 42, ../sass/_mixin.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/*layout*/
+/*background-size*/
+/*fonts*/
+/*Transition*/
+/*Break Point*/
+/*Background-size*/
+/*Fonts*/
+/*
+  Fool-Proof @font-face
+  A PEN BY Steve Hickey
+  http://codepen.io/javasteve99/pen/hDxpn
+*/
+/*Inline Gap Fix*/
+/* line 170, ../sass/_mixin.scss */
+.gapfix {
+  font-size: 0px;
+}
+
+/* line 174, ../sass/_mixin.scss */
+.gapfix > * {
+  font-size: initial;
+}
+
+/* line 178, ../sass/_mixin.scss */
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/*Colors*/
+/* line 20, ../sass/revised-ui.scss */
+html, body {
+  width: 100%;
+  height: 100%;
+  font-size: 13px;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+}
+
+/* line 27, ../sass/revised-ui.scss */
+.container {
+  background-image: url(../layouts/revised-ui-test/bg.png);
+  background-size: contain;
+  width: 100%;
+}
+
+/* line 34, ../sass/revised-ui.scss */
+h2 {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 15px 0px;
+}
+
+/* line 40, ../sass/revised-ui.scss */
+header {
+  padding: 15px 15px;
+  background-color: #90CAD6;
+}
+/* line 44, ../sass/revised-ui.scss */
+header h1 {
+  word-spacing: 2px;
+  font-weight: bold;
+  font-size: 13px;
+  color: white;
+  text-transform: uppercase;
+  display: inline;
+}
+/* line 53, ../sass/revised-ui.scss */
+header .close-icon {
+  float: right;
+}
+
+/* line 59, ../sass/revised-ui.scss */
+.modal-tab {
+  width: 100%;
+  max-width: 1200px;
+  /*Set this off for responsive design*/
+  margin: 40px auto;
+  -moz-box-shadow: 1px 3px 12px #97A3BB;
+  -webkit-box-shadow: 1px 3px 12px #97A3BB;
+  box-shadow: 1px 3px 12px #97A3BB;
+}
+@media screen and (min-width: 320px) {
+  /* line 59, ../sass/revised-ui.scss */
+  .modal-tab {
+    width: 90%;
+  }
+}
+
+/* line 71, ../sass/revised-ui.scss */
+.modal-tab-body {
+  background-color: #F4F5F7;
+  padding: 15px;
+  position: relative;
+}
+
+/* line 77, ../sass/revised-ui.scss */
+.preview {
+  padding: 0px;
+  background-color: white;
+  margin-bottom: 10px;
+  /*15px is the gapsize*/
+}
+/* line 82, ../sass/revised-ui.scss */
+.preview img {
+  float: none;
+}
+@media screen and (min-width: 992px) {
+  /* line 82, ../sass/revised-ui.scss */
+  .preview img {
+    padding: 0px;
+  }
+}
+@media screen and (min-width: 992px) {
+  /* line 77, ../sass/revised-ui.scss */
+  .preview {
+    padding: 150px 0px;
+    width: calc(50% - 15px);
+    margin-right: 15px;
+    margin-bottom: 0px;
+  }
+}
+
+/* line 100, ../sass/revised-ui.scss */
+.icon {
+  position: absolute;
+  right: 0px;
+  background-color: white;
+  padding: 5px;
+}
+
+/* line 107, ../sass/revised-ui.scss */
+.settings {
+  padding: 0px;
+  overflow: hidden;
+}
+/* line 111, ../sass/revised-ui.scss */
+.settings span {
+  line-height: 25px;
+  display: inline-block;
+}
+@media screen and (min-width: 992px) {
+  /* line 107, ../sass/revised-ui.scss */
+  .settings {
+    position: absolute;
+    top: 15px;
+    bottom: 15px;
+    right: 15px;
+    width: calc(50% - 15px);
+  }
+}
+/* line 123, ../sass/revised-ui.scss */
+.settings .column1,
+.settings .column2 {
+  padding: 0px;
+  margin-top: 35px;
+}
+@media screen and (min-width: 768px) {
+  /* line 123, ../sass/revised-ui.scss */
+  .settings .column1,
+  .settings .column2 {
+    /*Equal Column*/
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+  }
+}
+/* line 134, ../sass/revised-ui.scss */
+.settings .column1 {
+  background-color: white;
+}
+@media screen and (min-width: 768px) {
+  /* line 134, ../sass/revised-ui.scss */
+  .settings .column1 {
+    border-right: 1px solid #c6d6da;
+  }
+}
+/* line 142, ../sass/revised-ui.scss */
+.settings .column2 {
+  /*These provide space for save and cancel button at mobile view*/
+  /*Used a max-screen here for special purposes*/
+  background-color: white;
+}
+@media screen and (max-width: 768px) {
+  /* line 142, ../sass/revised-ui.scss */
+  .settings .column2 {
+    padding-bottom: 60px;
+    margin-top: 0px;
+  }
+}
+
+/* line 155, ../sass/revised-ui.scss */
+.general-tab,
+.color-tab,
+.advance-tab {
+  display: inline-block;
+  background-color: white;
+  margin-top: 15px;
+  margin-bottom: 0px;
+}
+@media screen and (min-width: 768px) {
+  /* line 155, ../sass/revised-ui.scss */
+  .general-tab,
+  .color-tab,
+  .advance-tab {
+    margin-top: 0px;
+  }
+}
+
+/* line 168, ../sass/revised-ui.scss */
+.general-tab {
+  margin-top: 0px;
+}
+/* line 171, ../sass/revised-ui.scss */
+.general-tab div:nth-child(3) {
+  border-bottom: 1px solid #c6d6da;
+}
+
+/* line 177, ../sass/revised-ui.scss */
+.general-tab,
+.color-tab,
+.advance-tab {
+  /*minumum-height is 23px, any further will cause the alignment to run*/
+}
+/* line 183, ../sass/revised-ui.scss */
+.general-tab div,
+.color-tab div,
+.advance-tab div {
+  padding: 7.5px 0px;
+}
+/* line 187, ../sass/revised-ui.scss */
+.general-tab p,
+.color-tab p,
+.advance-tab p {
+  line-height: 23px;
+}
+/* line 191, ../sass/revised-ui.scss */
+.general-tab select,
+.color-tab select,
+.advance-tab select {
+  float: right;
+  height: 23px;
+  background-color: white;
+  border: 1px solid #809a9f;
+}
+/* line 198, ../sass/revised-ui.scss */
+.general-tab p, .general-tab select,
+.color-tab p,
+.color-tab select,
+.advance-tab p,
+.advance-tab select {
+  display: inline-block;
+}
+
+/* line 206, ../sass/revised-ui.scss */
+.color-tab div {
+  padding: 7.5px 0px;
+}
+/* line 210, ../sass/revised-ui.scss */
+.color-tab input, .color-tab label {
+  margin: 0px;
+  float: left;
+  font-size: 13px;
+}
+/* line 215, ../sass/revised-ui.scss */
+.color-tab input {
+  margin-right: 5px;
+}
+
+/* line 223, ../sass/revised-ui.scss */
+.advance-tab input[type="text"] {
+  width: 100%;
+}
+
+/* line 228, ../sass/revised-ui.scss */
+.button-set {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+/* line 233, ../sass/revised-ui.scss */
+.button-set a {
+  color: white;
+  padding: 5px 10px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+/* line 239, ../sass/revised-ui.scss */
+.button-set a:nth-child(1) {
+  background-color: #9FA7B0;
+}
+/* line 242, ../sass/revised-ui.scss */
+.button-set a:nth-child(2) {
+  background-color: #368393;
+}

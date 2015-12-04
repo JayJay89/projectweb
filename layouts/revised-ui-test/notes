@@ -1,0 +1,34 @@
+Dear Candidate,
+
+The ‘Source Files’ folder consists a static modal html file & its assets. (do not worry about the function of the modal) Imagine that this is one of the page of a website you and your fellow UI dev teammates are working on, you are one of them who is in charge of this page and there will be more pages to add on to the folder in the future. 
+
+As you can see the folder is not structured properly and the html contains internal & inline css. It is a mess! With your outstanding ability to uphold CSS driven development standards and best practices, you are require to refactor the HTMLCSS and provide us a well structured folder with flexible, up to date & semantic code.
+
+Following are the requirements:
+    •   the code is required to be written in sass, please make use of variable and mixin (you may use compass as the converter)
+    •   you are encouraged to use bootstrap framework
+    •   clean code with DRY methodology
+    •   the code is flexible enough to accommodate future edit of content and is able to be easily plug and apply on other pages
+    •   the code is up to date
+    •   correct code indentation
+    •   semantic class naming convention
+    •   UI looks good in various browsers. (For IE, support at least IE9)
+    •   make sure your code can be easily understood by your fellow colleague
+
+Duration: 4 days
+
+
+Date: Dec 4 2015
+Time start: 4:30pm
+Time End: 6.00pm
+Duration: 90 minutes
+
+Date: Dec 4 2015
+Time Start: 8.30pm
+Time End: 10.30pm
+Duration: 2 Hours
+
+Date: Dec 6 2015
+Time Start: 3pm
+Time End 7.30PM
+Duration: 4 Hours 30 minutes

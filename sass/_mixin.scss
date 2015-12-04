@@ -63,6 +63,12 @@ $midnightblue:#2C3E50;
   border-radius: $value;
 }
 
+@mixin box-shadow ($value) {
+   -moz-box-shadow: $value;
+   -webkit-box-shadow: $value;
+   box-shadow: $value;
+}
+
 @mixin fill {
   top: 0px;
   bottom: 0px;
@@ -153,7 +159,7 @@ $xs: 320px;
 }
 
 /*Inline Gap Fix*/
-@mixin gapfix {
+@mixin gapfix-inline {
   margin-right: -4px;
 
   &:last-child {
@@ -163,6 +169,10 @@ $xs: 320px;
 
 .gapfix {
   font-size: 0px;
+}
+
+.gapfix > * {
+  font-size: initial;
 }
 
 .disabled {

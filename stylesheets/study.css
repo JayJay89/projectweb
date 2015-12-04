@@ -850,3 +850,41 @@ CONTENTS
 .study-css-positioning .pos5 .divbox span {
   position: relative;
 }
+
+/* line 728, ../sass/study.scss */
+.study-one-true-layout .col-1, .study-one-true-layout .col-2 {
+  width: 50%;
+  display: table-cell;
+  border: 1px solid red;
+  margin-right: -4px;
+  vertical-align: middle;
+}
+/* line 738, ../sass/study.scss */
+.study-one-true-layout #one-true .col {
+  padding: 20px;
+}
+/* line 741, ../sass/study.scss */
+.study-one-true-layout #one-true .col p {
+  font-size: 10px;
+  line-height: 15px;
+}
+/* line 746, ../sass/study.scss */
+.study-one-true-layout #one-true .col:nth-child(odd) {
+  background-color: white;
+}
+/* line 755, ../sass/study.scss */
+.study-one-true-layout .step-1 #one-true .col {
+  width: 25%;
+  float: left;
+}
+/* line 763, ../sass/study.scss */
+.study-one-true-layout .step-2 #one-true {
+  overflow: hidden;
+}
+/* line 765, ../sass/study.scss */
+.study-one-true-layout .step-2 #one-true .col {
+  width: 25%;
+  float: left;
+  margin-bottom: -99999px;
+  padding-bottom: 99999px;
+}
