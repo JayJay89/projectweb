@@ -771,3 +771,64 @@ CONTENTS
 		}
 	}
 }
+
+.study-css-animation {
+
+	.container {
+		position: relative;
+	}
+
+	.city {
+		height: 250px;
+		background: url('../studies/study-css-animation-image/city.jpg');
+		background-repeat: repeat-x;
+		-webkit-animation: move-city 15s infinite linear;
+	}
+
+	#monkey1 {
+		position: absolute;
+		bottom: -35px;
+		left: 50px;
+		z-index: 1;
+		-webkit-animation: 
+			monkey-shake 1s infinite alternate linear;
+	}
+	#monkey2 {
+		position: absolute;
+		bottom: -35px;
+		left: -1000px;
+		z-index: 1;
+		-webkit-animation: 
+			monkey-shake 0.5s 1s infinite alternate,
+			monkey-enter 1s 1s;
+	}
+	
+	#copter {
+		position: absolute;
+		right: 0px;
+		-webkit-animation: 
+			copter-hover 1s infinite alternate linear;
+	}
+
+	/*Animation*/
+	$image-width: 533px;
+	@-webkit-keyframes move-city {
+		0% 	{background-position: 0 0;}
+		100% {background-position: -$image-width 0;}
+	}
+	
+	@-webkit-keyframes monkey-shake {
+		from {left: 50px;}
+		to { left: 75px;}
+	}
+
+	@-webkit-keyframes monkey-enter {
+		from {left: -1000px;}
+		to {left: 50px;}
+	}
+
+	@-webkit-keyframes copter-hover {
+		from {top: 50px;}
+		to {top: 60px;}
+	}
+}
