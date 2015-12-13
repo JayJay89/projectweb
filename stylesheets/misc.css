@@ -18,6 +18,7 @@
 /*fonts*/
 /*Transition*/
 /*Break Point*/
+/*Background-size*/
 /*Fonts*/
 /*
   Fool-Proof @font-face
@@ -25,9 +26,20 @@
   http://codepen.io/javasteve99/pen/hDxpn
 */
 /*Inline Gap Fix*/
-/* line 156, ../sass/_mixin.scss */
+/* line 170, ../sass/_mixin.scss */
 .gapfix {
   font-size: 0px;
+}
+
+/* line 174, ../sass/_mixin.scss */
+.gapfix > * {
+  font-size: initial;
+}
+
+/* line 178, ../sass/_mixin.scss */
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 /*Stylesheet for Studies and Misc*/

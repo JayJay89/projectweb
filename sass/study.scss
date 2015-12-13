@@ -832,3 +832,42 @@ CONTENTS
 		to {top: 60px;}
 	}
 }
+
+.study-slideup-boxes {
+
+	.slideup {
+		display: block;
+		background-color: #eee;
+		border: 1px solid #ccc;
+		height: 65px;
+		margin: 0 0 20px 0px;
+		overflow: hidden;
+		
+		h5, div {
+			height: 65px;
+			text-align: center;
+			line-height: 65px;
+		}
+
+		h5 {
+			@include transition(margin-top 0.5s ease);
+		}
+
+		div {
+			background-color: yellow;
+			@include transform (rotate(6deg));
+			@include transition(all 0.5s ease);
+			opacity: 0;
+		}
+
+		&:hover {
+			h5 {
+				margin-top: -65px;
+			}
+			div {
+				opacity: 1;
+				@include transform (rotate(0deg));
+			}
+		}
+	}
+}
